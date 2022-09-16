@@ -1,0 +1,14 @@
+.*
+!.gitignore
+!.npmrc
+
+.idea/
+*.iml
+*/*.iml
+.sass-cache
+*.css
+*.css.map
+dist/
+target/
+/**/node_modules/*
+**/static/*
