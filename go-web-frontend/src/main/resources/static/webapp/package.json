@@ -1,0 +1,27 @@
+{
+  "name": "go",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "vue": "^3.2.25",
+    "axios": "^0.26.1",
+    "dayjs": "^1.11.0",
+    "decimal.js": "^10.3.1",
+    "echarts": "^5.3.1",
+    "js-base64": "^3.7.2",
+    "js-md5": "^0.7.3",
+    "lodash": "^4.17.21",
+    "vue-axios": "^3.4.1",
+    "vue-router": "^4.0.13",
+    "@cccis/vue3-common": "1.0.0-SNAPSHOT.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "vite": "^3.0.9",
+    "sass": "^1.49.9"
+  }
+}
