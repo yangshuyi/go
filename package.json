@@ -1,0 +1,30 @@
+{
+  "name": "io.cordova.hellocordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd vue-app && npm install && npm run build && cd ../",
+    "browser": "npm run build && cordova run browser",
+    "android": "npm run build && cordova platform rm android && cordova platform add android && cordova build android",
+    "ios": "npm run build && cordova platform rm ios && cordova platform add ios && cordova build ios",
+    "build-android": "npm run build && cordova build android",
+    "build-ios": "npm run build && cordova build ios"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
+}
