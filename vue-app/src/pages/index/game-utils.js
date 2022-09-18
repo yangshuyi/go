@@ -1,16 +1,21 @@
 import _ from 'lodash';
 import dayjs from "dayjs";
-import {CccisAxiosUtils} from "@cccis/vue3-common";
+import {CccisAxiosUtils, CccisDialogUtils} from "@cccis/vue3-common";
+import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 import Constants from "@/components/Constants";
 
 let GAME_MAP = {}; //key: Id, value Game
 
 
 async function init() {
-    let gamesList = await CccisAxiosUtils.getData("games.json");
-    _.each(gamesList, (game) => {
-        GAME_MAP[game.id] = game;
-    });
+    let gameList = await IndexAxiosUtils.loadGameData();
+    if(gameList == null){
+        CccisDialogUtils.alert("加载围棋题目资源文件失败");
+    }else{
+        _.each(gameList, (game) => {
+            GAME_MAP[game.id] = game;
+        });
+    }
 }
 
 function fetchAllGames() {

@@ -4,7 +4,7 @@ import {resolve} from 'path';
 
 export default defineConfig({
   plugins: [vue()],
-  base: './cst',
+  base: './go',
   resolve: {
     alias: [{find: '@', replacement: resolve(__dirname, 'src')}],
   },
@@ -16,7 +16,7 @@ export default defineConfig({
     },
   },
   build:{
-    outDir: '../../../../../../cst-web/src/main/resources/static',
+    outDir: '../www',
   },
   define: {
     'process.env': { name: '哈哈哈', age: 12 }

@@ -25,6 +25,7 @@
     "platforms": [
       "android",
       "browser"
-    ]
+    ],
+    "plugins": {}
   }
 }
