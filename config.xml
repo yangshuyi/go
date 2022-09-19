@@ -1,11 +1,56 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+<widget id="com.superyang.go" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>GO训练</name>
+    <description>
+        GO训练
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        shuyi.yang
     </author>
     <content src="index.html" />
+    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+        <preference name="AndroidPersistentFileLocation" value="Internal" />
+    </platform>
+    <platform name="ios">
+        <feature name="StatusBar">
+            <param name="ios-package" onload="true" value="CDVStatusBar" />
+        </feature>
+        <preference name="FadeSplashScreenDuration" value="1000" />
+        <config-file file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+            <string>need camera access to take pictures</string>
+        </config-file>
+        <config-file file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>Track the app where it is used</string>
+        </config-file>
+        <config-file file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+            <string>need to photo library access to get pictures from there</string>
+        </config-file>
+        <config-file file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+            <string>need to photo library access to save pictures there</string>
+        </config-file>
+        <config-file file="*-Info.plist" target="NSAppleMusicUsageDescription">
+            <string>need music</string>
+        </config-file>
+        <edit-config file="*-Info.plist" mode="merge" target="NSMicrophoneUsageDescription">
+            <string>need microphone access to record sounds</string>
+        </edit-config>
+        <preference name="AllowInlineMediaPlayback" value="true" />
+        <preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+        <preference name="iosPersistentFileLocation" value="Library" />
+        <preference name="StatusBarOverlaysWebView" value="true" />
+        <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
+        <preference name="StatusBarStyle" value="default" />
+    </platform>
+    <engine name="ios" spec="~4.5.1" />
+    <engine name="browser" spec="latest" />
 </widget>

@@ -3,6 +3,15 @@
 import _ from 'lodash';
 import {computed, inject, provide, ref, reactive} from 'vue';
 
+import {useRoute, useRouter} from "vue-router";
+
+let route = useRoute();
+
+const urlFullPath = computed(() => {
+  return route.fullPath;
+});
+
+
 const windowSize = reactive({});
 provide("windowSize", windowSize);
 
@@ -17,6 +26,7 @@ function resizeLayout() {
 </script>
 
 <template>
+  <div>{{urlFullPath}}</div>
   <router-view/>
 </template>
 

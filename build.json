@@ -1,0 +1,21 @@
+{
+  "ios": {
+    "debug": {
+    },
+    "release": {
+      "codeSignIdentity": "iOS Distribution",
+      "provisioningProfile": "ffd9f654-a0fa-41f0-9acb-73e1eda91f63",
+      "iCloudContainerEnvironment": "Production",
+      "developmentTeam": "5E83MWB4Z4",
+      "packageType": "enterprise"
+    }
+  },
+  "android": {
+    "release": {
+      "keystore": "release-key-go.keystore",
+      "alias": "go",
+      "storePassword": "Aspen000",
+      "password": "Aspen000"
+    }
+  }
+}

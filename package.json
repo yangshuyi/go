@@ -10,6 +10,7 @@
     "android": "npm run build && cordova platform rm android && cordova platform add android && cordova build android",
     "ios": "npm run build && cordova platform rm ios && cordova platform add ios && cordova build ios",
     "build-android": "npm run build && cordova build android",
+    "release-android": "npm run build && cordova build android --release",
     "build-ios": "npm run build && cordova build ios"
   },
   "keywords": [
@@ -18,14 +19,17 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^10.1.2",
-    "cordova-browser": "^6.0.0"
+    "cordova-browser": "^6.0.0",
+    "cordova-ios": "~4.5.1"
   },
   "cordova": {
     "platforms": [
-      "android",
-      "browser"
-    ],
-    "plugins": {}
+      "browser",
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "8.1.0"
   }
 }
