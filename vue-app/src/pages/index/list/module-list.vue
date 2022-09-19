@@ -37,9 +37,31 @@ function mgmtGame(game) {
   <div>
     <div>
       <div @click="mgmtGame(null)">新增</div>
+      <div @click="mgmtGame(null)">新增</div>
     </div>
     <div class="list">
       <div>
+        <CccisTable :gridData="data.games" class="with-column-border with-head-row-dbl-height flex-1">
+          <CccisColumn field="id" label="ID" width="50px" cellClass="with-align-center"/>
+          <CccisColumn field="book" label="书籍" width="150px" cellClass="with-align-left"/>
+          <CccisColumn field="title" label="标题" width="50px" cellClass="with-align-left"/>
+          <CccisColumn field="chessBoardSize" label="棋盘" width="50px" cellClass="with-align-center"/>
+          <CccisColumn field="tags" label="标签" width="50px" cellClass="with-align-left">
+            <template v-slot:default="scope">
+              <template v-if="scope && scope.rowData">
+                <div>_.join(scope.rowData.tags, ",")</div>
+              </template>
+            </template>
+          </CccisColumn>
+          <CccisColumn field="level" label="级别" width="50px" cellClass="with-align-center"/>
+          <CccisColumn field="action" label="操作" width="50px" cellClass="with-align-left">
+            <template v-slot:default="scope">
+              <template v-if="scope && scope.rowData">
+                <div>_.join(scope.rowData.tags, ",")</div>
+              </template>
+            </template>
+          </CccisColumn>
+        </CccisTable>
         <div v-for="game in data.games" class="item cccis-flex-row" >
           <div @click="enterGame(game)">{{
               game.id + " " + game.title + " " + game.chessBoardSize + " " + game.desc + " [" + _.join(game.tags, ",") + "] " + game.level
