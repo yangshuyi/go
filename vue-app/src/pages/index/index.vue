@@ -18,5 +18,5 @@ import GameUtils from "@/pages/index/game-utils.js";
   </div>
 </template>
 
-<style src="./a.scss" lang="scss"></style>
+<style src="./index.scss" lang="scss"></style>
 

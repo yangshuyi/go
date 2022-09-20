@@ -13,8 +13,7 @@ import {
   onUnmounted
 } from 'vue';
 
-const props = defineProps({
-});
+const props = defineProps();
 
 const emits = defineEmits(['onChessStep'])
 
@@ -26,7 +25,9 @@ let domChessBoardRef = ref(null);
 let domChessBoardCanvasRef = ref(null);
 
 let data = reactive({
-  chessBoardSize: 9, //'路'
+  chessBoardSize: 11, //'路'
+  showMark: true,
+  showBoard: true,
   canvas: {
     ctx: null,
     scale: 4,
@@ -41,13 +42,16 @@ onMounted(() => { // 需要获取到element,所以是onMounted的Hook
 
 });
 
-function init(chessBoardSize) {
+function init(chessBoardSize, showMark = false, showBoard = false) {
   let chessBoardBorder = domChessBoardRef.value?.clientWidth;
+  console.log("init canvas: " + chessBoardBorder);
   if (!chessBoardBorder) {
     return;
   }
 
   data.chessBoardSize = chessBoardSize;
+  data.showMark = showMark;
+  data.showBoard = showBoard;
 
   data.canvas.padding = Math.trunc(chessBoardBorder / (data.chessBoardSize * 2));
   data.canvas.unitBorder = data.canvas.padding * 2;
@@ -108,7 +112,7 @@ function drawLine() {
  *
  */
 function drawChess(chessObj) {
-  console.log("drawChess:" + JSON.stringify(chessObj));
+  //console.log("drawChess:" + JSON.stringify(chessObj));
   if (!chessObj) {
     return;
   }
@@ -121,7 +125,7 @@ function drawChess(chessObj) {
 
   ctx.translate(x, y);
 
-  let chessRadius = data.canvas.unitBorder * 2 / 5;
+  let chessRadius = data.canvas.unitBorder * 4 / 9;
 
   ctx.fillStyle = chessObj.color;
   ctx.strokeStyle = 'black';
@@ -131,7 +135,7 @@ function drawChess(chessObj) {
   ctx.closePath();
   ctx.stroke();
 
-  if (chessObj.marked) {
+  if (data.showMark && chessObj.marked) {
     let border = chessRadius * 2 / 3;
 
     ctx.fillStyle = chessObj.markedColor;
@@ -217,23 +221,31 @@ function onCanvasClick($target) {
 </script>
 
 <template>
-  <div ref="domChessBoardRef" class="chess-board">
-    <canvas ref="domChessBoardCanvasRef" @click="onCanvasClick"></canvas>
+  <div class="chess-board" :class="{'with-board': data.showBoard==true}">
+    <div ref="domChessBoardRef" class="wrap">
+      <canvas ref="domChessBoardCanvasRef" @click="onCanvasClick"></canvas>
+    </div>
   </div>
-
 </template>
 
 <style scoped lang="scss">
 .chess-board {
-  //background-image: url(/chess-board-bg.png);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  > .wrap {
+    //background-image: url(/chess-board-bg.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  > .chess-board-canvas {
-    width: 100%;
-    height: 100%;
+    > .chess-board-canvas {
+      width: 100%;
+      height: 100%;
+    }
   }
+}
 
+.chess-board.with-board {
+  > .wrap {
+    background-image: url(/chess-board-bg.png);
+  }
 }
 </style>

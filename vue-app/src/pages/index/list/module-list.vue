@@ -6,7 +6,7 @@ import {useRoute, useRouter} from "vue-router";
 
 import Constants from "@/components/constants";
 import GameUtils from "@/pages/index/game-utils.js";
-import Game from "@/components/game.vue";
+
 
 let data = reactive({
   games: [],
@@ -24,56 +24,36 @@ async function init() {
 }
 
 function enterGame(game) {
-  router.push({name: 'game', query: {gameId: game.id}});
+  router.push({name: 'gameMobile', query: {gameId: game.id}});
 }
 
 function mgmtGame(game) {
-  router.push({name: 'mgmt', query: {gameId: game?.id}});
+  router.push({name: 'mgmtMobile', query: {gameId: game?.id}});
 }
 
 </script>
 
 <template>
-  <div>
-    <div>
-      <div @click="mgmtGame(null)">新增</div>
-      <div @click="mgmtGame(null)">新增</div>
-    </div>
-    <div class="list">
-      <div>
-        <CccisTable :gridData="data.games" class="with-column-border with-head-row-dbl-height flex-1">
-          <CccisColumn field="id" label="ID" width="50px" cellClass="with-align-center"/>
-          <CccisColumn field="book" label="书籍" width="150px" cellClass="with-align-left"/>
-          <CccisColumn field="title" label="标题" width="50px" cellClass="with-align-left"/>
-          <CccisColumn field="chessBoardSize" label="棋盘" width="50px" cellClass="with-align-center"/>
-          <CccisColumn field="tags" label="标签" width="50px" cellClass="with-align-left">
-            <template v-slot:default="scope">
-              <template v-if="scope && scope.rowData">
-                <div>_.join(scope.rowData.tags, ",")</div>
-              </template>
-            </template>
-          </CccisColumn>
-          <CccisColumn field="level" label="级别" width="50px" cellClass="with-align-center"/>
-          <CccisColumn field="action" label="操作" width="50px" cellClass="with-align-left">
-            <template v-slot:default="scope">
-              <template v-if="scope && scope.rowData">
-                <div>_.join(scope.rowData.tags, ",")</div>
-              </template>
-            </template>
-          </CccisColumn>
-        </CccisTable>
-        <div v-for="game in data.games" class="item cccis-flex-row" >
-          <div @click="enterGame(game)">{{
-              game.id + " " + game.title + " " + game.chessBoardSize + " " + game.desc + " [" + _.join(game.tags, ",") + "] " + game.level
-            }}
-          </div>
-          <div @click="mgmtGame(game)">编辑</div>
-        </div>
-      </div>
-    </div>
+  <div class="module-mgmt">
+    <van-nav-bar :fixed="true" :placeholder="true"
+        title="棋局列表"
+        right-text="新增棋局"
+        right-arrow
+        @click-right="mgmtGame(null)"
+    />
+    <van-list>
+      <template v-for="game in data.games">
+        <van-swipe-cell>
+        <van-cell :title="game.introValue" size="large" :label="game.introLabel" @click="enterGame(game)"/>
+        <template #right>
+          <van-button square type="primary" text="编辑" @click="mgmtGame"/>
+        </template>
+        </van-swipe-cell>
+      </template>
+    </van-list>
   </div>
 </template>
 
-<style scoped>
+<style>
 
 </style>

@@ -6,7 +6,7 @@ import {useRoute, useRouter} from "vue-router";
 
 import Constants from "@/components/constants";
 import GameUtils from "@/pages/index/game-utils.js";
-import Game from "@/components/game.vue";
+import GameMobile from "@/components/game-mobile.vue";
 
 let data = reactive({
   selectedGame: null,
@@ -31,21 +31,33 @@ async function goBack() {
 </script>
 
 <template>
-  <div class="">
-    <div class="cccis-flex-row">
-      <div @click="goBack" class="go-back-btn">返回</div>
+  <div class="module-game">
+    <div class="module-head">
+      <CccisButton text="返回" class="left-btn" @click="goBack"/>
+      <div class="title">{{ data.selectedGame.book+" - "+data.selectedGame.title }}</div>
     </div>
+    <div>
+      <div class="game-desc">
+        <div>描述：</div>
+        <div>{{ data.game?.desc }}</div>
+      </div>
+      <div class="game-tag-list">
+        <div>标签：</div>
+        <div v-for="tag in data.game?.tagList" class="game-tag">
+          <div>{{ tag }}</div>
+        </div>
+      </div>
+    </div>
+
     <template v-if="data.selectedGame">
-      <Game :game="data.selectedGame" style="width: 500px;"/>
+      <GameMobile :game="data.selectedGame" style="width: 500px;"/>
     </template>
   </div>
 
 </template>
 
-<style scoped>
-.go-back-btn {
-  width: fit-content;
-  background: gray;
-  padding: 10px;
+<style>
+.module-game{
+
 }
 </style>

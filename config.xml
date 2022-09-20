@@ -9,19 +9,33 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="resources/icon.png" />
     <platform name="android">
         <allow-intent href="market:*" />
+
+        <splash density="land-ldpi" src="resources/splash-screen.png"/>
+        <splash density="port-ldpi" src="resources/splash-screen.png"/>
+        <preference name="SplashScreenDelay" value="1000"/>
+        <preference name="AutoHideSplashScreen" value="true"/>
+        <preference name="FadeSplashScreen" value="false"/>
+
         <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <preference name="AndroidPersistentFileLocation" value="Internal" />
     </platform>
     <platform name="ios">
+        <splash width="375" height="812" src="resources/splash-screen.png"/>
+        <preference name="SplashScreenDelay" value="1000"/>
+        <preference name="AutoHideSplashScreen" value="true"/>
+        <preference name="FadeSplashScreen" value="false"/>
+
         <feature name="StatusBar">
             <param name="ios-package" onload="true" value="CDVStatusBar" />
         </feature>

@@ -28,6 +28,8 @@ let domChessBoardRef = ref(null);
 
 let data = reactive({
   game: null,
+  showMark: false,
+  showBoard: false,
 });
 
 watch(() => props.game, (newVal, oldVal) => {
@@ -36,11 +38,15 @@ watch(() => props.game, (newVal, oldVal) => {
 
 
 onMounted(() => { // 需要获取到element,所以是onMounted的Hook
-  init();
+  setTimeout(() => {
+    init();
+  });
 });
 
 function init() {
   data.game = props.game;
+  data.showMark = false;
+  data.showBoard = false;
 
   reset();
 }
@@ -50,7 +56,7 @@ function reset() {
   data.game.currChessList = [];
   data.game.currNextStep = data.game.nextChessType;
 
-  domChessBoardRef.value?.init(data.game.chessBoardSize);
+  domChessBoardRef.value?.init(data.game.chessBoardSize, data.showMark, data.showBoard);
 
   _.each(data.game.chessList, (chessItem) => {
     let chess = JSON.parse(JSON.stringify(chessItem));
@@ -95,11 +101,11 @@ function markLevel(level) {
   data.game.level = level;
 }
 
-function updateNextChessStep(chessType) {
-  data.game.currNextStep = chessType;
-}
-
 function onChessStep($chess) {
+  if (!data.game) {
+    return;
+  }
+
   let chess = getChessInBoardByPosition($chess.pos);
 
   if (data.game.currNextStep == Constants.CHESS_TYPE.CLEAR.value) {
@@ -157,112 +163,65 @@ function removeChessInBoardByPosition(pos) {
 
 <template>
   <div class="game">
-    <div class="game-info">
-      <div class="game-title">
-        <div>标题：</div>
-        <div>{{ data.game?.title }}</div>
-      </div>
-      <div class="game-desc">
-        <div>描述：</div>
-        <div>{{ data.game?.desc }}</div>
-      </div>
-      <div class="game-tag-list">
-        <div>标签：</div>
-        <div v-for="tag in data.game?.tagList" class="game-tag">
-          <div>{{ tag }}</div>
-        </div>
-      </div>
-      <div class="game-action-list">
-        <div>操作：</div>
-        <div v-if="data.game?.stepList.length>0" class="game-action" @click="reset();">
-          <div>还原</div>
-        </div>
-        <div v-if="data.game?.stepList.length>0" class="game-action" @click="stepBackward()">
-          <div>上一步</div>
-        </div>
-        <div class="game-action" :class="{'selected': data.game?.currNextStep=='WHITE' }"
-             @click="updateNextChessStep('WHITE')">
-          <div>白棋</div>
-        </div>
-        <div class="game-action" :class="{'selected': data.game?.currNextStep=='BLACK' }"
-             @click="updateNextChessStep('BLACK')">
-          <div>黑棋</div>
-        </div>
-        <div class="game-action" :class="{'selected': data.game?.currNextStep=='CLEAR' }"
-             @click="updateNextChessStep('CLEAR')">
-          <div>清除</div>
-        </div>
-        <div class="game-action" :class="{'selected': data.game?.level==0 }" @click="markLevel(0)">
-          <div>标记0</div>
-        </div>
-        <div class="game-action" :class="{'selected': data.game?.level==1 }" @click="markLevel(1)">
-          <div>标记1</div>
-        </div>
-      </div>
+    <div v-if="data.game" class="block">
+
+      <van-cell-group inset>
+        <van-field label="当前手">
+          <template #input>
+            <van-radio-group v-model="data.game.currNextStep" direction="horizontal" @change="">
+              <van-radio name="BLACK">黑棋</van-radio>
+              <van-radio name="WHITE">白棋</van-radio>
+              <van-radio name="CLEAR">清除</van-radio>
+            </van-radio-group>
+          </template>
+        </van-field>
+        <van-field label="展示标记">
+          <template #input>
+            <van-switch v-model="data.showMark" @change="reset"/>
+          </template>
+        </van-field>
+        <van-field label="展示棋盘">
+          <template #input>
+            <van-switch v-model="data.showBoard" @change="reset"/>
+          </template>
+        </van-field>
+      </van-cell-group>
     </div>
-    <ChessBoard ref="domChessBoardRef" @onChessStep="onChessStep"></ChessBoard>
-    <div class="debug-info">
-      <div v-for="chess in data.game?.currChessList" class="row">
-        <div>{{ JSON.stringify(chess) }}</div>
-      </div>
-    </div>
+
+    <ChessBoard ref="domChessBoardRef" @onChessStep="onChessStep" style="width:100%;"></ChessBoard>
+
+    <!--    <div class="debug-info">-->
+    <!--      <div v-for="chess in data.game?.currChessList" class="row">-->
+    <!--        <div>{{ JSON.stringify(chess) }}</div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <van-row justify="space-around">
+      <van-col span="6">
+        <van-button type="primary" plain hairline  @click="reset();" :disabled="data.game?.stepList.length==0">还原</van-button>
+      </van-col>
+      <van-col span="6">
+        <van-button type="primary" plain hairline  @click="stepBackward()" :disabled="data.game?.stepList.length==0">上一步</van-button>
+      </van-col>
+    </van-row>
+
+    <van-space>
+    </van-space>
+
   </div>
 
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .game {
-  display: flex;
-  flex-direction: column;
 
-  > .game-info {
-    .game-title, .game-desc {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      height: 30px;
+    > .chess-board {
+      padding: 5px;
+      align-self: center;
     }
 
-    .game-tag-list {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      height: 30px;
-
-      > .game-tag {
-        border: 1px solid darkgray;
-        margin-right: 20px;
-        padding: 0px 10px;
-      }
-    }
-
-    .game-action-list {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      height: 30px;
-
-      > .game-action {
-        border: 1px solid darkgray;
-        margin-right: 10px;
-        padding: 0px 10px;
-
-        &.selected {
-          background: black;
-          color: white;
-        }
-      }
-
+    > .debug-info {
+      font-size: 12px;
     }
   }
-
-  > .chess-board {
-    padding: 20px;
-    align-self: center;
-  }
-
-  > .debug-info {
-    font-size: 12px;
-  }
-}
 </style>

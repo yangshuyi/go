@@ -7,7 +7,7 @@ const routes = [
         path: "/index",
         name: "index",
         component: async () => {
-            return import("@/pages/index/Index.vue");
+            return import("@/pages/index/index.vue");
         },
         children: [
             {
@@ -16,14 +16,24 @@ const routes = [
                 component: () => import('@/pages/index/list/module-list.vue'),
             },
             {
-                path: 'mgmt',
-                name: 'mgmt',
-                component: () => import('@/pages/index/mgmt/module-mgmt.vue'),
+                path: 'mgmtMobile',
+                name: 'mgmtMobile',
+                component: () => import('@/pages/index/mgmt/module-mgmt-mobile.vue'),
             },
             {
-                path: 'game',
-                name: 'game',
-                component: () => import('@/pages/index/game/module-game.vue'),
+                path: 'gameMobile',
+                name: 'gameMobile',
+                component: () => import('@/pages/index/game/module-game-mobile.vue'),
+            },
+            {
+                path: 'mgmtPc',
+                name: 'mgmtPc',
+                component: () => import('@/pages/index/mgmt/module-mgmt-pc.vue'),
+            },
+            {
+                path: 'gamePc',
+                name: 'gamePc',
+                component: () => import('@/pages/index/game/module-game-pc.vue'),
             },
         ]
     }

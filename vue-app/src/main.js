@@ -1,4 +1,3 @@
-console.log("hello");
 import * as Vue from 'vue';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
@@ -8,6 +7,8 @@ import CccisVue3Common from '@cccis/vue3-common';
 import {CccisCfgUtils} from '@cccis/vue3-common';
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 
+import { Button, NavBar,List, Cell, SwipeCell,Field, CellGroup, Tag, Switch,RadioGroup, Radio,Space,Row,Col    } from 'vant';
+
 axios.defaults.baseURL = import.meta.env.VITE_APP_AXIOS_BASE_URL;
 axios.defaults.withCredentials=true;
 
@@ -15,6 +16,9 @@ const app = Vue.createApp(App);
 app.use(VueAxios, axios);
 app.use(router);
 app.use(CccisVue3Common);
+
+import 'vant/lib/index.css';
+app.use(Button).use(NavBar).use(List).use(Cell).use(SwipeCell).use(Field).use(Tag).use(CellGroup).use(Switch).use(RadioGroup).use(Radio).use(Space).use(Row).use(Col);
 
 app.provide('axios', app.config.globalProperties.axios);
 app.mount('#app')
