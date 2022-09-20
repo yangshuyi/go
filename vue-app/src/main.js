@@ -3,8 +3,8 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import App from './App.vue';
 import router from './route';
-import CccisVue3Common from '@cccis/vue3-common';
-import {CccisCfgUtils} from '@cccis/vue3-common';
+import CccisVue3Common, {CccisCfgUtils, CccisLoggerUtils} from '@cccis/vue3-common';
+
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 
 import { Button, NavBar,List, Cell, SwipeCell,Field, CellGroup, Tag, Switch,RadioGroup, Radio,Space,Row,Col    } from 'vant';
@@ -29,6 +29,9 @@ CccisCfgUtils.appInfo.appName = 'GO';
 
 CccisCfgUtils.ajax.sessionEnabled = false; //是否启用Session用户认证
 CccisCfgUtils.ajax.jwtEnabled = false; //是否启用JWT用户认证
+
+CccisLoggerUtils.init(null, "DEBUG", "BATCH");
+
 
 
 

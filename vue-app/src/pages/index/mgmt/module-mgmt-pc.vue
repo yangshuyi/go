@@ -14,7 +14,7 @@ let data = reactive({
     id: '',
     book: '',
     title: '',
-    chessBoardSize: 9,
+    chessBoardSize: 11,
     desc: '',
     tags: '',
     level: 1,
@@ -59,7 +59,7 @@ async function init() {
     data.field.id = new Date().getTime() + "";
   }
 
-  domChessBoardRef.value?.init(data.field.chessBoardSize);
+  domChessBoardRef.value?.init(data.field.chessBoardSize, true, false);
   _.each(data.field.chessList, (item) => {
     domChessBoardRef.value?.drawChess(item);
   });
@@ -84,7 +84,7 @@ async function save() {
       return;
     }
   }
-
+  game.book = data.field.book;
   game.title = data.field.title;
   game.chessBoardSize = data.field.chessBoardSize;
   game.desc = data.field.desc;
@@ -97,7 +97,7 @@ async function save() {
 }
 
 function afterChessBoardSizeChanged() {
-  domChessBoardRef.value?.init(data.field.chessBoardSize);
+  domChessBoardRef.value?.init(data.field.chessBoardSize, true, false);
   _.each(data.field.chessList, (item) => {
     domChessBoardRef.value?.drawChess(item);
   });
@@ -200,7 +200,7 @@ function removeChessInBoardByPosition(pos) {
           <CccisToggleSingleButton v-model:value="data.chessType" :optionList="data.optionList.nextChessTypeOptions"/>
         </CccisLabelField>
         <CccisLabelField caption="" style="width: 300px;">
-          <CccisCheckboxField v-model:value="data.marked" caption="标记" valueType="0"/>
+          <CccisCheckboxField v-model:value="data.marked" caption="标记" valueType="1"/>
         </CccisLabelField>
       </div>
     </div>

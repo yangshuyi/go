@@ -15,7 +15,8 @@ export default {
     },
 
     loadGameData: function () {
-        let gameList = CccisAxiosUtils.getData("https://ipa.cccdrp.cn/dms/sit/data.json");
+        let timestamp = new Date().getTime();
+        let gameList = CccisAxiosUtils.getData(`https://ipa.cccdrp.cn/dms/sit/data.json?_t=${timestamp}`);
         return gameList;
     }
 

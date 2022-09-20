@@ -15,6 +15,7 @@ import {
 
 import _ from 'lodash';
 import Constants from "@/components/constants";
+import stylusPluginManager from "@/cordova-plugins/stylus/stylus-plugin-manager";
 import ChessBoard from "@/components/chess-board.vue";
 
 const props = defineProps({
@@ -38,6 +39,7 @@ watch(() => props.game, (newVal, oldVal) => {
 
 
 onMounted(() => { // 需要获取到element,所以是onMounted的Hook
+  stylusPluginManager.init();
   setTimeout(() => {
     init();
   });
