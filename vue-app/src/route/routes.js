@@ -16,24 +16,14 @@ const routes = [
                 component: () => import('@/pages/index/list/module-list.vue'),
             },
             {
-                path: 'mgmtMobile',
-                name: 'mgmtMobile',
-                component: () => import('@/pages/index/mgmt/module-mgmt-mobile.vue'),
+                path: 'mgmt',
+                name: 'mgmt',
+                component: () => import('@/pages/index/mgmt/module-mgmt.vue'),
             },
             {
-                path: 'gameMobile',
-                name: 'gameMobile',
-                component: () => import('@/pages/index/game/module-game-mobile.vue'),
-            },
-            {
-                path: 'mgmtPc',
-                name: 'mgmtPc',
-                component: () => import('@/pages/index/mgmt/module-mgmt-pc.vue'),
-            },
-            {
-                path: 'gamePc',
-                name: 'gamePc',
-                component: () => import('@/pages/index/game/module-game-pc.vue'),
+                path: 'game',
+                name: 'game',
+                component: () => import('@/pages/index/game/module-game.vue'),
             },
         ]
     }

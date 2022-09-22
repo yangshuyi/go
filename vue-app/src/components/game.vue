@@ -165,65 +165,70 @@ function removeChessInBoardByPosition(pos) {
 
 <template>
   <div class="game">
-    <div v-if="data.game" class="block">
-
-      <van-cell-group inset>
-        <van-field label="当前手">
-          <template #input>
-            <van-radio-group v-model="data.game.currNextStep" direction="horizontal" @change="">
-              <van-radio name="BLACK">黑棋</van-radio>
-              <van-radio name="WHITE">白棋</van-radio>
-              <van-radio name="CLEAR">清除</van-radio>
-            </van-radio-group>
-          </template>
-        </van-field>
-        <van-field label="展示标记">
-          <template #input>
-            <van-switch v-model="data.showMark" @change="reset"/>
-          </template>
-        </van-field>
-        <van-field label="展示棋盘">
-          <template #input>
-            <van-switch v-model="data.showBoard" @change="reset"/>
-          </template>
-        </van-field>
-      </van-cell-group>
-    </div>
+    <van-cell-group inset v-if="data.game" class="control-section">
+      <van-field label="当前手" center>
+        <template #input>
+          <van-radio-group v-model="data.game.currNextStep" direction="horizontal" @change="">
+            <van-radio name="BLACK">黑棋</van-radio>
+            <van-radio name="WHITE">白棋</van-radio>
+            <van-radio name="CLEAR">清除</van-radio>
+          </van-radio-group>
+        </template>
+      </van-field>
+      <van-field label="展示标记" center>
+        <template #input>
+          <van-switch v-model="data.showMark" @change="reset"/>
+        </template>
+      </van-field>
+      <van-field label="展示棋盘" center>
+        <template #input>
+          <van-switch v-model="data.showBoard" @change="reset"/>
+        </template>
+      </van-field>
+    </van-cell-group>
 
     <ChessBoard ref="domChessBoardRef" @onChessStep="onChessStep" style="width:100%;"></ChessBoard>
 
-    <!--    <div class="debug-info">-->
-    <!--      <div v-for="chess in data.game?.currChessList" class="row">-->
-    <!--        <div>{{ JSON.stringify(chess) }}</div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-
-    <van-row justify="space-around">
+    <van-row justify="space-around" class="action-section">
       <van-col span="6">
-        <van-button type="primary" plain hairline  @click="reset();" :disabled="data.game?.stepList.length==0">还原</van-button>
+        <van-button type="primary" plain hairline @click="reset();" :disabled="data.game?.stepList.length==0">还原</van-button>
       </van-col>
       <van-col span="6">
-        <van-button type="primary" plain hairline  @click="stepBackward()" :disabled="data.game?.stepList.length==0">上一步</van-button>
+        <van-button type="primary" plain hairline @click="stepBackward()" :disabled="data.game?.stepList.length==0">上一步</van-button>
       </van-col>
     </van-row>
 
-    <van-space>
-    </van-space>
-
+<!--    <div class="debug-info-section">-->
+<!--      <div v-for="chess in data.game?.currChessList" class="row">-->
+<!--        <div>{{ JSON.stringify(chess) }}</div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 
 </template>
 
 <style lang="scss">
 .game {
-
-    > .chess-board {
-      padding: 5px;
-      align-self: center;
-    }
-
-    > .debug-info {
-      font-size: 12px;
+  > .control-section {
+    .van-cell {
+      height: 52px;
     }
   }
+
+  > .chess-board {
+    align-self: center;
+  }
+
+  > .action-section {
+    margin-top: var(--van-cell-vertical-padding);
+
+    .van-button {
+      width: 100px;
+    }
+  }
+
+  > .debug-info {
+    font-size: 12px;
+  }
+}
 </style>

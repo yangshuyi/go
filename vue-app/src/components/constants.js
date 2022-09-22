@@ -16,11 +16,11 @@ export default {
         {text: '17路', value: 17},
         {text: '19路', value: 19}
     ],
-    LEVEL_OPTIONS: [
-        {text: '0', value: 0},
-        {text: '1', value: 1},
-        {text: '2', value: 2},
-        {text: '3', value: 3}
-    ],
+    LEVEL_OPTIONS: {
+        "0": {value: "0", text: '通过', icon: 'passed', iconColor: 'green'},
+        "1": {value: "1", text: '巩固', icon: 'warning-o', iconColor: 'red'},
+        "2": {value: "2", text: '错误', icon: 'close', iconColor: 'red'},
+        "3":  {value: "3", text: '新题', icon: 'question-o', iconColor: 'black'},
+    },
     BOOK_LIST: ['手筋专项训练：从入门到10级', '快乐学围棋1', '快乐学围棋2', '快乐学围棋3'],
 };

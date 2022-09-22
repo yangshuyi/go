@@ -48,6 +48,11 @@ $table-head-row-text-color: black,
 
 @import "../../../node_modules/@cccis/vue3-common/src/packages/scss/index.scss";
 
+:root {
+  --van-toast-default-width: 70%;
+  --van-toast-text-min-width: 70%;
+}
+
 ul {
   margin: 0px;
 }
