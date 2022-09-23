@@ -59,6 +59,10 @@ function mgmtGame() {
   router.push({name: 'mgmt', query: {gameId: data.selectedGame.id}});
 }
 
+function toggleHardFlag(){
+  data.selectedGame.hardFlag = !data.selectedGame.hardFlag;
+}
+
 </script>
 
 <template>
@@ -97,6 +101,7 @@ function mgmtGame() {
           <template v-for="levelOption in data.levelOptions">
             <van-action-bar-icon :icon="levelOption.icon" :text="levelOption.text" :color="levelOption.iconColor" @click="updateGameLevel(levelOption)"/>
           </template>
+          <van-action-bar-icon icon="star" text="难题" :color="data.selectedGame.hardFlag==true?'black':'lightgray'" @click="toggleHardFlag()"/>
           <van-action-bar-icon icon="edit" text="编辑" color="black" @click="mgmtGame"/>
         </van-row>
       </van-action-bar>

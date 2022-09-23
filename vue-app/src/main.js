@@ -7,7 +7,7 @@ import CccisVue3Common, {CccisCfgUtils, CccisLoggerUtils} from '@cccis/vue3-comm
 
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 
-import {Picker, Popup, ActionBar, ActionBarIcon, ActionBarButton,  Icon, Toast , Button, NavBar,List, Cell, SwipeCell,Field, CellGroup, Tag, Switch,RadioGroup, Radio,Space,Row,Col    } from 'vant';
+import {Collapse, CollapseItem , Picker, Popup, ActionBar, ActionBarIcon, ActionBarButton,  Icon, Toast , Button, NavBar,List, Cell, SwipeCell,Field, CellGroup, Tag, Switch,RadioGroup, Radio,Space,Row,Col    } from 'vant';
 
 axios.defaults.baseURL = import.meta.env.VITE_APP_AXIOS_BASE_URL;
 axios.defaults.withCredentials=true;
@@ -18,7 +18,7 @@ app.use(router);
 app.use(CccisVue3Common);
 
 import 'vant/lib/index.css';
-app.use(Picker).use(Popup).use(Icon).use(Toast).use(Button).use(NavBar).use(List).use(Cell).use(SwipeCell).use(Field).use(Tag).use(CellGroup).use(Switch).use(RadioGroup).use(Radio).use(Space).use(Row).use(Col);
+app.use(Collapse).use(CollapseItem).use(Picker).use(Popup).use(Icon).use(Toast).use(Button).use(NavBar).use(List).use(Cell).use(SwipeCell).use(Field).use(Tag).use(CellGroup).use(Switch).use(RadioGroup).use(Radio).use(Space).use(Row).use(Col);
 app.use(ActionBar);
 app.use(ActionBarIcon);
 app.use(ActionBarButton);

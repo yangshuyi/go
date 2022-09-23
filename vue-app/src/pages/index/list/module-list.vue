@@ -10,6 +10,10 @@ import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 import {Toast} from 'vant';
 
 let data = reactive({
+  showFilterPanel: [],
+  filter: {
+    onlyHardFlag: false,
+  },
   games: [],
 });
 
@@ -18,6 +22,10 @@ let route = useRoute();
 
 onMounted(async () => {
   data.games = GameUtils.fetchAllGames();
+});
+
+watch(data.filter,()=>{
+  loadGameList();
 });
 
 async function downloadData() {
@@ -47,7 +55,12 @@ async function loadData() {
   Toast({message: message, position: 'bottom'});
 
   GameUtils.init(gameList);
-  data.games = GameUtils.fetchAllGames();
+
+  loadGameList();
+}
+
+function loadGameList(){
+  data.games = GameUtils.fetchAllGames(data.filter);
 }
 
 function enterGame(game) {
@@ -66,7 +79,18 @@ function mgmtGame(game) {
                  title="棋局列表"
                  right-text="新增棋局" right-arrow @click-right="mgmtGame(null)"
     />
-    <van-list>
+    <van-collapse v-model="data.showFilterPanel" class="filter-panel">
+      <van-collapse-item title="列表过滤面板" name="1" :border="false">
+        <van-cell-group inset>
+          <van-field label="仅展示难题" input-align="right">
+            <template #input>
+              <van-switch v-model="data.filter.onlyHardFlag"/>
+            </template>
+          </van-field>
+        </van-cell-group>
+      </van-collapse-item>
+    </van-collapse>
+    <van-list class="game-list">
       <template v-for="game in data.games">
         <van-swipe-cell>
           <van-cell center size="large"
@@ -74,6 +98,9 @@ function mgmtGame(game) {
                     @click="enterGame(game)">
             <template #icon>
               <van-icon :name="game.levelIcon" :color="game.levelIconColor" size="22px"/>
+            </template>
+            <template #right-icon>
+              <van-icon v-if="game.hardFlag==true" name="star" color="black" size="22px"/>
             </template>
           </van-cell>
           <template #right>
@@ -94,19 +121,28 @@ function mgmtGame(game) {
 
 <style lang="scss">
 
-.van-cell {
-  > .van-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: var(--van-cell-horizontal-padding);
+.filter-panel {
+  border: 1px solid #F0F0F0;
+  .van-collapse-item {
+    > .van-cell {
+      background-color: #F0F0F0;
+    }
   }
 }
 
-.van-swipe-cell__right {
+.game-list {
+  .van-cell {
+    > .van-cell__title {
+      padding-left: var(--van-cell-horizontal-padding);
+    }
+  }
 
-  > .van-button {
-    height: inherit;
+  .van-swipe-cell__right {
+    > .van-button {
+      height: inherit;
+    }
   }
 }
+
+
 </style>

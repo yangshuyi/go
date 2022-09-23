@@ -28,13 +28,31 @@ function buildGame(game) {
     game.levelIcon = gameLevel.icon;
     game.levelIconColor = gameLevel.iconColor;
 
+    if(game.hardFlag == null) {
+        game.hardFlag = false;
+    }
+
     game.modifyDateText = dayjs(game.modifyDate).format('YYYY-MM-DD');
     game.introValue = "《" + game.book + "》" + game.title;
     game.introLabel = game.modifyDateText + "　　" + game.chessBoardSizeText + "　　" + game.tagsText;
 }
 
-function fetchAllGames() {
-    return GAME_LIST;
+function fetchAllGames(filterParams) {
+    let gameList = [];
+    if (filterParams) {
+        _.each(GAME_LIST, (game) => {
+            if (filterParams.onlyHardFlag == true) {
+                if (game.hardFlag != true) {
+                    return;
+                }
+            }
+
+            gameList.push(game);
+        })
+    } else {
+        gameList = GAME_LIST;
+    }
+    return gameList;
 }
 
 function fetchNextGame(currGameId) {
