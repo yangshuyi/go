@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import Constants from "@/components/Constants";
 
-import {CccisAxiosUtils} from '@cccis/vue3-common';
+import {CccisAxiosUtils, CccisLoggerUtils} from '@cccis/vue3-common';
 import RESULT from "@cccis/vue3-common";
 import handlerError from "@cccis/vue3-common";
 
@@ -31,6 +31,8 @@ export default {
         if (data == null) {
             return null;
         }
+
+        CccisLoggerUtils.debug(data.value);
 
         if (data.value) {
             data.valueObj = JSON.parse(data.value);
