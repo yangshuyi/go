@@ -107,7 +107,7 @@ async function save() {
   game.title = data.field.title;
   game.chessBoardSize = data.field.chessBoardSize;
   game.desc = data.field.desc;
-  if (data.field.tagsText) {
+  if (!data.field.tagsText) {
     game.tags = [];
   } else {
     game.tags = _.split(data.field.tagsText, ",");
@@ -134,6 +134,12 @@ function afterChessBoardSizeChanged() {
   });
 }
 
+function afterChessTypeChanged(){
+  if(data.marked){
+    data.marked = false;
+  }
+}
+
 function onChessStep($chess) {
   let chess = getChessInBoardByPosition($chess.pos);
 
@@ -149,7 +155,14 @@ function onChessStep($chess) {
     return;
   } else {
     if (chess) {
-      //棋盘上有棋子
+      //棋盘上有棋子，检查是不是仅进行标记
+      if(chess.color == Constants.CHESS_TYPE[data.chessType].color){
+        if(chess.marked != data.marked){
+          //仅对当前棋子进行标记
+          chess.marked = data.marked;
+          domChessBoardRef.value?.drawChess(chess);
+        }
+      }
     } else {
       //棋盘上没有棋子
 
@@ -230,7 +243,8 @@ function removeChessInBoardByPosition(pos) {
         <van-field label="操作" input-align="right">
           <template #input>
             <div>
-              <CccisToggleSingleButton v-model:value="data.chessType" :optionList="data.optionList.nextChessTypeOptions"/>
+              <CccisToggleSingleButton v-model:value="data.chessType" :optionList="data.optionList.nextChessTypeOptions"
+                                       @afterOptionSelected="afterChessTypeChanged()"/>
             </div>
           </template>
         </van-field>
@@ -287,7 +301,7 @@ function removeChessInBoardByPosition(pos) {
         <div class="cccis-flex-row cccis-row">
           <CccisLabelField caption="操作" style="width: 300px;">
             <div></div>
-            <CccisToggleSingleButton v-model:value="data.chessType" :optionList="data.optionList.nextChessTypeOptions"/>
+            <CccisToggleSingleButton v-model:value="data.chessType" :optionList="data.optionList.nextChessTypeOptions" @afterOptionSelected="afterChessTypeChanged()"/>
           </CccisLabelField>
           <CccisLabelField caption="" style="width: 300px;">
             <CccisCheckboxField v-model:value="data.marked" caption="标记" valueType="1"/>

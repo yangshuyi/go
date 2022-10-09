@@ -185,7 +185,7 @@ function clearChess(chessObj) {
   if (chessObj.pos.x == 0) {
     ctx.moveTo(0, 0);
     ctx.lineTo(data.canvas.unitBorder / 2, 0);
-  } else if (chessObj.pos.x == data.chessBoardSize) {
+  } else if (chessObj.pos.x == (data.chessBoardSize - 1)) {
     ctx.moveTo(-data.canvas.unitBorder / 2, 0);
     ctx.lineTo(0, 0);
   } else {
@@ -198,7 +198,7 @@ function clearChess(chessObj) {
   if (chessObj.pos.y == 0) {
     ctx.moveTo(0, 0);
     ctx.lineTo(0, data.canvas.unitBorder / 2);
-  } else if (chessObj.pos.y == data.chessBoardSize) {
+  } else if (chessObj.pos.y == (data.chessBoardSize - 1)) {
     ctx.moveTo(0, -data.canvas.unitBorder / 2);
     ctx.lineTo(0, 0);
   } else {

@@ -22,5 +22,5 @@ export default {
         "2": {value: "2", text: '错误', icon: 'close', iconColor: 'red'},
         "3":  {value: "3", text: '新题', icon: 'question-o', iconColor: 'black'},
     },
-    BOOK_LIST: ['手筋专项训练：从入门到10级', '快乐学围棋1', '快乐学围棋2', '快乐学围棋3'],
+    BOOK_LIST: ['手筋专项训练：从入门到10级', '快乐学围棋1', '快乐学围棋2', '快乐学围棋3', '弈学院上课练习', '弈学院三步计算力'],
 };
