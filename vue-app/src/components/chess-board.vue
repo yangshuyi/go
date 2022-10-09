@@ -13,6 +13,9 @@ import {
   onUnmounted
 } from 'vue';
 
+import _ from 'lodash';
+import Constants from "@/components/constants";
+
 const props = defineProps();
 
 const emits = defineEmits(['onChessStep'])
@@ -34,7 +37,7 @@ let data = reactive({
     boardBorder: 0, //棋盘边长
     unitBorder: 0, //格子边长
     padding: 0, //棋盘边距
-  }
+  },
 });
 
 
@@ -53,9 +56,14 @@ function init(chessBoardSize, showMark = false, showBoard = false) {
   data.showMark = showMark;
   data.showBoard = showBoard;
 
-  data.canvas.padding = Math.trunc(chessBoardBorder / (data.chessBoardSize * 2));
-  data.canvas.unitBorder = data.canvas.padding * 2;
-  data.canvas.boardBorder = data.canvas.unitBorder * data.chessBoardSize;
+  let unit = Math.trunc(chessBoardBorder / (data.chessBoardSize + 1) * 2); //padding为unitBorder的1/2
+  if (unit > 25) {
+    unit = 25;
+  }
+  data.canvas.unitBorder = unit * 2;
+  data.canvas.padding = unit * 2;
+  console.log("data.canvas.padding:" + data.canvas.padding);
+  data.canvas.boardBorder = data.canvas.padding * 2 + data.canvas.unitBorder * (data.chessBoardSize - 1);
 
   domChessBoardCanvasRef.value.width = data.canvas.boardBorder * data.canvas.scale;
   domChessBoardCanvasRef.value.height = data.canvas.boardBorder * data.canvas.scale;
@@ -76,7 +84,18 @@ function drawCanvas() {
 
   ctx.scale(data.canvas.scale, data.canvas.scale);
 
+  drawPadding();
   drawLine(ctx);
+}
+
+function drawPadding() {
+  let ctx = data.canvas.ctx;
+  ctx.save();
+
+  ctx.strokeStyle = "red";
+  ctx.fillStyle = "yellow";
+
+  ctx.restore();
 }
 
 function drawLine() {
@@ -84,12 +103,25 @@ function drawLine() {
   ctx.save();
 
   ctx.strokeStyle = "black";
-  for (let rowIdx = 0; rowIdx <= data.chessBoardSize; rowIdx++) {
-    ctx.moveTo(data.canvas.padding + data.canvas.unitBorder * rowIdx, data.canvas.padding);
-    ctx.lineTo(data.canvas.padding + data.canvas.unitBorder * rowIdx, data.canvas.boardBorder - data.canvas.padding);
+  ctx.fillStyle = "black";
+  ctx.textAlign = 'center';
+  ctx.textBaseline = "middle";
+  ctx.font = 'normal bold 20px Arial'
+
+  let labelArray = _.get(_.find(Constants.CHESS_BOARD_SIZE_OPTIONS, {value:data.chessBoardSize}), 'label');
+  //竖线
+  for (let colIdx = 0; colIdx < data.chessBoardSize; colIdx++) {
+    ctx.fillText(labelArray[colIdx].column2, data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.padding / 4);
+
+    ctx.moveTo(data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.padding);
+    ctx.lineTo(data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.boardBorder - data.canvas.padding);
     ctx.stroke();
+
   }
-  for (let rowIdx = 0; rowIdx <= data.chessBoardSize; rowIdx++) {
+  //横线
+  for (let rowIdx = 0; rowIdx < data.chessBoardSize; rowIdx++) {
+    ctx.fillText(labelArray[rowIdx].row2, data.canvas.padding / 4, data.canvas.padding + data.canvas.unitBorder * rowIdx);
+
     ctx.moveTo(data.canvas.padding, data.canvas.padding + data.canvas.unitBorder * rowIdx);
     ctx.lineTo(data.canvas.boardBorder - data.canvas.padding, data.canvas.padding + data.canvas.unitBorder * rowIdx);
     ctx.stroke();
