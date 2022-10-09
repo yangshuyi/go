@@ -1,5 +1,5413 @@
 [
   {
+    "id": "1664031819784",
+    "book": "快乐学围棋1",
+    "title": "203",
+    "chessBoardSize": 11,
+    "desc": "门吃",
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "通过",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋1》203",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 0
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1664031811578",
+    "book": "快乐学围棋1",
+    "title": "201",
+    "chessBoardSize": 11,
+    "desc": "门吃",
+    "tags": [
+      ""
+    ],
+    "level": "2",
+    "nextChessType": "BLACK",
+    "chessList": [],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "错误",
+    "levelIcon": "close",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋1》201",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1664031687223",
+    "book": "快乐学围棋1",
+    "title": "201",
+    "chessBoardSize": 11,
+    "desc": "门吃",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 0,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 0,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "错误",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋1》201",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 0,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 0,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663999297380",
+    "book": "快乐学围棋3",
+    "title": "50-4",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 4
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》50-4",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 4
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663999249657",
+    "book": "快乐学围棋3",
+    "title": "47-14",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 9,
+          "y": 8
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》47-14",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 9,
+          "y": 8
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663999215098",
+    "book": "快乐学围棋3",
+    "title": "46-13",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-13",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663999179159",
+    "book": "快乐学围棋3",
+    "title": "46-12",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-12",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663999132699",
+    "book": "快乐学围棋3",
+    "title": "46-11",
+    "chessBoardSize": 11,
+    "desc": "双",
+    "tags": [
+      ""
+    ],
+    "level": "2",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "close",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-11",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 0,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663999080297",
+    "book": "快乐学围棋3",
+    "title": "46-10",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-10",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1663999044827",
+    "book": "快乐学围棋3",
+    "title": "46-9",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-9",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1663999011930",
+    "book": "快乐学围棋3",
+    "title": "46-8",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-8",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663998910039",
+    "book": "快乐学围棋3",
+    "title": "46-7",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-7",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663998401315",
+    "book": "快乐学围棋3",
+    "title": "46-6",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-6",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663998341992",
+    "book": "快乐学围棋3",
+    "title": "46-1",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 4
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》46-1",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1663998287383",
+    "book": "快乐学围棋3",
+    "title": "44-4",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 0,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》44-4",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 0,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663998234691",
+    "book": "快乐学围棋3",
+    "title": "44-3",
+    "chessBoardSize": 11,
+    "desc": "双",
+    "tags": [
+      ""
+    ],
+    "level": "2",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 5
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "close",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》44-3",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 5
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663998181701",
+    "book": "快乐学围棋3",
+    "title": "44-2",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》44-2",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1663998138276",
+    "book": "快乐学围棋3",
+    "title": "44-1",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》44-1",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1663998063369",
+    "book": "快乐学围棋3",
+    "title": "44-5",
+    "chessBoardSize": 11,
+    "desc": "黑棋可以断么",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 9,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 9,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 9,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 3
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》44-5",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1663998011138",
+    "book": "快乐学围棋3",
+    "title": "43-2",
+    "chessBoardSize": 11,
+    "desc": "双",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 9,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 9,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 4
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》43-2",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1663997989069",
+    "book": "快乐学围棋3",
+    "title": "43-1",
+    "chessBoardSize": 11,
+    "desc": "虎",
+    "tags": [
+      ""
+    ],
+    "level": "0",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《快乐学围棋3》43-1",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 2
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
     "id": "1663594772599",
     "book": "手筋专项训练：从入门到10级",
     "title": "499",
@@ -160,9 +5568,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》499",
-    "introLabel": "2022-09-23　　11路　　制造倒扑",
+    "introLabel": "2022-10-09　　11路　　制造倒扑",
     "hardFlag": false
   },
   {
@@ -359,9 +5767,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》500",
-    "introLabel": "2022-09-23　　11路　　制造倒扑",
+    "introLabel": "2022-10-09　　11路　　制造倒扑",
     "stepList": [
       {
         "action": "add",
@@ -685,7 +6093,7 @@
     "tags": [
       "制造倒扑"
     ],
-    "level": "1",
+    "level": "0",
     "nextChessType": "BLACK",
     "chessList": [
       {
@@ -890,12 +6298,214 @@
     "chessBoardSizeText": "11路",
     "tagsText": "制造倒扑",
     "levelText": "巩固",
-    "levelIcon": "warning-o",
-    "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》501",
-    "introLabel": "2022-09-23　　11路　　制造倒扑",
-    "hardFlag": false
+    "introLabel": "2022-10-09　　11路　　制造倒扑",
+    "hardFlag": false,
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 8
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
   },
   {
     "id": "1663595153564",
@@ -1113,9 +6723,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》502",
-    "introLabel": "2022-09-23　　11路　　制造倒扑",
+    "introLabel": "2022-10-09　　11路　　制造倒扑",
     "hardFlag": false
   },
   {
@@ -1378,9 +6988,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》503",
-    "introLabel": "2022-09-23　　11路　　制造倒扑",
+    "introLabel": "2022-10-09　　11路　　制造倒扑",
     "hardFlag": false
   },
   {
@@ -1632,9 +7242,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》504",
-    "introLabel": "2022-09-23　　11路　　制造倒扑",
+    "introLabel": "2022-10-09　　11路　　制造倒扑",
     "hardFlag": false
   },
   {
@@ -1809,9 +7419,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《手筋专项训练：从入门到10级》505",
-    "introLabel": "2022-09-23　　11路　　接不归",
+    "introLabel": "2022-10-09　　11路　　接不归",
     "hardFlag": false
   },
   {
@@ -1950,9 +7560,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》9-1",
-    "introLabel": "2022-09-23　　11路　　",
+    "introLabel": "2022-10-09　　11路　　",
     "hardFlag": false
   },
   {
@@ -2156,9 +7766,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》9-2",
-    "introLabel": "2022-09-23　　11路　　",
+    "introLabel": "2022-10-09　　11路　　",
     "hardFlag": false
   },
   {
@@ -2282,9 +7892,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》9-3",
-    "introLabel": "2022-09-23　　11路　　",
+    "introLabel": "2022-10-09　　11路　　",
     "hardFlag": false,
     "stepList": [],
     "currChessList": [
@@ -2588,9 +8198,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》11-5",
-    "introLabel": "2022-09-23　　11路　　",
+    "introLabel": "2022-10-09　　11路　　",
     "hardFlag": false
   },
   {
@@ -2776,9 +8386,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》23-5",
-    "introLabel": "2022-09-23　　11路　　逃子",
+    "introLabel": "2022-10-09　　11路　　逃子",
     "hardFlag": false
   },
   {
@@ -2790,7 +8400,7 @@
     "tags": [
       "逃子"
     ],
-    "level": "1",
+    "level": "0",
     "nextChessType": "BLACK",
     "chessList": [
       {
@@ -2929,12 +8539,148 @@
     "chessBoardSizeText": "11路",
     "tagsText": "逃子",
     "levelText": "巩固",
-    "levelIcon": "warning-o",
-    "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "levelIcon": "passed",
+    "levelIconColor": "green",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》23-6",
-    "introLabel": "2022-09-23　　11路　　逃子",
-    "hardFlag": false
+    "introLabel": "2022-10-09　　11路　　逃子",
+    "hardFlag": false,
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
   },
   {
     "id": "1663682306556",
@@ -3075,9 +8821,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》23-7",
-    "introLabel": "2022-09-23　　11路　　逃子，错误",
+    "introLabel": "2022-10-09　　11路　　逃子，错误",
     "stepList": [],
     "currChessList": [
       {
@@ -3399,10 +9145,190 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》23-10",
-    "introLabel": "2022-09-23　　11路　　逃子",
-    "hardFlag": false
+    "introLabel": "2022-10-09　　11路　　逃子",
+    "hardFlag": false,
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 4
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
   },
   {
     "id": "1663682640670",
@@ -3653,10 +9579,245 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》24-12",
-    "introLabel": "2022-09-23　　11路　　对杀",
-    "hardFlag": false
+    "introLabel": "2022-10-09　　11路　　对杀",
+    "hardFlag": false,
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 9,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
   },
   {
     "id": "1663682738885",
@@ -3784,9 +9945,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》24-13",
-    "introLabel": "2022-09-23　　11路　　",
+    "introLabel": "2022-10-09　　11路　　",
     "stepList": [],
     "currChessList": [
       {
@@ -4031,137 +10192,10 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》27-3",
-    "introLabel": "2022-09-23　　11路　　错误",
-    "stepList": [
-      {
-        "action": "add",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": 1,
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 5,
-            "y": 9
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "white",
-          "fixed": false,
-          "caption": 2,
-          "marked": false,
-          "markedColor": "black",
-          "pos": {
-            "x": 3,
-            "y": 10
-          }
-        }
-      },
-      {
-        "action": "remove",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": "",
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 3,
-            "y": 9
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": 3,
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 6,
-            "y": 8
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "white",
-          "fixed": false,
-          "caption": 4,
-          "marked": false,
-          "markedColor": "black",
-          "pos": {
-            "x": 5,
-            "y": 7
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": 5,
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 5,
-            "y": 6
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "white",
-          "fixed": false,
-          "caption": 6,
-          "marked": false,
-          "markedColor": "black",
-          "pos": {
-            "x": 6,
-            "y": 7
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": 7,
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 7,
-            "y": 7
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "white",
-          "fixed": false,
-          "caption": 8,
-          "marked": false,
-          "markedColor": "black",
-          "pos": {
-            "x": 6,
-            "y": 6
-          }
-        }
-      }
-    ],
+    "introLabel": "2022-10-09　　11路　　错误",
+    "stepList": [],
     "currChessList": [
       {
         "color": "white",
@@ -4225,6 +10259,17 @@
         "marked": false,
         "markedColor": "white",
         "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
           "x": 4,
           "y": 8
         }
@@ -4260,94 +10305,6 @@
         "pos": {
           "x": 2,
           "y": 7
-        }
-      },
-      {
-        "color": "black",
-        "fixed": false,
-        "caption": 1,
-        "marked": false,
-        "markedColor": "white",
-        "pos": {
-          "x": 5,
-          "y": 9
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": 2,
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 10
-        }
-      },
-      {
-        "color": "black",
-        "fixed": false,
-        "caption": 3,
-        "marked": false,
-        "markedColor": "white",
-        "pos": {
-          "x": 6,
-          "y": 8
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": 4,
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 5,
-          "y": 7
-        }
-      },
-      {
-        "color": "black",
-        "fixed": false,
-        "caption": 5,
-        "marked": false,
-        "markedColor": "white",
-        "pos": {
-          "x": 5,
-          "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": 6,
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 6,
-          "y": 7
-        }
-      },
-      {
-        "color": "black",
-        "fixed": false,
-        "caption": 7,
-        "marked": false,
-        "markedColor": "white",
-        "pos": {
-          "x": 7,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": 8,
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 6,
-          "y": 6
         }
       }
     ],
@@ -4482,9 +10439,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》29-10",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "stepList": [],
     "currChessList": [
       {
@@ -4817,9 +10774,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》30-11",
-    "introLabel": "2022-09-23　　11路　　错误",
+    "introLabel": "2022-10-09　　11路　　错误",
     "stepList": [
       {
         "action": "add",
@@ -5135,7 +11092,7 @@
     "chessBoardSize": 11,
     "desc": "",
     "tags": [
-      "两步吃子"
+      ""
     ],
     "level": "2",
     "nextChessType": "BLACK",
@@ -5257,96 +11214,8 @@
         "marked": false,
         "markedColor": "black",
         "pos": {
-          "x": 2,
-          "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 2,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 8
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 4,
-          "y": 8
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 4,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 5,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
           "x": 6,
           "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 5
         }
       },
       {
@@ -5359,60 +11228,116 @@
           "x": 4,
           "y": 3
         }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
       }
     ],
     "chessBoardSizeText": "11路",
-    "tagsText": "两步吃子",
+    "tagsText": "",
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》33-1",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
-    "stepList": [
-      {
-        "action": "add",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": 1,
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 6,
-            "y": 7
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "white",
-          "fixed": false,
-          "caption": 2,
-          "marked": false,
-          "markedColor": "black",
-          "pos": {
-            "x": 5,
-            "y": 6
-          }
-        }
-      },
-      {
-        "action": "add",
-        "chess": {
-          "color": "black",
-          "fixed": false,
-          "caption": 3,
-          "marked": false,
-          "markedColor": "white",
-          "pos": {
-            "x": 4,
-            "y": 5
-          }
-        }
-      }
-    ],
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
     "currChessList": [
       {
         "color": "black",
@@ -5531,96 +11456,8 @@
         "marked": false,
         "markedColor": "black",
         "pos": {
-          "x": 2,
-          "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 2,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 8
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 4,
-          "y": 8
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 4,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 5,
-          "y": 7
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
           "x": 6,
           "y": 6
-        }
-      },
-      {
-        "color": "white",
-        "fixed": false,
-        "caption": "",
-        "marked": false,
-        "markedColor": "black",
-        "pos": {
-          "x": 3,
-          "y": 5
         }
       },
       {
@@ -5637,7 +11474,7 @@
       {
         "color": "black",
         "fixed": false,
-        "caption": 1,
+        "caption": "",
         "marked": false,
         "markedColor": "white",
         "pos": {
@@ -5648,27 +11485,93 @@
       {
         "color": "white",
         "fixed": false,
-        "caption": 2,
-        "marked": false,
+        "caption": "",
+        "marked": true,
         "markedColor": "black",
         "pos": {
           "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
           "y": 6
         }
       },
       {
-        "color": "black",
+        "color": "white",
         "fixed": false,
-        "caption": 3,
-        "marked": false,
-        "markedColor": "white",
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
         "pos": {
-          "x": 4,
+          "x": 3,
           "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
         }
       }
     ],
-    "currNextStep": "WHITE",
+    "currNextStep": "BLACK",
     "hardFlag": true
   },
   {
@@ -5865,9 +11768,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》33-2",
-    "introLabel": "2022-09-23　　11路　　两步吃子，错误",
+    "introLabel": "2022-10-09　　11路　　两步吃子，错误",
     "stepList": [
       {
         "action": "add",
@@ -6293,9 +12196,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》34-5",
-    "introLabel": "2022-09-23　　11路　　",
+    "introLabel": "2022-10-09　　11路　　",
     "stepList": [
       {
         "action": "add",
@@ -6803,9 +12706,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》34-6",
-    "introLabel": "2022-09-23　　11路　　两步吃子，错误",
+    "introLabel": "2022-10-09　　11路　　两步吃子，错误",
     "stepList": [
       {
         "action": "add",
@@ -7302,9 +13205,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》34-8",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "hardFlag": false
   },
   {
@@ -7479,9 +13382,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》34-10",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "hardFlag": false
   },
   {
@@ -7733,9 +13636,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》35-11",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "hardFlag": false
   },
   {
@@ -7943,9 +13846,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》35-12",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "stepList": [
       {
         "action": "add",
@@ -8390,9 +14293,9 @@
     "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》35-13",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "stepList": [],
     "currChessList": [
       {
@@ -8813,9 +14716,9 @@
     "levelText": "巩固",
     "levelIcon": "warning-o",
     "levelIconColor": "red",
-    "modifyDateText": "2022-09-23",
+    "modifyDateText": "2022-10-09",
     "introValue": "《快乐学围棋3》35-14",
-    "introLabel": "2022-09-23　　11路　　两步吃子",
+    "introLabel": "2022-10-09　　11路　　两步吃子",
     "hardFlag": false
   },
   {

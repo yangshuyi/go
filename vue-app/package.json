@@ -7,7 +7,7 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
-    "@cccis/vue3-common": "1.0.0-SNAPSHOT.103",
+    "@cccis/vue3-common": "1.0.0-SNAPSHOT.107",
     "axios": "^0.26.1",
     "dayjs": "^1.11.0",
     "decimal.js": "^10.3.1",

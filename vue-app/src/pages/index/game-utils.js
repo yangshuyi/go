@@ -5,7 +5,7 @@ import Constants from "@/components/constants.js";
 
 let GAME_MAP = {}; //key: Id, value Game
 let GAME_LIST = []; //key: Id, value Game
-
+let gameTmpl = null;
 function init(gameList) {
     if (gameList == null) {
         CccisDialogUtils.alert("加载围棋题目资源文件失败");
@@ -74,7 +74,27 @@ function addGame(game) {
         return false;
     }
     GAME_MAP[game.id] = game;
+    GAME_LIST.push(game);
+    GAME_LIST = _.orderBy(GAME_LIST, ['modifyDateText'], ['desc']);
     return true;
+}
+
+function getGameTemplate(){
+  return gameTmpl;
+}
+
+
+function saveGameTemplate(game){
+    gameTmpl = {
+        book: game.book,
+        title: game.title,
+        chessBoardSize: game.chessBoardSize,
+        desc: game.desc,
+        tagsText: game.tagsText,
+        level: game.level,
+        nextChessType: game.nextChessType,
+
+    }
 }
 
 export default {
@@ -83,5 +103,8 @@ export default {
     fetchNextGame: fetchNextGame,
     getGameById: getGameById,
     addGame: addGame,
-    buildGame: buildGame
+    buildGame: buildGame,
+
+    getGameTemplate: getGameTemplate,
+    saveGameTemplate: saveGameTemplate,
 };

@@ -60,6 +60,17 @@ async function init() {
   } else {
     data.isNewGame = true;
     data.field.id = new Date().getTime() + "";
+
+    let gameTmpl = GameUtils.getGameTemplate();
+    if (gameTmpl) {
+      data.field.book = gameTmpl.book;
+      data.field.title = gameTmpl.title;
+      data.field.chessBoardSize = gameTmpl.chessBoardSize;
+      data.field.desc = gameTmpl.desc;
+      data.field.tagsText = gameTmpl.tagsText;
+      data.field.level = gameTmpl.level;
+      data.field.nextChessType = gameTmpl.nextChessType;
+    }
   }
 
   domChessBoardRef.value?.init(data.field.chessBoardSize, true, false);
@@ -73,11 +84,10 @@ function goBack() {
 }
 
 async function save() {
-  let gameId = route.query.gameId;
   let game = null;
-  if (gameId) {
-    game = GameUtils.getGameById(gameId);
-  } else {
+  if (data.isNewGame == true) {
+    GameUtils.saveGameTemplate(data.field);
+
     game = {};
     game.id = data.field.id;
     let result = GameUtils.addGame(game);
@@ -90,6 +100,8 @@ async function save() {
       }
       return;
     }
+  } else {
+    game = GameUtils.getGameById(data.field.id);
   }
   game.book = data.field.book;
   game.title = data.field.title;
@@ -105,6 +117,10 @@ async function save() {
   game.chessList = data.field.chessList;
 
   GameUtils.buildGame(game);
+
+  if (data.isNewGame == true) {
+
+  }
 
   console.log(JSON.stringify(game));
 

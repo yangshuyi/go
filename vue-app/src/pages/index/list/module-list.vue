@@ -21,7 +21,7 @@ let router = useRouter();
 let route = useRoute();
 
 onMounted(async () => {
-  data.games = GameUtils.fetchAllGames();
+  loadGameList();
 });
 
 watch(data.filter,()=>{
@@ -104,7 +104,7 @@ function mgmtGame(game) {
             </template>
           </van-cell>
           <template #right>
-            <van-button square type="primary" text="编辑" @click="mgmtGame"/>
+            <van-button square type="primary" text="编辑" @click="mgmtGame(game)"/>
           </template>
         </van-swipe-cell>
       </template>
