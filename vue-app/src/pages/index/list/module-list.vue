@@ -6,6 +6,7 @@ import {useRoute, useRouter} from "vue-router";
 
 import Constants from "@/components/constants";
 import GameUtils from "@/pages/index/game-utils.js";
+import ChessUtils from "@/pages/index/chess-utils.js";
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 import {Toast} from 'vant';
 
@@ -24,42 +25,42 @@ onMounted(async () => {
   loadGameList();
 });
 
-watch(data.filter,()=>{
+watch(data.filter, () => {
   loadGameList();
 });
 
 async function downloadData() {
   data.games = [];
-  let remoteObj = await IndexAxiosUtils.downloadGameData();
-  if (remoteObj && remoteObj.valueObj) {
-    let message = `发现服务器数据，共${_.size(remoteObj.valueObj)}条记录。\n版本时间：${remoteObj.timestamp}`;
-    Toast({message: message, position: 'bottom'});
 
-    GameUtils.init(remoteObj.valueObj);
-    data.games = GameUtils.fetchAllGames();
-  } else {
+  let dataList = await GameUtils.downloadGameData();
+  if (!dataList) {
     Toast.fail({message: `未发现服务器数据`, position: 'bottom'});
+    return;
   }
+
+  let message = `发现服务器数据，共${_.size(dataList)}条记录。`;
+  Toast({message: message, position: 'bottom'});
+
+  loadGameList();
 }
 
 async function uploadData() {
-  await IndexAxiosUtils.uploadGameData(data.games);
+  await GameUtils.uploadGameData();
   Toast({message: `推送现服务器数据成功`, position: 'bottom'});
 
   await downloadData();
 }
 
 async function loadData() {
-  let gameList = await IndexAxiosUtils.loadGameData();
-  let message = `发现本地数据，共${_.size(gameList)}条记录。`;
-  Toast({message: message, position: 'bottom'});
+  let dataList = await GameUtils.loadGameData();
 
-  GameUtils.init(gameList);
+  let message = `发现本地数据，共${_.size(dataList)}条记录。`;
+  Toast({message: message, position: 'bottom'});
 
   loadGameList();
 }
 
-function loadGameList(){
+function loadGameList() {
   data.games = GameUtils.fetchAllGames(data.filter);
 }
 
@@ -123,6 +124,7 @@ function mgmtGame(game) {
 
 .filter-panel {
   border: 1px solid #F0F0F0;
+
   .van-collapse-item {
     > .van-cell {
       background-color: #F0F0F0;

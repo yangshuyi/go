@@ -11,12 +11,14 @@ import {
   defineExpose,
   onMounted,
   onUnmounted
-} from 'vue';
+} from 'vue'
 
 import _ from 'lodash';
 import Constants from "@/components/constants";
 import stylusPluginManager from "@/cordova-plugins/stylus/stylus-plugin-manager";
 import ChessBoard from "@/components/chess-board.vue";
+
+import ChessUtils from "@/pages/index/chess-utils.js";
 
 const props = defineProps({
   game: {
@@ -54,47 +56,45 @@ function init() {
 }
 
 function reset() {
-  data.game.stepList = [];
-  data.game.currChessList = [];
-  data.game.currNextStep = data.game.nextChessType;
+  data.game.$stepList = []; //每一手
+  data.game.$currChessBoard = {}; //当前棋盘上的棋子信息
+  data.game.$currNextStep = data.game.nextChessType; //下一手
 
   domChessBoardRef.value?.init(data.game.chessBoardSize, data.showMark, data.showBoard);
 
-  _.each(data.game.chessList, (chessItem) => {
-    let chess = JSON.parse(JSON.stringify(chessItem));
+  data.game.$currChessBoard = JSON.parse(JSON.stringify(data.game.chessBoard));
 
-    data.game.currChessList.push(chess);
-
+  _.each(data.game.$currChessBoard, (chess) => {
     domChessBoardRef.value?.drawChess(chess);
   });
 }
 
 function stepForward(action, chess) {
   if (action == 'add') {
-    data.game.currChessList.push(chess);
+    data.game.$currChessBoard[chess.geo] = chess;
     domChessBoardRef.value?.drawChess(chess);
   } else if (action == 'remove') {
-    removeChessInBoardByPosition(chess.pos);
+    delete data.game.$currChessBoard[chess.geo];
     domChessBoardRef.value?.clearChess(chess);
   }
 
-  data.game.stepList.push({
+  data.game.$stepList.push({
     action: action,
     chess: chess
   });
 }
 
 function stepBackward() {
-  let lastStep = data.game.stepList.pop();
+  let lastStep = data.game.$stepList.pop();
   if (!lastStep) {
     return;
   }
 
   if (lastStep.action == 'add') {
-    removeChessInBoardByPosition(lastStep.chess.pos);
+    delete data.game.$currChessBoard[lastStep.chess.geo];
     domChessBoardRef.value?.clearChess(lastStep.chess);
   } else if (lastStep.action == 'remove') {
-    data.game.currChessList.push(lastStep.chess);
+    data.game.$currChessBoard[lastStep.chess.geo] = lastStep.chess;
     domChessBoardRef.value?.drawChess(lastStep.chess);
   }
 }
@@ -103,14 +103,19 @@ function markLevel(level) {
   data.game.level = level;
 }
 
+/**
+ * $chess 仅有geo信息
+ */
 function onChessStep($chess) {
   if (!data.game) {
     return;
   }
 
-  let chess = getChessInBoardByPosition($chess.pos);
+  let geo = $chess.geo;
 
-  if (data.game.currNextStep == Constants.CHESS_TYPE.CLEAR.value) {
+  let chess = data.game.$currChessBoard[geo];
+
+  if (data.game.$currNextStep == Constants.CHESS_TYPE.CLEAR.value) {
     //删除棋子
     if (chess) {
       //棋盘上有棋子
@@ -126,38 +131,23 @@ function onChessStep($chess) {
       //棋盘上没有棋子
 
       //创建棋子
-      let caption = (_.max(_.map(data.game.currChessList, 'caption')) || 0) + 1;
+      let caption = (_.max(_.map(data.game.$currChessBoard, 'caption')) || 0) + 1;
 
-      let chessType = Constants.CHESS_TYPE[data.game.currNextStep];
+      let chessType = Constants.CHESS_TYPE[data.game.$currNextStep];
       let newChess = {
         color: chessType.color,
-        fixed: false,
         caption: caption,
         marked: false,
         markedColor: chessType.markedColor,
-        pos: {x: $chess.pos.x, y: $chess.pos.y}
+        geo: geo
       };
       stepForward('add', newChess);
 
       //调整下一步
-      data.game.currNextStep = chessType.nextStep;
+      data.game.$currNextStep = chessType.nextStep;
       return;
     }
   }
-}
-
-function getChessInBoardByPosition(pos) {
-  let result = _.find(data.game.currChessList, (item) => {
-    return item.pos.x == pos.x && item.pos.y == pos.y;
-  });
-  return result;
-}
-
-function removeChessInBoardByPosition(pos) {
-  let result = _.remove(data.game.currChessList, (item) => {
-    return item.pos.x == pos.x && item.pos.y == pos.y;
-  });
-  return result;
 }
 
 
@@ -168,7 +158,7 @@ function removeChessInBoardByPosition(pos) {
     <van-cell-group inset v-if="data.game" class="control-section">
       <van-field label="当前手" center>
         <template #input>
-          <van-radio-group v-model="data.game.currNextStep" direction="horizontal" @change="">
+          <van-radio-group v-model="data.game.$currNextStep" direction="horizontal" @change="">
             <van-radio name="BLACK">黑棋</van-radio>
             <van-radio name="WHITE">白棋</van-radio>
             <van-radio name="CLEAR">清除</van-radio>
@@ -191,18 +181,18 @@ function removeChessInBoardByPosition(pos) {
 
     <van-row justify="space-around" class="action-section">
       <van-col span="6">
-        <van-button type="primary" plain hairline @click="reset();" :disabled="data.game?.stepList.length==0">还原</van-button>
+        <van-button type="primary" plain hairline @click="reset();" :disabled="data.game?.$stepList.length==0">还原</van-button>
       </van-col>
       <van-col span="6">
-        <van-button type="primary" plain hairline @click="stepBackward()" :disabled="data.game?.stepList.length==0">上一步</van-button>
+        <van-button type="primary" plain hairline @click="stepBackward()" :disabled="data.game?.$stepList.length==0">上一步</van-button>
       </van-col>
     </van-row>
 
-<!--    <div class="debug-info-section">-->
-<!--      <div v-for="chess in data.game?.currChessList" class="row">-->
-<!--        <div>{{ JSON.stringify(chess) }}</div>-->
-<!--      </div>-->
-<!--    </div>-->
+    <!--    <div class="debug-info-section">-->
+    <!--      <div v-for="chess in data.game?.currChessBoard" class="row">-->
+    <!--        <div>{{ chess.geo }}</div>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 
 </template>

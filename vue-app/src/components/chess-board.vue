@@ -15,6 +15,7 @@ import {
 
 import _ from 'lodash';
 import Constants from "@/components/constants";
+import ChessUtils from "@/pages/index/chess-utils.js";
 
 const props = defineProps();
 
@@ -108,10 +109,11 @@ function drawLine() {
   ctx.textBaseline = "middle";
   ctx.font = 'normal bold 20px Arial'
 
-  let labelArray = _.get(_.find(Constants.CHESS_BOARD_SIZE_OPTIONS, {value:data.chessBoardSize}), 'label');
+
   //竖线
   for (let colIdx = 0; colIdx < data.chessBoardSize; colIdx++) {
-    ctx.fillText(labelArray[colIdx].column2, data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.padding / 4);
+    let label = ChessUtils.getGeoLabelByIdx(data.chessBoardSize, 'column2', colIdx);
+    ctx.fillText(label, data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.padding / 4);
 
     ctx.moveTo(data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.padding);
     ctx.lineTo(data.canvas.padding + data.canvas.unitBorder * colIdx, data.canvas.boardBorder - data.canvas.padding);
@@ -120,7 +122,8 @@ function drawLine() {
   }
   //横线
   for (let rowIdx = 0; rowIdx < data.chessBoardSize; rowIdx++) {
-    ctx.fillText(labelArray[rowIdx].row2, data.canvas.padding / 4, data.canvas.padding + data.canvas.unitBorder * rowIdx);
+    let label = ChessUtils.getGeoLabelByIdx(data.chessBoardSize, 'row2', rowIdx);
+    ctx.fillText(label, data.canvas.padding / 4, data.canvas.padding + data.canvas.unitBorder * rowIdx);
 
     ctx.moveTo(data.canvas.padding, data.canvas.padding + data.canvas.unitBorder * rowIdx);
     ctx.lineTo(data.canvas.boardBorder - data.canvas.padding, data.canvas.padding + data.canvas.unitBorder * rowIdx);
@@ -136,12 +139,7 @@ function drawLine() {
  *  fixed: true,false
  *  marked: true,false,
  *  markedColor: black, white
- *  pos:
- *    x:
- *    y:
- *
- *
- *
+ *  geo: '0419'
  */
 function drawChess(chessObj) {
   //console.log("drawChess:" + JSON.stringify(chessObj));
@@ -152,8 +150,9 @@ function drawChess(chessObj) {
   let ctx = data.canvas.ctx;
   ctx.save();
 
-  let x = chessObj.pos.x * data.canvas.unitBorder + data.canvas.padding;
-  let y = chessObj.pos.y * data.canvas.unitBorder + data.canvas.padding;
+  let posIdx = ChessUtils.getPosIdxFromGeo(data.chessBoardSize, chessObj.geo);
+  let x = posIdx.x * data.canvas.unitBorder + data.canvas.padding;
+  let y = posIdx.y * data.canvas.unitBorder + data.canvas.padding;
 
   ctx.translate(x, y);
 
@@ -197,7 +196,6 @@ function drawChess(chessObj) {
 
 
 function clearChess(chessObj) {
-  console.log("clearChess:" + JSON.stringify(chessObj));
   if (!chessObj) {
     return;
   }
@@ -205,8 +203,9 @@ function clearChess(chessObj) {
   let ctx = data.canvas.ctx;
   ctx.save();
 
-  let x = chessObj.pos.x * data.canvas.unitBorder + data.canvas.padding;
-  let y = chessObj.pos.y * data.canvas.unitBorder + data.canvas.padding;
+  let posIdx = ChessUtils.getPosIdxFromGeo(data.chessBoardSize, chessObj.geo);
+  let x = posIdx.x * data.canvas.unitBorder + data.canvas.padding;
+  let y = posIdx.y * data.canvas.unitBorder + data.canvas.padding;
   ctx.translate(x, y);
 
   ctx.strokeStyle = "black";
@@ -214,10 +213,10 @@ function clearChess(chessObj) {
   ctx.clearRect(-data.canvas.unitBorder / 2, -data.canvas.unitBorder / 2, data.canvas.unitBorder, data.canvas.unitBorder);
 
   ctx.beginPath();
-  if (chessObj.pos.x == 0) {
+  if (posIdx.x == 0) {
     ctx.moveTo(0, 0);
     ctx.lineTo(data.canvas.unitBorder / 2, 0);
-  } else if (chessObj.pos.x == (data.chessBoardSize - 1)) {
+  } else if (posIdx.x == (data.chessBoardSize - 1)) {
     ctx.moveTo(-data.canvas.unitBorder / 2, 0);
     ctx.lineTo(0, 0);
   } else {
@@ -227,10 +226,10 @@ function clearChess(chessObj) {
   ctx.stroke();
 
   ctx.beginPath();
-  if (chessObj.pos.y == 0) {
+  if (posIdx.y == 0) {
     ctx.moveTo(0, 0);
     ctx.lineTo(0, data.canvas.unitBorder / 2);
-  } else if (chessObj.pos.y == (data.chessBoardSize - 1)) {
+  } else if (posIdx.y == (data.chessBoardSize - 1)) {
     ctx.moveTo(0, -data.canvas.unitBorder / 2);
     ctx.lineTo(0, 0);
   } else {
@@ -246,7 +245,9 @@ function onCanvasClick($target) {
   let posX = Math.round((($target.offsetX - data.canvas.padding)) / data.canvas.unitBorder);
   let posY = Math.round((($target.offsetY - data.canvas.padding)) / data.canvas.unitBorder);
 
-  emits("onChessStep", {pos: {x: posX, y: posY}});
+  let geo = ChessUtils.getGeoFromPosIdx(data.chessBoardSize, {x: posX, y: posY});
+
+  emits("onChessStep", {geo: geo});
 }
 
 

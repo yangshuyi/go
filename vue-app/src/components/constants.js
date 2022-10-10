@@ -9,95 +9,43 @@ export default {
         WHITE: {text: '白棋', value: 'WHITE', color: 'white', markedColor: 'black', nextStep: 'BLACK'},
         CLEAR: {text: '空', value: 'CLEAR', color: 'transparent', markedColor: 'transparent'},
     },
+    CHESS_BOARD_LABEL: {
+        "01": {row1: '一', column1: '1', row2: '1', column2: 'A'},
+        "02": {row1: '二', column1: '2', row2: '2', column2: 'B'},
+        "03": {row1: '三', column1: '3', row2: '3', column2: 'C'},
+        "04": {row1: '四', column1: '4', row2: '4', column2: 'D'},
+        "05": {row1: '五', column1: '5', row2: '5', column2: 'E'},
+        "06": {row1: '六', column1: '6', row2: '6', column2: 'F'},
+        "07": {row1: '七', column1: '7', row2: '7', column2: 'G'},
+        "08": {row1: '八', column1: '8', row2: '8', column2: 'H'},
+        "09": {row1: '九', column1: '9', row2: '9', column2: 'J'},
+        "10": {row1: '十', column1: '10', row2: '10', column2: 'K'},
+        "11": {row1: '十一', column1: '11', row2: '11', column2: 'L'},
+        "12": {row1: '十二', column1: '12', row2: '12', column2: 'M'},
+        "13": {row1: '十三', column1: '13', row2: '13', column2: 'N'},
+        "14": {row1: '十四', column1: '14', row2: '14', column2: 'O'},
+        "15": {row1: '十五', column1: '15', row2: '15', column2: 'P'},
+        "16": {row1: '十六', column1: '16', row2: '16', column2: 'Q'},
+        "17": {row1: '十七', column1: '17', row2: '17', column2: 'R'},
+        "18": {row1: '十八', column1: '18', row2: '18', column2: 'S'},
+        "19": {row1: '十九', column1: '19', row2: '19', column2: 'T'},
+    },
+
     CHESS_BOARD_SIZE_OPTIONS: [
         {
-            text: '9路', value: 9, label: [
-                {row1: '一', column1: '1', row2: '9', column2: 'A'},
-                {row1: '二', column1: '2', row2: '8', column2: 'B'},
-                {row1: '三', column1: '3', row2: '7', column2: 'C'},
-                {row1: '四', column1: '4', row2: '6', column2: 'D'},
-                {row1: '五', column1: '5', row2: '5', column2: 'E'},
-                {row1: '六', column1: '6', row2: '4', column2: 'F'},
-                {row1: '七', column1: '7', row2: '3', column2: 'G'},
-                {row1: '八', column1: '8', row2: '2', column2: 'H'},
-                {row1: '九', column1: '9', row2: '1', column2: 'J'},
-            ]
+            text: '9路', value: 9
         },
         {
-            text: '11路', value: 11, label: [
-                {row1: '一', column1: '1', row2: '11', column2: 'A'},
-                {row1: '二', column1: '2', row2: '10', column2: 'B'},
-                {row1: '三', column1: '3', row2: '9', column2: 'C'},
-                {row1: '四', column1: '4', row2: '8', column2: 'D'},
-                {row1: '五', column1: '5', row2: '7', column2: 'E'},
-                {row1: '六', column1: '6', row2: '6', column2: 'F'},
-                {row1: '七', column1: '7', row2: '5', column2: 'G'},
-                {row1: '八', column1: '8', row2: '4', column2: 'H'},
-                {row1: '九', column1: '9', row2: '3', column2: 'J'},
-                {row1: '十', column1: '10', row2: '2', column2: 'K'},
-                {row1: '十一', column1: '11', row2: '1', column2: 'L'},
-            ]
+            text: '11路', value: 11
         },
         {
-            text: '13路', value: 13, label: [
-                {row1: '一', column1: '1', row2: '13', column2: 'A'},
-                {row1: '二', column1: '2', row2: '12', column2: 'B'},
-                {row1: '三', column1: '3', row2: '11', column2: 'C'},
-                {row1: '四', column1: '4', row2: '10', column2: 'D'},
-                {row1: '五', column1: '5', row2: '9', column2: 'E'},
-                {row1: '六', column1: '6', row2: '8', column2: 'F'},
-                {row1: '七', column1: '7', row2: '7', column2: 'G'},
-                {row1: '八', column1: '8', row2: '6', column2: 'H'},
-                {row1: '九', column1: '9', row2: '5', column2: 'J'},
-                {row1: '十', column1: '10', row2: '4', column2: 'K'},
-                {row1: '十一', column1: '11', row2: '3', column2: 'L'},
-                {row1: '十二', column1: '12', row2: '2', column2: 'M'},
-                {row1: '十三', column1: '13', row2: '1', column2: 'N'},
-            ]
+            text: '13路', value: 13
         },
         {
-            text: '17路', value: 17, label: [
-                {row1: '一', column1: '1', row2: '17', column2: 'A'},
-                {row1: '二', column1: '2', row2: '16', column2: 'B'},
-                {row1: '三', column1: '3', row2: '15', column2: 'C'},
-                {row1: '四', column1: '4', row2: '14', column2: 'D'},
-                {row1: '五', column1: '5', row2: '13', column2: 'E'},
-                {row1: '六', column1: '6', row2: '12', column2: 'F'},
-                {row1: '七', column1: '7', row2: '11', column2: 'G'},
-                {row1: '八', column1: '8', row2: '10', column2: 'H'},
-                {row1: '九', column1: '9', row2: '9', column2: 'J'},
-                {row1: '十', column1: '10', row2: '8', column2: 'K'},
-                {row1: '十一', column1: '11', row2: '7', column2: 'L'},
-                {row1: '十二', column1: '12', row2: '6', column2: 'M'},
-                {row1: '十三', column1: '13', row2: '5', column2: 'N'},
-                {row1: '十四', column1: '14', row2: '4', column2: 'O'},
-                {row1: '十五', column1: '15', row2: '3', column2: 'P'},
-                {row1: '十六', column1: '16', row2: '2', column2: 'Q'},
-                {row1: '十七', column1: '17', row2: '1', column2: 'R'},
-            ]
+            text: '17路', value: 17
         },
         {
-            text: '19路', value: 19, label: [
-                {row1: '一', column1: '1', row2: '19', column2: 'A'},
-                {row1: '二', column1: '2', row2: '18', column2: 'B'},
-                {row1: '三', column1: '3', row2: '17', column2: 'C'},
-                {row1: '四', column1: '4', row2: '16', column2: 'D'},
-                {row1: '五', column1: '5', row2: '15', column2: 'E'},
-                {row1: '六', column1: '6', row2: '14', column2: 'F'},
-                {row1: '七', column1: '7', row2: '13', column2: 'G'},
-                {row1: '八', column1: '8', row2: '12', column2: 'H'},
-                {row1: '九', column1: '9', row2: '11', column2: 'J'},
-                {row1: '十', column1: '10', row2: '10', column2: 'K'},
-                {row1: '十一', column1: '11', row2: '9', column2: 'L'},
-                {row1: '十二', column1: '12', row2: '8', column2: 'M'},
-                {row1: '十三', column1: '13', row2: '7', column2: 'N'},
-                {row1: '十四', column1: '14', row2: '6', column2: 'O'},
-                {row1: '十五', column1: '15', row2: '5', column2: 'P'},
-                {row1: '十六', column1: '16', row2: '4', column2: 'Q'},
-                {row1: '十七', column1: '17', row2: '3', column2: 'R'},
-                {row1: '十八', column1: '18', row2: '2', column2: 'S'},
-                {row1: '十九', column1: '19', row2: '1', column2: 'T'},
-            ]
+            text: '19路', value: 19
         }
     ],
     LEVEL_OPTIONS: {

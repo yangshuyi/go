@@ -1,10 +1,1242 @@
 [
   {
+    "id": "1665290643914",
+    "book": "弈学院上课练习",
+    "title": "2022100705",
+    "chessBoardSize": 11,
+    "desc": "扑吃",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《弈学院上课练习》2022100705",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
+  },
+  {
+    "id": "1665290599159",
+    "book": "弈学院上课练习",
+    "title": "2022100704",
+    "chessBoardSize": 11,
+    "desc": "扑吃",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 7,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《弈学院上课练习》2022100704",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1665290488531",
+    "book": "弈学院上课练习",
+    "title": "2022100703",
+    "chessBoardSize": 11,
+    "desc": "扑吃",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 7,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 8,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《弈学院上课练习》2022100703",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
+    "id": "1665290359973",
+    "book": "弈学院上课练习",
+    "title": "2022100702",
+    "chessBoardSize": 11,
+    "desc": "扑吃",
+    "tags": [
+      ""
+    ],
+    "level": "1",
+    "nextChessType": "BLACK",
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 6,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 6,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 2,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "chessBoardSizeText": "11路",
+    "tagsText": "",
+    "levelText": "巩固",
+    "levelIcon": "warning-o",
+    "levelIconColor": "red",
+    "hardFlag": false,
+    "modifyDateText": "2022-10-09",
+    "introValue": "《弈学院上课练习》2022100702",
+    "introLabel": "2022-10-09　　11路　　"
+  },
+  {
     "id": "1664031819784",
     "book": "快乐学围棋1",
     "title": "203",
     "chessBoardSize": 11,
     "desc": "门吃",
+    "tags": [
+      ""
+    ],
     "level": "0",
     "nextChessType": "BLACK",
     "chessList": [
@@ -685,16 +1917,259 @@
   },
   {
     "id": "1664031811578",
-    "book": "快乐学围棋1",
-    "title": "201",
+    "book": "弈学院上课练习",
+    "title": "2922100701",
     "chessBoardSize": 11,
-    "desc": "门吃",
+    "desc": "扑吃",
     "tags": [
       ""
     ],
     "level": "2",
     "nextChessType": "BLACK",
-    "chessList": [],
+    "chessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      }
+    ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
     "levelText": "错误",
@@ -702,8 +2177,254 @@
     "levelIconColor": "red",
     "hardFlag": false,
     "modifyDateText": "2022-10-09",
-    "introValue": "《快乐学围棋1》201",
-    "introLabel": "2022-10-09　　11路　　"
+    "introValue": "《弈学院上课练习》2922100701",
+    "introLabel": "2022-10-09　　11路　　",
+    "stepList": [],
+    "currChessList": [
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 1,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 10
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 9
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 8
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "color": "black",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "white",
+        "pos": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": false,
+        "markedColor": "black",
+        "pos": {
+          "x": 5,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 6
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 9
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 4,
+          "y": 10
+        }
+      },
+      {
+        "color": "white",
+        "fixed": false,
+        "caption": "",
+        "marked": true,
+        "markedColor": "black",
+        "pos": {
+          "x": 3,
+          "y": 10
+        }
+      }
+    ],
+    "currNextStep": "BLACK"
   },
   {
     "id": "1664031687223",
@@ -951,7 +2672,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "错误",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -1890,7 +3611,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -2181,7 +3902,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -2538,7 +4259,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
     "hardFlag": false,
@@ -3161,7 +4882,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -3485,7 +5206,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -3809,7 +5530,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -4233,7 +5954,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -4502,7 +6223,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "错误",
     "levelIcon": "close",
     "levelIconColor": "red",
     "hardFlag": false,
@@ -4771,7 +6492,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -5340,7 +7061,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "hardFlag": false,
@@ -6297,7 +8018,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "制造倒扑",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "modifyDateText": "2022-10-09",
@@ -8538,7 +10259,7 @@
     ],
     "chessBoardSizeText": "11路",
     "tagsText": "逃子",
-    "levelText": "巩固",
+    "levelText": "通过",
     "levelIcon": "passed",
     "levelIconColor": "green",
     "modifyDateText": "2022-10-09",

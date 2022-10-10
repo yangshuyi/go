@@ -7,6 +7,7 @@ import {CccisExplorerUtils} from "@cccis/vue3-common";
 
 import Constants from "@/components/constants";
 import GameUtils from "@/pages/index/game-utils.js";
+import ChessUtils from "@/pages/index/chess-utils.js";
 import ChessBoard from "@/components/chess-board.vue";
 import DropdownField from "@/components/dropdown-field/dropdown-field.vue";
 import {Dialog} from 'vant';
@@ -22,7 +23,7 @@ let data = reactive({
     tags: '',
     level: 1,
     nextChessType: 'BLACK',
-    chessList: [],
+    chessBoard: {},
   },
   marked: false,
   chessType: 'BLACK',
@@ -56,7 +57,7 @@ async function init() {
     data.field.tagsText = game.tagsText;
     data.field.level = game.level;
     data.field.nextChessType = game.nextChessType;
-    data.field.chessList = game.chessList;
+    data.field.chessBoard = game.chessBoard;
   } else {
     data.isNewGame = true;
     data.field.id = new Date().getTime() + "";
@@ -74,7 +75,7 @@ async function init() {
   }
 
   domChessBoardRef.value?.init(data.field.chessBoardSize, true, false);
-  _.each(data.field.chessList, (item) => {
+  _.each(data.field.chessBoard, (item) => {
     domChessBoardRef.value?.drawChess(item);
   });
 }
@@ -114,7 +115,7 @@ async function save() {
   }
   game.level = data.field.level;
   game.nextChessType = data.field.nextChessType;
-  game.chessList = data.field.chessList;
+  game.chessBoard = data.field.chessBoard;
 
   GameUtils.buildGame(game);
 
@@ -129,7 +130,7 @@ async function save() {
 
 function afterChessBoardSizeChanged() {
   domChessBoardRef.value?.init(data.field.chessBoardSize, true, false);
-  _.each(data.field.chessList, (item) => {
+  _.each(data.field.chessBoard, (item) => {
     domChessBoardRef.value?.drawChess(item);
   });
 }
@@ -140,14 +141,19 @@ function afterChessTypeChanged(){
   }
 }
 
+/**
+ * $chess 仅有geo信息
+ */
 function onChessStep($chess) {
-  let chess = getChessInBoardByPosition($chess.pos);
+  let geo = $chess.geo;
+
+  let chess = data.field.chessBoard[geo];
 
   if (data.chessType == Constants.CHESS_TYPE.CLEAR.value) {
     //删除棋子
     if (chess) {
       //棋盘上有棋子
-      removeChessInBoardByPosition(chess.pos);
+      delete data.field.chessBoard[chess.geo];
       domChessBoardRef.value?.clearChess(chess);
     } else {
       //棋盘上没有棋子
@@ -174,27 +180,13 @@ function onChessStep($chess) {
         caption: '',
         marked: data.marked,
         markedColor: chessType.markedColor,
-        pos: {x: $chess.pos.x, y: $chess.pos.y}
+        geo: geo
       };
-      data.field.chessList.push(chess);
+      data.field.chessBoard[chess.geo] = chess;
       domChessBoardRef.value?.drawChess(chess);
       return;
     }
   }
-}
-
-function getChessInBoardByPosition(pos) {
-  let result = _.find(data.field.chessList, (item) => {
-    return item.pos.x == pos.x && item.pos.y == pos.y;
-  });
-  return result;
-}
-
-function removeChessInBoardByPosition(pos) {
-  let result = _.remove(data.field.chessList, (item) => {
-    return item.pos.x == pos.x && item.pos.y == pos.y;
-  });
-  return result;
 }
 
 </script>

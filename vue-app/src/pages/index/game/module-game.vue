@@ -148,7 +148,7 @@ function toggleHardFlag(){
   }
 
   .game-section {
-    padding: 20px 0px;
+    padding: 0px 0px;
   }
 
   .van-action-bar {

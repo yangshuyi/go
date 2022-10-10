@@ -2,10 +2,36 @@ import _ from 'lodash';
 import dayjs from "dayjs";
 import {CccisDialogUtils} from "@cccis/vue3-common";
 import Constants from "@/components/constants.js";
+import ChessUtils from "@/pages/index/chess-utils.js";
+import IndexAxiosUtils from "@/pages/index/index-axios-utils";
+import {Toast} from "vant";
 
 let GAME_MAP = {}; //key: Id, value Game
 let GAME_LIST = []; //key: Id, value Game
 let gameTmpl = null;
+
+async function loadGameData() {
+    let dataList = await IndexAxiosUtils.loadGameData();
+    if (!dataList) {
+        return dataList;
+    }
+
+    init(dataList);
+
+    return dataList;
+}
+
+async function downloadGameData() {
+    let dataList = await IndexAxiosUtils.downloadGameData();
+    if (!dataList) {
+        return dataList;
+    }
+
+    init(dataList);
+
+    return dataList;
+}
+
 function init(gameList) {
     if (gameList == null) {
         CccisDialogUtils.alert("加载围棋题目资源文件失败");
@@ -21,21 +47,73 @@ function init(gameList) {
 
 function buildGame(game) {
     game.chessBoardSizeText = game.chessBoardSize + "路";
-    game.tagsText = _.join(game.tags, ",");
+    if (!_.isEmpty(game.tags) && game.tags[0] != '') {
+        game.tagsText = _.join(game.tags, ",");
+    } else {
+        game.tagsText = '';
+        game.tags = [];
+    }
+
     game.level = (game.level || '0') + "";
     let gameLevel = Constants.LEVEL_OPTIONS[game.level];
     game.levelText = gameLevel.text;
     game.levelIcon = gameLevel.icon;
     game.levelIconColor = gameLevel.iconColor;
 
-    if(game.hardFlag == null) {
+    if (game.hardFlag == null) {
         game.hardFlag = false;
     }
 
     game.modifyDateText = dayjs(game.modifyDate).format('YYYY-MM-DD');
     game.introValue = "《" + game.book + "》" + game.title;
     game.introLabel = game.modifyDateText + "　　" + game.chessBoardSizeText + "　　" + game.tagsText;
+
+    if (!game.chessBoard && _.isArray(game.chessList)) {
+        let chessBoard = {};
+        _.each(game.chessList, (item) => {
+            let key = ChessUtils.getGeoFromPosIdx(game.chessBoardSize, item.pos);
+            item.geo = key;
+            chessBoard[key] = item;
+            delete item.fixed;
+            delete item.pos;
+        });
+
+        delete game.chessList;
+        game.chessBoard = chessBoard;
+    }
 }
+
+async function uploadGameData() {
+    let dataList = [];
+    _.each(GAME_LIST, (game) => {
+        let data = JSON.parse(JSON.stringify(game));
+        delete data.currChessList;
+
+        delete data.chessBoardSizeText;
+        delete data.tagsText;
+        if (data.tags && data.tags.length == 0) {
+            delete data.tags;
+        }
+        delete data.levelText;
+        delete data.levelIcon;
+        delete data.levelIconColor;
+
+        delete data.modifyDateText;
+        delete data.introValue;
+        delete data.introLabel;
+
+        delete data.$stepList;
+
+        _.each(data.chessBoard, (chess, geo) => {
+            delete chess.geo;
+        });
+
+        dataList.push(data);
+    });
+
+    await IndexAxiosUtils.uploadGameData(dataList);
+}
+
 
 function fetchAllGames(filterParams) {
     let gameList = [];
@@ -46,7 +124,6 @@ function fetchAllGames(filterParams) {
                     return;
                 }
             }
-
             gameList.push(game);
         })
     } else {
@@ -79,12 +156,12 @@ function addGame(game) {
     return true;
 }
 
-function getGameTemplate(){
-  return gameTmpl;
+function getGameTemplate() {
+    return gameTmpl;
 }
 
 
-function saveGameTemplate(game){
+function saveGameTemplate(game) {
     gameTmpl = {
         book: game.book,
         title: game.title,
@@ -98,7 +175,12 @@ function saveGameTemplate(game){
 }
 
 export default {
-    init: init,
+
+    uploadGameData: uploadGameData,
+    loadGameData: loadGameData,
+
+    downloadGameData: downloadGameData,
+
     fetchAllGames: fetchAllGames,
     fetchNextGame: fetchNextGame,
     getGameById: getGameById,

@@ -32,21 +32,19 @@ export default {
             return null;
         }
 
-        CccisLoggerUtils.debug(data.value);
-
         if (data.value) {
             data.valueObj = JSON.parse(data.value);
         }
 
-        return data;
+        return data.valueObj ;
     },
 
-    uploadGameData: async function (gameList) {
+    uploadGameData: async function (dataList) {
         let url = `${remoteServerAddress}/acquisition/system/data/save`;
 
         let dataObj = {
             key: key,
-            value: JSON.stringify(gameList),
+            value: JSON.stringify(dataList),
             timestamp: new Date()
         }
         await CccisAxiosUtils.postData(url, dataObj);
