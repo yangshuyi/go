@@ -115,7 +115,7 @@ function onChessStep($chess) {
 
   let chess = data.game.$currChessBoard[geo];
 
-  if (data.game.$currNextStep == Constants.CHESS_TYPE.CLEAR.value) {
+  if (data.game.$currNextStep == Constants.CHESS_TYPE.C.value) {
     //删除棋子
     if (chess) {
       //棋盘上有棋子
@@ -135,10 +135,9 @@ function onChessStep($chess) {
 
       let chessType = Constants.CHESS_TYPE[data.game.$currNextStep];
       let newChess = {
-        color: chessType.color,
+        type: chessType.value,
         caption: caption,
         marked: false,
-        markedColor: chessType.markedColor,
         geo: geo
       };
       stepForward('add', newChess);
@@ -159,9 +158,9 @@ function onChessStep($chess) {
       <van-field label="当前手" center>
         <template #input>
           <van-radio-group v-model="data.game.$currNextStep" direction="horizontal" @change="">
-            <van-radio name="BLACK">黑棋</van-radio>
-            <van-radio name="WHITE">白棋</van-radio>
-            <van-radio name="CLEAR">清除</van-radio>
+            <van-radio name="B">黑棋</van-radio>
+            <van-radio name="W">白棋</van-radio>
+            <van-radio name="C">清除</van-radio>
           </van-radio-group>
         </template>
       </van-field>

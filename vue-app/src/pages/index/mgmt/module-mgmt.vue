@@ -22,11 +22,11 @@ let data = reactive({
     desc: '',
     tags: '',
     level: 1,
-    nextChessType: 'BLACK',
+    nextChessType: 'B',
     chessBoard: {},
   },
   marked: false,
-  chessType: 'BLACK',
+  chessType: 'B',
   optionList: {
     nextChessTypeOptions: Constants.CHESS_TYPE,
     bookOptions: Constants.BOOK_LIST,
@@ -149,7 +149,7 @@ function onChessStep($chess) {
 
   let chess = data.field.chessBoard[geo];
 
-  if (data.chessType == Constants.CHESS_TYPE.CLEAR.value) {
+  if (data.chessType == Constants.CHESS_TYPE.C.value) {
     //删除棋子
     if (chess) {
       //棋盘上有棋子
@@ -162,7 +162,7 @@ function onChessStep($chess) {
   } else {
     if (chess) {
       //棋盘上有棋子，检查是不是仅进行标记
-      if(chess.color == Constants.CHESS_TYPE[data.chessType].color){
+      if(chess.type == data.chessType){
         if(chess.marked != data.marked){
           //仅对当前棋子进行标记
           chess.marked = data.marked;
@@ -175,11 +175,9 @@ function onChessStep($chess) {
       //创建棋子
       let chessType = Constants.CHESS_TYPE[data.chessType];
       let chess = {
-        color: chessType.color,
-        fixed: false,
+        type: chessType.value,
         caption: '',
         marked: data.marked,
-        markedColor: chessType.markedColor,
         geo: geo
       };
       data.field.chessBoard[chess.geo] = chess;

@@ -47,6 +47,7 @@ function init(gameList) {
 
 function buildGame(game) {
     game.chessBoardSizeText = game.chessBoardSize + "路";
+
     if (!_.isEmpty(game.tags) && game.tags[0] != '') {
         game.tagsText = _.join(game.tags, ",");
     } else {
@@ -68,19 +69,43 @@ function buildGame(game) {
     game.introValue = "《" + game.book + "》" + game.title;
     game.introLabel = game.modifyDateText + "　　" + game.chessBoardSizeText + "　　" + game.tagsText;
 
+    if (game.nextChessType == 'BLACK') {
+        game.nextChessType = 'B';
+    } else if (game.nextChessType == 'WHITE') {
+        game.nextChessType = 'W';
+    }
+
     if (!game.chessBoard && _.isArray(game.chessList)) {
         let chessBoard = {};
-        _.each(game.chessList, (item) => {
-            let key = ChessUtils.getGeoFromPosIdx(game.chessBoardSize, item.pos);
-            item.geo = key;
-            chessBoard[key] = item;
-            delete item.fixed;
-            delete item.pos;
+        _.each(game.chessList, (chess) => {
+            let key = ChessUtils.getGeoFromPosIdx(game.chessBoardSize, chess.pos);
+            chess.geo = key;
+
+            chessBoard[key] = chess;
+            delete chess.pos;
         });
 
         delete game.chessList;
         game.chessBoard = chessBoard;
     }
+
+    _.each(game.chessBoard, (chess, geo) => {
+        game.caption = game.caption || '';
+        chess.geo = geo;
+
+
+        if (chess.color) {
+            chess.type = _.find(Constants.CHESS_TYPE, {color: chess.color}).value;
+            delete chess.color;
+            delete chess.markedColor;
+        }
+
+        delete chess.fixed;
+    });
+
+
+    delete game.stepList;
+    delete game.currNextStep;
 }
 
 async function uploadGameData() {
@@ -90,6 +115,7 @@ async function uploadGameData() {
         delete data.currChessList;
 
         delete data.chessBoardSizeText;
+
         delete data.tagsText;
         if (data.tags && data.tags.length == 0) {
             delete data.tags;
@@ -103,8 +129,14 @@ async function uploadGameData() {
         delete data.introLabel;
 
         delete data.$stepList;
+        delete data.$currChessBoard;
+        delete data.$currNextStep;
 
         _.each(data.chessBoard, (chess, geo) => {
+            if (chess.caption == '') {
+                delete chess.caption;
+            }
+
             delete chess.geo;
         });
 

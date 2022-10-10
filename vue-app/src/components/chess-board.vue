@@ -135,10 +135,9 @@ function drawLine() {
 
 /**
  * chessObj:
- *  color: black,white
- *  fixed: true,false
+ *  caption
+ *  type: black,white
  *  marked: true,false,
- *  markedColor: black, white
  *  geo: '0419'
  */
 function drawChess(chessObj) {
@@ -158,7 +157,7 @@ function drawChess(chessObj) {
 
   let chessRadius = data.canvas.unitBorder * 4 / 9;
 
-  ctx.fillStyle = chessObj.color;
+  ctx.fillStyle = Constants.CHESS_TYPE[chessObj.type].color;
   ctx.strokeStyle = 'black';
   ctx.beginPath();
   ctx.arc(0, 0, chessRadius, 0, 2 * Math.PI);
@@ -169,7 +168,7 @@ function drawChess(chessObj) {
   if (data.showMark && chessObj.marked) {
     let border = chessRadius * 2 / 3;
 
-    ctx.fillStyle = chessObj.markedColor;
+    ctx.fillStyle = Constants.CHESS_TYPE[chessObj.type].markedColor;
     ctx.strokeStyle = 'black';
 
     ctx.beginPath();
@@ -182,8 +181,7 @@ function drawChess(chessObj) {
   }
 
   if (chessObj.caption) {
-
-    ctx.fillStyle = chessObj.markedColor;
+    ctx.fillStyle = Constants.CHESS_TYPE[chessObj.type].markedColor;
 
     ctx.textAlign = 'center';
     ctx.textBaseline = "middle";

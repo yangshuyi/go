@@ -5,9 +5,9 @@ import _ from 'lodash';
  */
 export default {
     CHESS_TYPE: {
-        BLACK: {text: '黑棋', value: 'BLACK', color: 'black', markedColor: 'white', nextStep: 'WHITE'},
-        WHITE: {text: '白棋', value: 'WHITE', color: 'white', markedColor: 'black', nextStep: 'BLACK'},
-        CLEAR: {text: '空', value: 'CLEAR', color: 'transparent', markedColor: 'transparent'},
+        B: {text: '黑棋', value: 'B', color: 'black', markedColor: 'white', nextStep: 'W'},
+        W: {text: '白棋', value: 'W', color: 'white', markedColor: 'black', nextStep: 'B'},
+        C: {text: '空', value: 'C', color: 'transparent', markedColor: 'transparent'},
     },
     CHESS_BOARD_LABEL: {
         "01": {row1: '一', column1: '1', row2: '1', column2: 'A'},
