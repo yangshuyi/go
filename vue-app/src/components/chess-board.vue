@@ -57,9 +57,10 @@ function init(chessBoardSize, showMark = false, showBoard = false) {
   data.showMark = showMark;
   data.showBoard = showBoard;
 
-  let unit = Math.trunc(chessBoardBorder / (data.chessBoardSize + 1) * 2); //padding为unitBorder的1/2
-  if (unit > 25) {
-    unit = 25;
+  let unit = Math.trunc(chessBoardBorder / ((data.chessBoardSize + 1) * 2)); //padding为unitBorder的1/2
+  console.log("unit:" + unit);
+  if (unit > 20) {
+    unit = 20;
   }
   data.canvas.unitBorder = unit * 2;
   data.canvas.padding = unit * 2;
@@ -243,6 +244,12 @@ function onCanvasClick($target) {
   let posX = Math.round((($target.offsetX - data.canvas.padding)) / data.canvas.unitBorder);
   let posY = Math.round((($target.offsetY - data.canvas.padding)) / data.canvas.unitBorder);
 
+  if (posX < 0 || posX >= data.chessBoardSize) {
+    return;
+  } else if (posY < 0 || posY >= data.chessBoardSize) {
+    return;
+  }
+
   let geo = ChessUtils.getGeoFromPosIdx(data.chessBoardSize, {x: posX, y: posY});
 
   emits("onChessStep", {geo: geo});
@@ -261,7 +268,11 @@ function onCanvasClick($target) {
 
 <style scoped lang="scss">
 .chess-board {
+
   > .wrap {
+    width: 100%;
+    height: 100%;
+
     //background-image: url(/chess-board-bg.png);
     display: flex;
     align-items: center;

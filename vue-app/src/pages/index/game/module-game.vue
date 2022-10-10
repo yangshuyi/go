@@ -59,7 +59,7 @@ function mgmtGame() {
   router.push({name: 'mgmt', query: {gameId: data.selectedGame.id}});
 }
 
-function toggleHardFlag(){
+function toggleHardFlag() {
   data.selectedGame.hardFlag = !data.selectedGame.hardFlag;
 }
 
@@ -96,7 +96,7 @@ function toggleHardFlag(){
         <Game :game="data.selectedGame" :withBoard="true" style="width: 100%;"/>
       </div>
 
-      <van-action-bar>
+      <van-action-bar :placeholder="true">
         <van-row justify="space-around" style="width: 100%;">
           <template v-for="levelOption in data.levelOptions">
             <van-action-bar-icon :icon="levelOption.icon" :text="levelOption.text" :color="levelOption.iconColor" @click="updateGameLevel(levelOption)"/>
@@ -112,6 +112,9 @@ function toggleHardFlag(){
 <style lang="scss">
 
 .module-game {
+  display: flex;
+  flex-direction: column;
+
   .van-nav-bar {
     .van-nav-bar__title {
       white-space: initial;
@@ -148,7 +151,12 @@ function toggleHardFlag(){
   }
 
   .game-section {
-    padding: 0px 0px;
+    flex: 1;
+
+    > * {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .van-action-bar {

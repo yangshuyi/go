@@ -3,7 +3,7 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import App from './App.vue';
 import router from './route';
-import CccisVue3Common, {CccisCfgUtils, CccisLoggerUtils, CccisExplorerUtils} from '@cccis/vue3-common';
+import CccisVue3Common, {CccisAppUtils, CccisCfgUtils, CccisLoggerUtils, CccisExplorerUtils} from '@cccis/vue3-common';
 
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 
@@ -35,11 +35,18 @@ CccisCfgUtils.ajax.jwtEnabled = false; //是否启用JWT用户认证
 
 CccisLoggerUtils.init(null, "DEBUG", "BATCH");
 
-// CccisExplorerUtils.updateViewPort({
-//     "initial-scale": 1,
-//     "minimum-scale": 1,
-//     "maximum-scale": 1
-// });
+let scale = "1.0";
+if(window.innerWidth>1000){
+    scale = "2.0"; //1308*1685 1651*2127 (1.26)
+}
+
+CccisAppUtils.setLocalStorageStringItem("scale", scale);
+
+CccisExplorerUtils.updateViewPort({
+    "initial-scale": scale,
+    "minimum-scale": scale,
+    "maximum-scale": scale
+});
 
 
 

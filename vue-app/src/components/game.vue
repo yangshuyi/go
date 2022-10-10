@@ -154,51 +154,49 @@ function onChessStep($chess) {
 
 <template>
   <div class="game">
-    <van-cell-group inset v-if="data.game" class="control-section">
-      <van-field label="当前手" center>
-        <template #input>
-          <van-radio-group v-model="data.game.$currNextStep" direction="horizontal" @change="">
-            <van-radio name="B">黑棋</van-radio>
-            <van-radio name="W">白棋</van-radio>
-            <van-radio name="C">清除</van-radio>
-          </van-radio-group>
-        </template>
-      </van-field>
-      <van-field label="展示标记" center>
-        <template #input>
-          <van-switch v-model="data.showMark" @change="reset"/>
-        </template>
-      </van-field>
-      <van-field label="展示棋盘" center>
-        <template #input>
-          <van-switch v-model="data.showBoard" @change="reset"/>
-        </template>
-      </van-field>
-    </van-cell-group>
+    <div v-if="data.game" class="control-section cccis-flex-row">
+      <div class="cccis-flex-row flex-1">
+        <div>当前手</div>
+        <van-radio-group v-model="data.game.$currNextStep" direction="horizontal" @change="">
+          <van-radio name="B">黑棋</van-radio>
+          <van-radio name="W">白棋</van-radio>
+          <van-radio name="C">清除</van-radio>
+        </van-radio-group>
+      </div>
+    </div>
+    <div v-if="data.game" class="control-section cccis-flex-row">
+      <div class="cccis-flex-row">
+        <div>展示标记</div>
+        <van-switch v-model="data.showMark" @change="reset"/>
+      </div>
+      <div class="cccis-flex-row">
+        <div>当前手</div>
+        <van-switch v-model="data.showBoard" @change="reset"/>
+      </div>
+    </div>
 
     <ChessBoard ref="domChessBoardRef" @onChessStep="onChessStep" style="width:100%;"></ChessBoard>
 
     <van-row justify="space-around" class="action-section">
-      <van-col span="6">
+      <van-col span="6" style="text-align: center">
         <van-button type="primary" plain hairline @click="reset();" :disabled="data.game?.$stepList.length==0">还原</van-button>
       </van-col>
-      <van-col span="6">
+      <van-col span="6" style="text-align: center">
         <van-button type="primary" plain hairline @click="stepBackward()" :disabled="data.game?.$stepList.length==0">上一步</van-button>
       </van-col>
     </van-row>
-
-    <!--    <div class="debug-info-section">-->
-    <!--      <div v-for="chess in data.game?.currChessBoard" class="row">-->
-    <!--        <div>{{ chess.geo }}</div>-->
-    <!--      </div>-->
-    <!--    </div>-->
   </div>
 
 </template>
 
 <style lang="scss">
 .game {
+  display: flex;
+  flex-direction: column;
+
   > .control-section {
+    padding: var(--van-cell-vertical-padding) var(--van-cell-horizontal-padding);
+
     .van-cell {
       height: 52px;
     }
@@ -206,6 +204,7 @@ function onChessStep($chess) {
 
   > .chess-board {
     align-self: center;
+    flex: 1;
   }
 
   > .action-section {
@@ -214,10 +213,6 @@ function onChessStep($chess) {
     .van-button {
       width: 100px;
     }
-  }
-
-  > .debug-info {
-    font-size: 12px;
   }
 }
 </style>
