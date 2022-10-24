@@ -65,7 +65,7 @@ async function init() {
     let gameTmpl = GameUtils.getGameTemplate();
     if (gameTmpl) {
       data.field.book = gameTmpl.book;
-      data.field.title = gameTmpl.title;
+      data.field.title = GameUtils.generateNewGameTitle(gameTmpl.title);
       data.field.chessBoardSize = gameTmpl.chessBoardSize;
       data.field.desc = gameTmpl.desc;
       data.field.tagsText = gameTmpl.tagsText;
@@ -209,7 +209,7 @@ function onChessStep($chess) {
 
         <van-field label="描述" v-model="data.field.desc" clearable/>
 
-        <van-field label="标签" v-model="data.field.tags" clearable/>
+        <van-field label="标签" v-model="data.field.tagsText" clearable/>
 
         <van-field label="棋盘">
           <template #input>

@@ -6,14 +6,27 @@ import {useRoute, useRouter} from "vue-router";
 
 import Constants from "@/components/constants";
 import GameUtils from "@/pages/index/game-utils.js";
+import TagUtils from "@/pages/index/tag-utils.js";
 import ChessUtils from "@/pages/index/chess-utils.js";
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
+import DropdownField from "@/components/dropdown-field/dropdown-field.vue";
+import TagSelector from "@/components/tag-selector.vue";
 import {Toast} from 'vant';
 
 let data = reactive({
   showFilterPanel: [],
   filter: {
-    onlyHardFlag: false,
+    books: [], //当前书籍
+    tags: [], //当前标签
+    onlyHardFlag: false, //仅展示难题
+    ignoreNewFlag: false, //排除新题
+  },
+  optionList: {
+    nextChessTypeOptions: Constants.CHESS_TYPE,
+    bookOptions: Constants.BOOK_LIST,
+    chessBoardSizeOptions: Constants.CHESS_BOARD_SIZE_OPTIONS,
+    levelOptions: Constants.LEVEL_OPTIONS,
+    tagOptions: [],
   },
   games: [],
 });
@@ -41,6 +54,8 @@ async function downloadData() {
   let message = `发现服务器数据，共${_.size(dataList)}条记录。`;
   Toast({message: message, position: 'bottom'});
 
+  data.optionList.tagOptions = TagUtils.getAllTags(dataList);
+
   loadGameList();
 }
 
@@ -57,6 +72,8 @@ async function loadData() {
   let message = `发现本地数据，共${_.size(dataList)}条记录。`;
   Toast({message: message, position: 'bottom'});
 
+  data.optionList.tagOptions = TagUtils.getAllTags(dataList);
+
   loadGameList();
 }
 
@@ -72,6 +89,10 @@ function mgmtGame(game) {
   router.push({name: 'mgmt', query: {gameId: game?.id}});
 }
 
+function custom(){
+  GameUtils.custom();
+}
+
 </script>
 
 <template>
@@ -83,12 +104,30 @@ function mgmtGame(game) {
     <van-collapse v-model="data.showFilterPanel" class="filter-panel">
       <van-collapse-item title="列表过滤面板" name="1" :border="false">
         <van-cell-group inset>
+          <van-field label="书籍" input-align="right">
+            <template #input>
+              <TagSelector v-model:value="data.filter.books" :optionList="data.optionList.bookOptions"/>
+            </template>
+          </van-field>
+          <van-field label="标签" input-align="right">
+            <template #input>
+              <TagSelector v-model:value="data.filter.tags" :optionList="data.optionList.tagOptions"/>
+            </template>
+          </van-field>
           <van-field label="仅展示难题" input-align="right">
             <template #input>
               <van-switch v-model="data.filter.onlyHardFlag"/>
             </template>
           </van-field>
+          <van-field label="排除新题" input-align="right">
+            <template #input>
+              <van-switch v-model="data.filter.ignoreNewFlag"/>
+            </template>
+          </van-field>
         </van-cell-group>
+        <van-space>
+          <van-button type="primary" plain hairline @click="custom();">custom</van-button>
+        </van-space>
       </van-collapse-item>
     </van-collapse>
     <van-list class="game-list">

@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import dayjs from "dayjs";
-import {CccisDialogUtils} from "@cccis/vue3-common";
+import {CccisDialogUtils, CccisLoggerUtils} from "@cccis/vue3-common";
 import Constants from "@/components/constants.js";
 import ChessUtils from "@/pages/index/chess-utils.js";
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
+import TagUtils from "@/pages/index/tag-utils";
 import {Toast} from "vant";
 
 let GAME_MAP = {}; //key: Id, value Game
@@ -109,6 +110,11 @@ function buildGame(game) {
 }
 
 async function uploadGameData() {
+    if (_.isEmpty(GAME_LIST)) {
+        CccisLoggerUtils.warn("GAME_LIST is empty");
+        return;
+    }
+
     let dataList = [];
     _.each(GAME_LIST, (game) => {
         let data = JSON.parse(JSON.stringify(game));
@@ -116,10 +122,6 @@ async function uploadGameData() {
 
         delete data.chessBoardSizeText;
 
-        delete data.tagsText;
-        if (data.tags && data.tags.length == 0) {
-            delete data.tags;
-        }
         delete data.levelText;
         delete data.levelIcon;
         delete data.levelIconColor;
@@ -131,6 +133,8 @@ async function uploadGameData() {
         delete data.$stepList;
         delete data.$currChessBoard;
         delete data.$currNextStep;
+
+        TagUtils.formatGameTagsBeforeUpload(data);
 
         _.each(data.chessBoard, (chess, geo) => {
             if (chess.caption == '') {
@@ -153,6 +157,24 @@ function fetchAllGames(filterParams) {
         _.each(GAME_LIST, (game) => {
             if (filterParams.onlyHardFlag == true) {
                 if (game.hardFlag != true) {
+                    return;
+                }
+            }
+
+            if (filterParams.ignoreNewFlag == true) {
+                if (game.level == Constants.LEVEL_OPTIONS[3].value) {
+                    return;
+                }
+            }
+
+            if (!_.isEmpty(filterParams.books)) {
+                if (!_.includes(filterParams.books, game.book)) {
+                    return;
+                }
+            }
+
+            if (!_.isEmpty(filterParams.tags)) {
+                if (_.isEmpty(_.intersection(game.tags, filterParams.tags))) {
                     return;
                 }
             }
@@ -188,6 +210,17 @@ function addGame(game) {
     return true;
 }
 
+function generateNewGameTitle(oldTitle) {
+    let array = _.split(oldTitle, '-');
+    let lastTitleSegment = array[array.length - 1];
+
+    let number = _.toNumber(lastTitleSegment);
+    if (!Number.isNaN(number)) {
+        array[array.length - 1] = number + 1;
+    }
+    return _.join(array, '-');
+}
+
 function getGameTemplate() {
     return gameTmpl;
 }
@@ -206,6 +239,10 @@ function saveGameTemplate(game) {
     }
 }
 
+function custom(){
+    TagUtils.custom(GAME_LIST);
+}
+
 export default {
 
     uploadGameData: uploadGameData,
@@ -219,6 +256,9 @@ export default {
     addGame: addGame,
     buildGame: buildGame,
 
+    generateNewGameTitle: generateNewGameTitle,
     getGameTemplate: getGameTemplate,
     saveGameTemplate: saveGameTemplate,
+
+    custom: custom,
 };

@@ -285,6 +285,7 @@ async function handleOptionSelected(currOptionText, currOptionIndex) {
 
   <van-popup v-model:show="data.optionContainer.visible" position="bottom" round>
     <van-picker show-toolbar :columns="data.optionTextList" :default-index="selectOptionIndex" item-height="50" :confirm-button-text="confirmButtonText" :cancel-button-text="cancelButtonText"
+                visible-item-count="10"
                 @cancel="hideOptionContainer" @confirm="handleOptionSelected">
     </van-picker>
   </van-popup>
