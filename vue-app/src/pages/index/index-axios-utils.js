@@ -36,6 +36,8 @@ export default {
             data.valueObj = JSON.parse(data.value);
         }
 
+        CccisLoggerUtils.debug(JSON.stringify(data.valueObj));
+
         return data.valueObj ;
     },
 
