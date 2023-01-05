@@ -1,11 +1,7925 @@
 [
   {
+    "id": "1672745803867",
+    "book": "弈学院三步计算力",
+    "title": "2-270",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745775998",
+    "book": "弈学院三步计算力",
+    "title": "2-275",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745725864",
+    "book": "弈学院三步计算力",
+    "title": "2-285",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0702": {
+        "type": "W",
+        "marked": false
+      },
+      "0601": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0902": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745676084",
+    "book": "弈学院三步计算力",
+    "title": "2-310",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745640808",
+    "book": "弈学院三步计算力",
+    "title": "2-315",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745586176",
+    "book": "弈学院三步计算力",
+    "title": "2-320",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0209": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0807": {
+        "type": "B",
+        "marked": false
+      },
+      "0804": {
+        "type": "B",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0208": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745539211",
+    "book": "弈学院三步计算力",
+    "title": "2-323",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0206": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745476291",
+    "book": "弈学院三步计算力",
+    "title": "2-348",
+    "chessBoardSize": 11,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1672745412748",
+    "book": "弈学院三步计算力",
+    "title": "2-344",
+    "chessBoardSize": 11,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1007": {
+        "type": "B",
+        "marked": false
+      },
+      "1008": {
+        "type": "W",
+        "marked": false
+      },
+      "1009": {
+        "type": "W",
+        "marked": false
+      },
+      "1010": {
+        "type": "B",
+        "marked": false
+      },
+      "1106": {
+        "type": "B",
+        "marked": false
+      },
+      "1108": {
+        "type": "B",
+        "marked": false
+      },
+      "1109": {
+        "type": "W",
+        "marked": false
+      },
+      "1110": {
+        "type": "B",
+        "marked": false
+      },
+      "1209": {
+        "type": "B",
+        "marked": false
+      },
+      "0910": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0808": {
+        "type": "B",
+        "marked": false
+      },
+      "0909": {
+        "type": "W",
+        "marked": false
+      },
+      "0810": {
+        "type": "W",
+        "marked": false
+      },
+      "0710": {
+        "type": "W",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0807": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670741169076",
+    "book": "弈学院上课练习",
+    "title": "挤杀-11",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670741134655",
+    "book": "弈学院上课练习",
+    "title": "挤杀-10",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670741095490",
+    "book": "弈学院上课练习",
+    "title": "挤杀-09",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1004": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0803": {
+        "type": "B",
+        "marked": false
+      },
+      "0903": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670741062375",
+    "book": "弈学院上课练习",
+    "title": "挤杀-08",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670741010561",
+    "book": "弈学院上课练习",
+    "title": "挤杀-07",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0805": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0509": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0309": {
+        "type": "B",
+        "marked": false
+      },
+      "0209": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740983312",
+    "book": "弈学院上课练习",
+    "title": "挤杀-06",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0609": {
+        "type": "B",
+        "marked": false
+      },
+      "0409": {
+        "type": "B",
+        "marked": false
+      },
+      "0309": {
+        "type": "B",
+        "marked": false
+      },
+      "0209": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0208": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740961353",
+    "book": "弈学院上课练习",
+    "title": "挤杀-05",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0206": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740941076",
+    "book": "弈学院上课练习",
+    "title": "挤杀-04",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0201": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740919501",
+    "book": "弈学院上课练习",
+    "title": "挤杀-03",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740901425",
+    "book": "弈学院上课练习",
+    "title": "挤杀-02",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740843711",
+    "book": "弈学院上课练习",
+    "title": "挤杀-01",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "挤杀"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0802": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740814671",
+    "book": "弈学院上课练习",
+    "title": "团活-12",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0601": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740737201",
+    "book": "弈学院上课练习",
+    "title": "团活-11",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0201": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740708221",
+    "book": "弈学院上课练习",
+    "title": "团活-10",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740674317",
+    "book": "弈学院上课练习",
+    "title": "团活-09",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0309": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740649396",
+    "book": "弈学院上课练习",
+    "title": "团活-08",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0409": {
+        "type": "W",
+        "marked": false
+      },
+      "0309": {
+        "type": "W",
+        "marked": false
+      },
+      "0209": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740621893",
+    "book": "弈学院上课练习",
+    "title": "团活-07",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0208": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740588876",
+    "book": "弈学院上课练习",
+    "title": "团活-06",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0206": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740564361",
+    "book": "弈学院上课练习",
+    "title": "团活-05",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0208": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740545528",
+    "book": "弈学院上课练习",
+    "title": "团活-04",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0206": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740515501",
+    "book": "弈学院上课练习",
+    "title": "团活-03",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1002": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0601": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0801": {
+        "type": "B",
+        "marked": false
+      },
+      "0901": {
+        "type": "B",
+        "marked": false
+      },
+      "0902": {
+        "type": "W",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740480456",
+    "book": "弈学院上课练习",
+    "title": "团活-02",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670740409785",
+    "book": "弈学院上课练习",
+    "title": "团活-01",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "团活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0702": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728512245",
+    "book": "弈学院三步计算力",
+    "title": "2-251",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0702": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728466351",
+    "book": "弈学院三步计算力",
+    "title": "2-248",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0908": {
+        "type": "B",
+        "marked": false
+      },
+      "0807": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0609": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0409": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0509": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728361198",
+    "book": "弈学院三步计算力",
+    "title": "2-245",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0903": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0804": {
+        "type": "B",
+        "marked": false
+      },
+      "0905": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0807": {
+        "type": "B",
+        "marked": false
+      },
+      "0908": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728338702",
+    "book": "弈学院三步计算力",
+    "title": "2-227",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0206": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728336546",
+    "book": "弈学院上课练习",
+    "title": "挤杀-12",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "tags": [
+      "挤杀"
+    ],
+    "caption": ""
+  },
+  {
+    "id": "1670728277585",
+    "book": "弈学院三步计算力",
+    "title": "2-218",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728241943",
+    "book": "弈学院三步计算力",
+    "title": "2-210",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0309": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0208": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0807": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728208835",
+    "book": "弈学院三步计算力",
+    "title": "2-208",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "2",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0201": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728125959",
+    "book": "弈学院三步计算力",
+    "title": "2-209",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1007": {
+        "type": "B",
+        "marked": false
+      },
+      "1009": {
+        "type": "W",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0807": {
+        "type": "B",
+        "marked": false
+      },
+      "0808": {
+        "type": "B",
+        "marked": false
+      },
+      "0809": {
+        "type": "B",
+        "marked": false
+      },
+      "0805": {
+        "type": "B",
+        "marked": false
+      },
+      "0904": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0908": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670728064110",
+    "book": "弈学院三步计算力",
+    "title": "2-204",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0409": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727956168",
+    "book": "弈学院三步计算力",
+    "title": "2-160",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1006": {
+        "type": "B",
+        "marked": false
+      },
+      "1007": {
+        "type": "B",
+        "marked": false
+      },
+      "1008": {
+        "type": "W",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0805": {
+        "type": "B",
+        "marked": false
+      },
+      "0904": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727883520",
+    "book": "弈学院三步计算力",
+    "title": "2-143",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0803": {
+        "type": "B",
+        "marked": false
+      },
+      "0903": {
+        "type": "B",
+        "marked": false
+      },
+      "0904": {
+        "type": "B",
+        "marked": false
+      },
+      "0905": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0908": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0804": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727841505",
+    "book": "弈学院三步计算力",
+    "title": "2-136",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0208": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727812260",
+    "book": "弈学院三步计算力",
+    "title": "2-128",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1006": {
+        "type": "W",
+        "marked": false
+      },
+      "1008": {
+        "type": "B",
+        "marked": false
+      },
+      "0909": {
+        "type": "B",
+        "marked": false
+      },
+      "0808": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0804": {
+        "type": "B",
+        "marked": false
+      },
+      "0905": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "W",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0908": {
+        "type": "W",
+        "marked": false
+      },
+      "0807": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727752025",
+    "book": "弈学院三步计算力",
+    "title": "2-122",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "1005": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0807": {
+        "type": "B",
+        "marked": false
+      },
+      "0808": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0609": {
+        "type": "B",
+        "marked": false
+      },
+      "0904": {
+        "type": "B",
+        "marked": false
+      },
+      "0804": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0905": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727706329",
+    "book": "弈学院三步计算力",
+    "title": "2-125",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0409": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727635929",
+    "book": "弈学院三步计算力",
+    "title": "2-119",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0804": {
+        "type": "B",
+        "marked": false
+      },
+      "0805": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0908": {
+        "type": "B",
+        "marked": false
+      },
+      "0807": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0903": {
+        "type": "W",
+        "marked": false
+      },
+      "0904": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1670727574841",
+    "book": "弈学院三步计算力",
+    "title": "2-107",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555499061",
+    "book": "弈学院上课练习",
+    "title": "扳-024",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555473324",
+    "book": "弈学院上课练习",
+    "title": "扳-023",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555411985",
+    "book": "弈学院上课练习",
+    "title": "扳-022",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555370428",
+    "book": "弈学院上课练习",
+    "title": "扳-021",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0601": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555335564",
+    "book": "弈学院上课练习",
+    "title": "扳-020",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0501": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555061889",
+    "book": "弈学院上课练习",
+    "title": "扳-019",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669555003872",
+    "book": "弈学院上课练习",
+    "title": "扳-018",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0207": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554976554",
+    "book": "弈学院上课练习",
+    "title": "扳-017",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0702": {
+        "type": "W",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0801": {
+        "type": "W",
+        "marked": false
+      },
+      "0901": {
+        "type": "B",
+        "marked": false
+      },
+      "0902": {
+        "type": "B",
+        "marked": false
+      },
+      "0903": {
+        "type": "B",
+        "marked": false
+      },
+      "0803": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554949102",
+    "book": "弈学院上课练习",
+    "title": "扳-016",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554914598",
+    "book": "弈学院上课练习",
+    "title": "扳-015",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554871343",
+    "book": "弈学院上课练习",
+    "title": "扳-014",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0501": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554785036",
+    "book": "弈学院上课练习",
+    "title": "扳-001",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "扳"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0201": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554743115",
+    "book": "弈学院上课练习",
+    "title": "立活-012",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0409": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554705013",
+    "book": "弈学院上课练习",
+    "title": "立活-011",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554678629",
+    "book": "弈学院上课练习",
+    "title": "立活-010",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554637051",
+    "book": "弈学院上课练习",
+    "title": "立活-009",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0701": {
+        "type": "B",
+        "marked": false
+      },
+      "0801": {
+        "type": "W",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554602529",
+    "book": "弈学院上课练习",
+    "title": "立活-008",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554562969",
+    "book": "弈学院上课练习",
+    "title": "立活-007",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554517969",
+    "book": "弈学院上课练习",
+    "title": "立活-006",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0804": {
+        "type": "W",
+        "marked": false
+      },
+      "0806": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554260545",
+    "book": "弈学院上课练习",
+    "title": "立活-005",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0802": {
+        "type": "W",
+        "marked": false
+      },
+      "0702": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554164631",
+    "book": "弈学院上课练习",
+    "title": "立活-004",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0202": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0502": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554134990",
+    "book": "弈学院上课练习",
+    "title": "立活-003",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669554103934",
+    "book": "弈学院上课练习",
+    "title": "立活-002",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0803": {
+        "type": "B",
+        "marked": false
+      },
+      "0801": {
+        "type": "B",
+        "marked": false
+      },
+      "0802": {
+        "type": "B",
+        "marked": false
+      },
+      "0901": {
+        "type": "W",
+        "marked": false
+      },
+      "0902": {
+        "type": "W",
+        "marked": false
+      },
+      "0903": {
+        "type": "W",
+        "marked": false
+      },
+      "0804": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669553959492",
+    "book": "弈学院上课练习",
+    "title": "立活-001",
+    "chessBoardSize": 11,
+    "desc": "",
+    "tags": [
+      "立活"
+    ],
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125516486",
+    "book": "弈学院三步计算力",
+    "title": "2-99",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0501": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0301": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0302": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0206": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125461901",
+    "book": "弈学院三步计算力",
+    "title": "2-96",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0903": {
+        "type": "W",
+        "marked": false
+      },
+      "0803": {
+        "type": "W",
+        "marked": false
+      },
+      "0905": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0907": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "B",
+        "marked": false
+      },
+      "0603": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125415017",
+    "book": "弈学院三步计算力",
+    "title": "2-82",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125368949",
+    "book": "弈学院三步计算力",
+    "title": "2-80",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0505": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125339010",
+    "book": "弈学院三步计算力",
+    "title": "2-83",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0405": {
+        "type": "B",
+        "marked": false
+      },
+      "0504": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0207": {
+        "type": "W",
+        "marked": false
+      },
+      "0308": {
+        "type": "W",
+        "marked": false
+      },
+      "0309": {
+        "type": "W",
+        "marked": false
+      },
+      "0209": {
+        "type": "W",
+        "marked": false
+      },
+      "0409": {
+        "type": "W",
+        "marked": false
+      },
+      "0509": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0708": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125270722",
+    "book": "弈学院三步计算力",
+    "title": "2-72",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0301": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0203": {
+        "type": "B",
+        "marked": false
+      },
+      "0204": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "W",
+        "marked": false
+      },
+      "0205": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125182652",
+    "book": "弈学院三步计算力",
+    "title": "2-43",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0209": {
+        "type": "B",
+        "marked": false
+      },
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0308": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0607": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0309": {
+        "type": "W",
+        "marked": false
+      },
+      "0409": {
+        "type": "W",
+        "marked": false
+      },
+      "0509": {
+        "type": "W",
+        "marked": false
+      },
+      "0609": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125079020",
+    "book": "弈学院三步计算力",
+    "title": "2-29",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0202": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0402": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "B",
+        "marked": false
+      },
+      "0705": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0303": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0203": {
+        "type": "W",
+        "marked": false
+      },
+      "0204": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669125029324",
+    "book": "弈学院三步计算力",
+    "title": "2-27",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0508": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0906": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0306": {
+        "type": "B",
+        "marked": false
+      },
+      "0305": {
+        "type": "B",
+        "marked": false
+      },
+      "0406": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0404": {
+        "type": "B",
+        "marked": false
+      },
+      "0403": {
+        "type": "B",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0606": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0805": {
+        "type": "W",
+        "marked": false
+      },
+      "0704": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0602": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0405": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669124976092",
+    "book": "弈学院三步计算力",
+    "title": "2-24",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "1",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0208": {
+        "type": "B",
+        "marked": false
+      },
+      "0309": {
+        "type": "B",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      },
+      "0408": {
+        "type": "B",
+        "marked": false
+      },
+      "0409": {
+        "type": "B",
+        "marked": false
+      },
+      "0609": {
+        "type": "B",
+        "marked": false
+      },
+      "0709": {
+        "type": "B",
+        "marked": false
+      },
+      "0708": {
+        "type": "B",
+        "marked": false
+      },
+      "0707": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0805": {
+        "type": "B",
+        "marked": false
+      },
+      "0704": {
+        "type": "B",
+        "marked": false
+      },
+      "0509": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0608": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0706": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0604": {
+        "type": "W",
+        "marked": false
+      },
+      "0505": {
+        "type": "W",
+        "marked": false
+      },
+      "0406": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669124928880",
+    "book": "弈学院三步计算力",
+    "title": "2-21",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0909": {
+        "type": "B",
+        "marked": false
+      },
+      "0908": {
+        "type": "B",
+        "marked": false
+      },
+      "0907": {
+        "type": "B",
+        "marked": false
+      },
+      "0806": {
+        "type": "B",
+        "marked": false
+      },
+      "0706": {
+        "type": "B",
+        "marked": false
+      },
+      "0606": {
+        "type": "B",
+        "marked": false
+      },
+      "0506": {
+        "type": "B",
+        "marked": false
+      },
+      "0507": {
+        "type": "B",
+        "marked": false
+      },
+      "0608": {
+        "type": "B",
+        "marked": false
+      },
+      "0709": {
+        "type": "W",
+        "marked": false
+      },
+      "0809": {
+        "type": "W",
+        "marked": false
+      },
+      "0808": {
+        "type": "W",
+        "marked": false
+      },
+      "0807": {
+        "type": "W",
+        "marked": false
+      },
+      "0707": {
+        "type": "W",
+        "marked": false
+      },
+      "0607": {
+        "type": "W",
+        "marked": false
+      },
+      "0508": {
+        "type": "W",
+        "marked": false
+      },
+      "0408": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
+    "id": "1669124819846",
+    "book": "弈学院三步计算力",
+    "title": "2-018",
+    "chessBoardSize": 9,
+    "desc": "",
+    "level": "0",
+    "nextChessType": "B",
+    "chessBoard": {
+      "0206": {
+        "type": "B",
+        "marked": false
+      },
+      "0205": {
+        "type": "B",
+        "marked": false
+      },
+      "0304": {
+        "type": "B",
+        "marked": false
+      },
+      "0303": {
+        "type": "B",
+        "marked": false
+      },
+      "0302": {
+        "type": "B",
+        "marked": false
+      },
+      "0401": {
+        "type": "B",
+        "marked": false
+      },
+      "0502": {
+        "type": "B",
+        "marked": false
+      },
+      "0602": {
+        "type": "B",
+        "marked": false
+      },
+      "0605": {
+        "type": "W",
+        "marked": false
+      },
+      "0503": {
+        "type": "B",
+        "marked": false
+      },
+      "0604": {
+        "type": "B",
+        "marked": false
+      },
+      "0703": {
+        "type": "W",
+        "marked": false
+      },
+      "0603": {
+        "type": "W",
+        "marked": false
+      },
+      "0705": {
+        "type": "W",
+        "marked": false
+      },
+      "0504": {
+        "type": "W",
+        "marked": false
+      },
+      "0402": {
+        "type": "W",
+        "marked": false
+      },
+      "0403": {
+        "type": "W",
+        "marked": false
+      },
+      "0404": {
+        "type": "W",
+        "marked": false
+      },
+      "0305": {
+        "type": "W",
+        "marked": false
+      },
+      "0306": {
+        "type": "W",
+        "marked": false
+      },
+      "0407": {
+        "type": "W",
+        "marked": false
+      },
+      "0507": {
+        "type": "W",
+        "marked": false
+      },
+      "0506": {
+        "type": "W",
+        "marked": false
+      },
+      "0307": {
+        "type": "B",
+        "marked": false
+      }
+    },
+    "hardFlag": false,
+    "caption": ""
+  },
+  {
     "id": "1668837625187",
     "book": "弈学院上课练习",
     "title": "3-481",
     "chessBoardSize": 9,
     "desc": "",
-    "level": "1",
+    "level": "0",
     "nextChessType": "B",
     "chessBoard": {
       "0202": {
@@ -109,7 +8023,7 @@
     "tags": [
       "双吃"
     ],
-    "level": "1",
+    "level": "0",
     "nextChessType": "B",
     "chessBoard": {
       "0908": {
@@ -336,7 +8250,7 @@
     "title": "3-311",
     "chessBoardSize": 9,
     "desc": "",
-    "level": "1",
+    "level": "0",
     "nextChessType": "B",
     "chessBoard": {
       "0204": {
@@ -421,7 +8335,7 @@
     "title": "3-41",
     "chessBoardSize": 11,
     "desc": "",
-    "level": "1",
+    "level": "0",
     "nextChessType": "B",
     "chessBoard": {
       "0202": {
