@@ -1,0 +1,22 @@
+.problem-filter-view {
+
+}
+
+.problem-filter-view .problem-filter-view-header{
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0px var(--margin-base);
+
+    background: var(--adm-color-background);
+}
+
+.problem-filter-view .problem-filter-view-body{
+
+}
+
+.problem-filter-view .problem-filter-view-body.invisible{
+    visibility: hidden;
+}
