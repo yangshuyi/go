@@ -2,7 +2,7 @@ import _ from 'lodash';
 import dayjs from "dayjs";
 import {CccisDialogUtils, CccisLoggerUtils} from "@cccis/vue3-common";
 import Constants from "@/components/constants.js";
-import ChessUtils from "@/pages/index/chess-utils.js";
+import ChessUtils from "@/pages/index/ChessUtils.js";
 import IndexAxiosUtils from "@/pages/index/index-axios-utils";
 import {Toast} from "vant";
 

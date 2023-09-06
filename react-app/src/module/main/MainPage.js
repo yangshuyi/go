@@ -5,6 +5,9 @@ import './MainPage.css';
 
 import {HashRouter, Route, useNavigate, Outlet} from "react-router-dom";
 import {XmsSpinView} from "sirius-react-mobile";
+import GithubUtils from "../util/GithubUtils";
+
+
 
 function MainPage(props) {
     const pageInitialized = useRef(false);
@@ -20,6 +23,7 @@ function MainPage(props) {
 
     const init = async () => {
         Promise.all([
+            GithubUtils.fetchAllAssets(),
         ]).then(() => {
             setDataInitialized(true);
         });

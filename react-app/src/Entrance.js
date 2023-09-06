@@ -9,6 +9,8 @@ import HomePage from "./module/home/HomePage";
 
 import {DomUtils} from "sirius-common-utils";
 import {SpinUtils, XmsRouterListener} from "sirius-react-mobile";
+import GithubUtils from "./module/util/GithubUtils";
+import ProblemUtils from "./module/util/ProblemUtils";
 
 
 function Entrance(props) {
@@ -24,6 +26,18 @@ function Entrance(props) {
     }, []);
 
     const init = async () => {
+        await GithubUtils.init();
+
+        let problemList = [];
+        let assetList = await GithubUtils.fetchAllAssets();
+        for(let i=0;i<assetList.length;i++){
+            assetList[i].problemList = await GithubUtils.downloadAssetData(assetList[i].downloadUrl);
+            problemList = _.union(problemList,assetList[i].problemList);
+        }
+        console.log(`Totally find ${problemList.length} problems`);
+
+        ProblemUtils.init(problemList);
+
         setDataInitialized(true);
     }
 

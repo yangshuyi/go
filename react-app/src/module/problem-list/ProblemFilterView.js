@@ -9,6 +9,10 @@ import {Button, Collapse, Form, List, NavBar, PullToRefresh, Selector, Switch, T
 import {ExclamationCircleFill, RedoOutline, StarFill, StarOutline} from "antd-mobile-icons";
 import {useLocation} from "react-router";
 import {DownOutlined, UpOutlined} from "@ant-design/icons";
+import ProblemUtils from "../util/ProblemUtils";
+import {XmsPicker} from "sirius-react-mobile";
+import BookPicker from "../../components/book-picker/BookPicker";
+import TagPicker from "../../components/tag-picker/TagPicker";
 
 
 function ProblemFilterView(props) {
@@ -26,8 +30,6 @@ function ProblemFilterView(props) {
     const [form] = Form.useForm();
     const [formData, setFormData] = useState();
     const [collapsed, setCollapsed] = useState(true);
-    const [bookOptions, setBookOptions] = useState([]);
-    const [tagOptions, setTagOptions] = useState([]);
 
     return (formData == null ? null :
             <div className="problem-filter-view">
@@ -35,13 +37,13 @@ function ProblemFilterView(props) {
                     <div className="flex-1">列表过滤面板</div>
                     {collapsed ? <UpOutlined/> : <DownOutlined/>}
                 </div>
-                <div className={collapsed ? 'problem-filter-view-body invisible' : 'problem-filter-view-body'}>
+                <div className={collapsed ? 'problem-filter-view-body display-none' : 'problem-filter-view-body'}>
                     <Form form={form} layout='horizontal' initialValues={formData}>
                         <Form.Item label="书籍" name="books">
-                            <Selector options={bookOptions}/>
+                            <BookPicker mode="multiple"/>
                         </Form.Item>
                         <Form.Item label="标签" name="tags">
-                            <Selector options={tagOptions}/>
+                            <TagPicker mode="multiple"/>
                         </Form.Item>
                         <Form.Item label="仅展示难题" name="onlyHardFlag" childElementPosition='right'>
                             <Switch/>

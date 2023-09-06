@@ -20,3 +20,11 @@
 .problem-filter-view .problem-filter-view-body.invisible{
     visibility: hidden;
 }
+
+.problem-filter-view .list-item {
+    background: red;
+}
+
+.problem-filter-view .list-item.visited {
+    background: lightgrey;
+}
