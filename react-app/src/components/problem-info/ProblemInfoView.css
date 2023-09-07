@@ -1,0 +1,42 @@
+.problem-info-view {
+
+}
+
+.problem-info-view .form-content {
+    height: 412px;
+}
+
+.problem-info-view-action-bar{
+    border-top: 1px solid var(--adm-color-border);
+    position: fixed;
+    z-index: 1000;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--adm-color-background);
+}
+
+.problem-info-view-action-bar .action-bar-item {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.problem-info-view-action-bar .action-bar-item .icon{
+
+}
+
+.problem-info-view-action-bar .action-bar-item .text{
+    margin-top: var(--margin-base-half);
+}
+
+.problem-info-view-action-bar .action-bar-item.unselected .icon > .anticon {
+    color: lightgrey !important;
+}

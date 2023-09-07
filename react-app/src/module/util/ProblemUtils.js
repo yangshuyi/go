@@ -1,17 +1,16 @@
 import _ from 'lodash';
 
-import {Octokit} from "octokit";
-import {AxiosUtils, DateUtils, StringUtils} from "sirius-common-utils";
+import {DateUtils, StringUtils} from "sirius-common-utils";
 import Constants from "../../Constants";
-import ChessUtils from "./ChessUtils";
+import TagUtils from "./TagUtils";
 
-let problemList = [];
+let problemMap = [];
 let bookList = [];
 let tagList = [];
 let filteredProblemList = [];
 
 function init(assetList) {
-    problemList = assetList;
+
     let bookMap = _.groupBy(assetList, 'book');
     bookList = [];
     _.each(bookMap, (items, bookName) => {
@@ -25,7 +24,8 @@ function init(assetList) {
 
     let tagMap = {};
     _.each(assetList, (problem) => {
-        buildGame(problem);
+        buildProblemFromRemote(problem);
+        problemMap[problem.id] = problem;
 
         _.each(problem.tags, (tag) => {
             if (!tag) {
@@ -54,7 +54,7 @@ function getTags() {
 
 async function filterProblemList(filterParam) {
     if (filterParam) {
-        filteredProblemList = _.filter(problemList, (problem) => {
+        filteredProblemList = _.filter(problemMap, (problem) => {
             if (filterParam.books && !_.isEmpty(filterParam.books)) {
                 if (!_.includes(filterParam.books, problem.book)) {
                     return false;
@@ -82,7 +82,7 @@ async function filterProblemList(filterParam) {
             return true;
         });
     } else {
-        filteredProblemList = problemList;
+        filteredProblemList = _.values(problemMap);
     }
 
     return filteredProblemList;
@@ -104,29 +104,50 @@ async function queryByPage(filterParam, pageNo, pageSize) {
     });
 }
 
+async function loadProblemById(problemId) {
+    let problem = problemMap[problemId];
+    if (problem == null) {
+        console.error(`Could not find Problem by id: ${problemId}`);
+    }
+    return problem;
+}
 
-function buildGame(game) {
-    game.chessBoardSizeText = game.chessBoardSize + "路";
+async function saveProblem(problemParam) {
+    let problem = null;
+    if (problemParam.id) {
+        problem = problemMap[problemParam.id];
+    }
+
+    buildProblemToRemote(problem, problemParam);
+
+
+
+    return problem;
+}
+
+function buildProblemFromRemote(game) {
+    game.$chessBoardSizeText = game.chessBoardSize + "路";
 
     if (!_.isEmpty(game.tags) && game.tags[0] != '') {
-        game.tagsText = _.join(game.tags, ",");
+        game.$tagsText = _.join(game.tags, ",");
     } else {
-        game.tagsText = '';
+        game.$tagsText = '';
         game.tags = [];
     }
 
     game.level = (game.level || '0') + "";
     let gameLevel = Constants.LEVEL_OPTIONS[game.level];
-    game.levelText = gameLevel.text;
-    game.levelIcon = gameLevel.icon;
+    game.$levelText = gameLevel.text;
+    game.$levelIcon = gameLevel.icon;
 
     if (game.hardFlag == null) {
         game.hardFlag = false;
     }
 
-    game.modifyDateText = DateUtils.convertTimestampToDateText(game.modifyDate);
-    game.introValue = "《" + game.book + "》" + game.title;
-    game.introLabel = game.modifyDateText + "　　" + game.chessBoardSizeText + "　　" + game.tagsText;
+    game.$modifyDateText = DateUtils.convertTimestampToDateText(game.modifyDate);
+    game.$introValue = "《" + game.book + "》" + game.title;
+    game.$introLabel = game.$modifyDateText + "　　" + game.$chessBoardSizeText + "　　" + game.$tagsText;
+    game.$visited = false;
 
     if (game.nextChessType === 'BLACK') {
         game.nextChessType = 'B';
@@ -134,37 +155,36 @@ function buildGame(game) {
         game.nextChessType = 'W';
     }
 
-    if (!game.chessBoard && _.isArray(game.chessList)) {
-        let chessBoard = {};
-        _.each(game.chessList, (chess) => {
-            let key = ChessUtils.getGeoFromPosIdx(game.chessBoardSize, chess.pos);
-            chess.geo = key;
-
-            chessBoard[key] = chess;
-            delete chess.pos;
-        });
-
-        delete game.chessList;
-        game.chessBoard = chessBoard;
-    }
-
     _.each(game.chessBoard, (chess, geo) => {
-        game.caption = game.caption || '';
-        chess.geo = geo;
-
-
-        if (chess.color) {
-            chess.type = _.find(Constants.CHESS_TYPE, {color: chess.color}).value;
-            delete chess.color;
-            delete chess.markedColor;
-        }
-
-        delete chess.fixed;
+        chess.$geo = geo;
     });
 
 
     delete game.stepList;
     delete game.currNextStep;
+}
+
+async function buildProblemToRemote(model, param) {
+    if(model==null){
+        model = {};
+        model.id = new Date().getTime() + "";
+    }
+    model.book = param.book;
+    model.title = param.title;
+    model.desc = param.desc;
+    model.modifyDate = DateUtils.getCurrentDate().getTime();
+    model.chessBoardSize = param.chessBoardSize;
+    model.tags = param.tags;
+    model.level = param.level;
+    model.hardFlag = param.hardFlag;
+    model.nextChessType = param.nextChessType;
+    model.chessBoard = param.chessBoard;
+
+    TagUtils.formatGameTagsBeforeUpload(model);
+
+    _.each(model.chessBoard, (chess, geo) => {
+        delete chess.$geo;
+    });
 }
 
 
@@ -174,4 +194,6 @@ export default {
     getTags: getTags,
     filterProblemList: filterProblemList,
     queryByPage: queryByPage,
+    loadProblemById: loadProblemById,
+    saveProblem: saveProblem,
 }

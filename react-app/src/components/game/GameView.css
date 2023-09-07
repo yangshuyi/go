@@ -1,0 +1,30 @@
+.game-view-action-bar{
+    height: 60px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--adm-color-background);
+}
+
+.game-view-action-bar .action-bar-item {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-view-action-bar .action-bar-item .icon{
+
+}
+
+.game-view-action-bar .action-bar-item .text{
+    margin-top: var(--margin-base-half);
+}
+
+.game-view-action-bar .action-bar-item.unselected .icon > .anticon {
+    color: lightgrey !important;
+}

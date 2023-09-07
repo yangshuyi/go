@@ -3,14 +3,8 @@ import _ from 'lodash';
 
 import './ProblemListPage.css';
 
-import {useNavigate} from "react-router-dom";
-import {useActivate, useAliveController} from "react-activation";
-import {Button, Collapse, Form, List, NavBar, PullToRefresh, Selector, Switch, Tabs} from "antd-mobile";
-import {ExclamationCircleFill, RedoOutline, StarFill, StarOutline} from "antd-mobile-icons";
-import {useLocation} from "react-router";
+import {Button, Collapse, Form, Switch} from "antd-mobile";
 import {DownOutlined, UpOutlined} from "@ant-design/icons";
-import ProblemUtils from "../util/ProblemUtils";
-import {XmsPicker} from "sirius-react-mobile";
 import BookPicker from "../../components/book-picker/BookPicker";
 import TagPicker from "../../components/tag-picker/TagPicker";
 

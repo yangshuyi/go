@@ -3,6 +3,7 @@ import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 
 import KeepAlive, {AliveScope} from "react-activation";
 import ProblemListPage from "./module/problem-list/ProblemListPage";
+import ProblemTestPage from "./module/problem-test/ProblemTestPage";
 import Constants from "./Constants";
 import MainPage from "./module/main/MainPage";
 import HomePage from "./module/home/HomePage";
@@ -10,7 +11,6 @@ import HomePage from "./module/home/HomePage";
 import {DomUtils} from "sirius-common-utils";
 import {SpinUtils, XmsRouterListener} from "sirius-react-mobile";
 import GithubUtils from "./module/util/GithubUtils";
-import ProblemUtils from "./module/util/ProblemUtils";
 
 
 function Entrance(props) {
@@ -55,6 +55,7 @@ function Entrance(props) {
                                         <ProblemListPage/>
                                     </KeepAlive>
                                 }/>
+                                <Route path={Constants.ROUTER.PROBLEM_TEST.path} element={<ProblemTestPage/>}/>
                             </Route>
                         </Routes>
                     </HashRouter>

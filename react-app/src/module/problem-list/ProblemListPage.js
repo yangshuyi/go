@@ -6,14 +6,13 @@ import './ProblemListPage.css';
 import {useNavigate} from "react-router-dom";
 import {useActivate, useAliveController} from "react-activation";
 import {Button, InfiniteScroll, List, NavBar, PullToRefresh, SwipeAction, Tabs} from "antd-mobile";
-import {ExclamationCircleFill, RedoOutline, StarFill, StarOutline} from "antd-mobile-icons";
 import {useLocation} from "react-router";
-import ProblemFilterView from "./ProblemFilterView";
 import GameUtils from "../util/game-utils";
 import Constants from "../../Constants";
 import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
 import ProblemUtils from "../util/ProblemUtils";
 import {EyeFilled, HeartFilled, StarFilled} from "@ant-design/icons";
+import ProblemFilterView from "./ProblemFilterView";
 
 
 function ProblemListPage(props) {
@@ -98,7 +97,7 @@ function ProblemListPage(props) {
     }
 
     return (
-        <div className="technician-task-list-page">
+        <div className="problem-list-page">
             <NavBar
                 onBack={() => navBack(false)}
                 right={<Button color="primary" fill="solid" size="small" onClick={() => navToProblemMgmtPage(null)}>新增棋局</Button>}
@@ -120,14 +119,14 @@ function ProblemListPage(props) {
                                 },
                             ]}
                             >
-                                <List.Item prefix={problem.levelIcon}
-                                           description={problem.introLabel}
+                                <List.Item prefix={problem.$levelIcon}
+                                           description={problem.$introLabel}
                                            arrow={false} extra={problem.hardFlag ? <HeartFilled style={{fontSize: '22px', color: 'red'}}/> : null}
                                            onClick={() => navToProblemTestPage(problem)}
                                 >
                                     <div className="flex-row">
-                                        <div>{problem.introValue}</div>
-                                        {problem.visited?<EyeFilled />:null}
+                                        <div>{problem.$introValue}</div>
+                                        {problem.$visited?<EyeFilled />:null}
                                     </div>
                                 </List.Item>
                             </SwipeAction>

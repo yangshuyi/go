@@ -27,7 +27,7 @@ function TagPicker(props) {
     }
 
     return (<XmsPicker
-        mode={props.mode} value={props.value} showSearch={true} itemRender={itemRender}
+        mode={props.mode} value={props.value} showSearch={true} itemRender={itemRender} disabled={props.disable}
         options={tagOptions} optionFieldLabel="tagName" optionFieldValue="tagName" optionFieldKeyword="keyword"
         onChange={props.onChange}
     />)

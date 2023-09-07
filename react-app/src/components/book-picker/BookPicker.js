@@ -27,7 +27,7 @@ function BookPicker(props) {
     }
 
     return (<XmsPicker
-        mode={props.mode} value={props.value} showSearch={true} itemRender={itemRender}
+        mode={props.mode} value={props.value} showSearch={true} itemRender={itemRender} disabled={props.disable}
         options={bookOptions} optionFieldLabel="bookName" optionFieldValue="bookName" optionFieldKeyword="keyword"
         onChange={props.onChange}
     />)

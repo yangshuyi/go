@@ -47,7 +47,7 @@ function HomePage(props) {
                 GO
             </NavBar>
 
-            <div className="xms-page-content">
+            <div className="xms-page-content with-padding-top padding">
                 {menuArray.map((menu) => {
                     return (
                         <Button key={menu.text} color="primary" block onClick={() => navToPage(menu)}>{menu.text}</Button>
