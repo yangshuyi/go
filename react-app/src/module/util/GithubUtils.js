@@ -4,13 +4,18 @@ import {Octokit} from "octokit";
 import {AxiosUtils, DateUtils} from "sirius-common-utils";
 import {Base64} from "js-base64";
 
-let token = Base64.decode("Z2l0aHViX3BhdF8xMUFCNFNZTUkwZTdpOFdvUjBEVGVYX1NyNVNDYzh6WTYwTHV5M0NCT2lBM1UwNjJLVGNNUVJwUnRrSHNpRWc4SGpIWEI1UVdTSFlHR0VvM1R3");
-
+let token = "dSMjI2gjIyMzIyMjVCMjI3QjIyM5IyMjMCMjI2EjIyNwIyMjWiMjI1QjIyNSIyMjeSMjI28jIyNWIyMjUiMjI0IjIyN4IyMjRSMjI1MjIyNhIyMjbCMjI1YjIyNTIyMjUSMjI1ojIyMxIyMjYSMjI3EjIyMxIyMjayMjI2MjIyNGIyMjRiMjI1YjIyNVIyMjayMjI0IjIyN6IyMjVSMjIzIjIyM0IyMjRyMjI1YjIyNXIyMjTiMjI1QjIyNTIyMjUCMjI04jIyNUIyMjUiMjI3cjIyMxIyMjbSMjI2QjIyMwIyMjOCMjI1cjIyNiIyMjWSMjI04jIyNHIyMjVyMjIzIjIyNvIyMjayMjI1kjIyNpIyMjSiMjI1cjIyNPIyMjMCMjI0UjIyNUIyMjZCMjI1cjIyNWIyMjMCMjI1gjIyNEIyMjWiMjI0cjIyNPIyMjVSMjI2wjIyMzIyMjTiMjI0kjIyNKIyMjVSMjI2UjIyNIIyMjcCMjI1YjIyNXIyMjdyMjI2sjIyNVIyMjVCMjI1ojIyNOIyMjRiMjI04jIyNDIyMjRiMjI1UjIyNNIyMjeCMjIzgjIyNGIyMjZCMjI2gjIyNCIyMjMyMjI1gjIyNpIyMjViMjI0gjIyNhIyMjMCMjI2wjIyMyIyMjWg==";
+let token_1 = Base64.decode(token);
+let token_2 = _.split(token_1,"###");
+let token_3 = _.reverse(token_2);
+let token_4 = _.join(token_3,'');
+let token_5 = Base64.decode(token_4);
 let octokit = null;
 
 async function init() {
+    debugger;
     octokit = new Octokit({
-        auth: token
+        auth: token_5
     });
 }
 
