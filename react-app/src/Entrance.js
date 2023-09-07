@@ -22,21 +22,14 @@ function Entrance(props) {
             return;
         }
         pageInitialized.current = true;
-        init();
+
+        if(!dataInitialized) {
+            init();
+        }
     }, []);
 
     const init = async () => {
         await GithubUtils.init();
-
-        let problemList = [];
-        let assetList = await GithubUtils.fetchAllAssets();
-        for(let i=0;i<assetList.length;i++){
-            assetList[i].problemList = await GithubUtils.downloadAssetData(assetList[i].downloadUrl);
-            problemList = _.union(problemList,assetList[i].problemList);
-        }
-        console.log(`Totally find ${problemList.length} problems`);
-
-        ProblemUtils.init(problemList);
 
         setDataInitialized(true);
     }

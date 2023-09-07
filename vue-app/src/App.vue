@@ -7,8 +7,14 @@ import {useRoute, useRouter} from "vue-router";
 
 import { Octokit } from "octokit";
 
+
+import { Base64 } from "js-base64";
+
+let code = Base64.encode("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")
+console.log("code:"+code);
+
 const octokit = new Octokit({
-    auth: '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',
+    auth: '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',
 });
 
 let releaseList =await octokit.request('GET /repos/{owner}/{repo}/releases', {

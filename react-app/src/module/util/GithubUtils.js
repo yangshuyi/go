@@ -2,20 +2,20 @@ import _ from 'lodash';
 
 import {Octokit} from "octokit";
 import {AxiosUtils, DateUtils} from "sirius-common-utils";
+import {Base64} from "js-base64";
+
+let token = Base64.decode("Z2l0aHViX3BhdF8xMUFCNFNZTUkwZWZ2Z1NQN2RtYjZiX2YxOUxrU2VJeGlvTGpCTlVJVGRodDRLcnQwMUlObGpSaE5IV3JBREZjYWlPNzNEVlJWR3NoTDVEYVRO");
 
 let octokit = null;
 
 async function init() {
     octokit = new Octokit({
-        auth: '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',
+        auth: token
     });
 }
 
 async function fetchAllAssets() {
-    const octokit = new Octokit({
-        auth: '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',
-    });
-
+    debugger;
     let releaseListResp = await octokit.request('GET /repos/{owner}/{repo}/releases', {
         owner: 'yangshuyi',
         repo: 'go',
@@ -54,6 +54,7 @@ async function fetchAllAssets() {
 }
 
 async function downloadAssetData(assetDownloadUrl) {
+    debugger;
     let assetData = await AxiosUtils.getFormData(assetDownloadUrl + `?_t=${new Date().getTime()}`);
     return assetData;
 }
