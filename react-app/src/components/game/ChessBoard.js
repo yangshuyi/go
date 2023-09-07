@@ -14,7 +14,7 @@ const ChessBoard = (props, ref) => {
         }
     });
 
-    const domChessBoardRef = useRef();
+    const pageInitialized = useRef(false);
     const domChessBoardCanvasRef = useRef();
 
     const data = useRef({
@@ -22,10 +22,12 @@ const ChessBoard = (props, ref) => {
         showMark: true,
         canvas: {
             ctx: null,
-            scale: 4,
+            scale: 1,
             boardBorder: 0, //棋盘边长
             unitBorder: 0, //格子边长
             padding: 0, //棋盘边距
+            domElemLeft:0,
+            domElemTop:0,
         },
     });
 
@@ -33,46 +35,48 @@ const ChessBoard = (props, ref) => {
     const [canvasHeight, setCanvasHeight] = useState(null);
     const [showBoard, setShowBoard] = useState(true);
 
-    const init = async (chessBoardSize, showMark = false, showBoard = false) => {
-        let canvas = domChessBoardCanvasRef.current;
-        let chessBoardBorder = domChessBoardRef.current.offsetWidth;
+    useEffect(() => {
+        if (pageInitialized.current) {
+            return;
+        }
+        if (!domChessBoardCanvasRef.current) {
+            return;
+        }
 
+        let canvas = domChessBoardCanvasRef.current;
+        data.current.canvas.ctx = canvas.getContext("2d");
+        data.current.canvas.boardBorder = canvas.offsetWidth * data.current.canvas.scale;
+        data.current.canvas.domElemLeft = canvas.getBoundingClientRect().left;
+        data.current.canvas.domElemTop = canvas.getBoundingClientRect().top;
+
+        setCanvasWidth(data.current.canvas.boardBorder);
+        setCanvasHeight(data.current.canvas.boardBorder);
+
+        setTimeout(() => {
+            props.onBoardReady();
+        })
+    }, [domChessBoardCanvasRef.current]);
+
+    const init = async (chessBoardSize, showMark = false, showBoard = false) => {
         data.current.chessBoardSize = chessBoardSize;
         data.current.showMark = showMark;
-        data.current.canvas.boardBorder = chessBoardBorder;
-        data.current.canvas.ctx = canvas.getContext("2d");
 
-        let unit = Math.trunc(chessBoardBorder / ((data.current.chessBoardSize + 1) * 2)); //padding为unitBorder的1/2
+        let unit = Math.trunc(data.current.canvas.boardBorder / ((data.current.chessBoardSize + 1) * 2)); //padding为unitBorder的1/2
         console.log("unit:" + unit);
-        if (unit > 20) {
-            unit = 20;
-        }
+        // if (unit > 20) {
+        //     unit = 20;
+        // }
         data.current.canvas.unitBorder = unit * 2;
         data.current.canvas.padding = unit * 2;
         console.log("data.canvas.padding:" + data.current.canvas.padding);
         data.current.canvas.boardBorder = data.current.canvas.padding * 2 + data.current.canvas.unitBorder * (data.current.chessBoardSize - 1);
 
-        debugger;
-
-        setCanvasWidth(data.current.canvas.boardBorder * data.current.canvas.scale);
-        setCanvasHeight(data.current.canvas.boardBorder * data.current.canvas.scale);
-        domChessBoardCanvasRef.current.style.width = data.current.canvas.boardBorder + 'px';
-        domChessBoardCanvasRef.current.style.height = data.current.canvas.boardBorder + 'px';
-
         drawCanvas();
     }
 
     function drawCanvas() {
-        let ctx = domChessBoardCanvasRef.value?.getContext("2d");
-        if (!ctx) {
-            return;
-        }
-        data.current.canvas.ctx = ctx;
-
-        console.log(JSON.stringify(data));
-
-        ctx.scale(data.current.canvas.scale, data.current.canvas.scale);
-
+        let ctx =   data.current.canvas.ctx;
+        // ctx.scale(data.current.canvas.scale, data.current.canvas.scale);
         drawPadding();
         drawLine(ctx);
     }
@@ -102,6 +106,7 @@ const ChessBoard = (props, ref) => {
         for (let colIdx = 0; colIdx < data.current.chessBoardSize; colIdx++) {
             let label = ChessUtils.getGeoLabelByIdx(data.current.chessBoardSize, 'column2', colIdx);
             ctx.fillText(label, data.current.canvas.padding + data.current.canvas.unitBorder * colIdx, data.current.canvas.padding / 4);
+            ctx.fillText(label, data.current.canvas.padding + data.current.canvas.unitBorder * colIdx, data.current.canvas.boardBorder - data.current.canvas.padding / 4);
 
             ctx.moveTo(data.current.canvas.padding + data.current.canvas.unitBorder * colIdx, data.current.canvas.padding);
             ctx.lineTo(data.current.canvas.padding + data.current.canvas.unitBorder * colIdx, data.current.canvas.boardBorder - data.current.canvas.padding);
@@ -112,6 +117,7 @@ const ChessBoard = (props, ref) => {
         for (let rowIdx = 0; rowIdx < data.current.chessBoardSize; rowIdx++) {
             let label = ChessUtils.getGeoLabelByIdx(data.current.chessBoardSize, 'row2', rowIdx);
             ctx.fillText(label, data.current.canvas.padding / 4, data.current.canvas.padding + data.current.canvas.unitBorder * rowIdx);
+            ctx.fillText(label, data.current.canvas.boardBorder - data.current.canvas.padding / 4, data.current.canvas.padding + data.current.canvas.unitBorder * rowIdx);
 
             ctx.moveTo(data.current.canvas.padding, data.current.canvas.padding + data.current.canvas.unitBorder * rowIdx);
             ctx.lineTo(data.current.canvas.boardBorder - data.current.canvas.padding, data.current.canvas.padding + data.current.canvas.unitBorder * rowIdx);
@@ -137,7 +143,7 @@ const ChessBoard = (props, ref) => {
         let ctx = data.current.canvas.ctx;
         ctx.save();
 
-        let posIdx = ChessUtils.getPosIdxFromGeo(data.current.hessBoardSize, chessObj.geo);
+        let posIdx = ChessUtils.getPosIdxFromGeo(data.current.chessBoardSize, chessObj.$geo);
         let x = posIdx.x * data.current.canvas.unitBorder + data.current.canvas.padding;
         let y = posIdx.y * data.current.canvas.unitBorder + data.current.canvas.padding;
 
@@ -189,7 +195,7 @@ const ChessBoard = (props, ref) => {
         let ctx = data.current.canvas.ctx;
         ctx.save();
 
-        let posIdx = ChessUtils.getPosIdxFromGeo(data.current.chessBoardSize, chessObj.geo);
+        let posIdx = ChessUtils.getPosIdxFromGeo(data.current.chessBoardSize, chessObj.$geo);
         let x = posIdx.x * data.current.canvas.unitBorder + data.current.canvas.padding;
         let y = posIdx.y * data.current.canvas.unitBorder + data.current.canvas.padding;
         ctx.translate(x, y);
@@ -227,9 +233,9 @@ const ChessBoard = (props, ref) => {
         ctx.restore();
     }
 
-    function onCanvasClick($target) {
-        let posX = Math.round((($target.offsetX - data.current.canvas.padding)) / data.current.canvas.unitBorder);
-        let posY = Math.round((($target.offsetY - data.current.canvas.padding)) / data.current.canvas.unitBorder);
+    function onCanvasClick(event) {
+        let posX = Math.round(((event.pageX - data.current.canvas.domElemLeft - data.current.canvas.padding)) / data.current.canvas.unitBorder);
+        let posY = Math.round(((event.pageY - data.current.canvas.domElemTop - data.current.canvas.padding)) / data.current.canvas.unitBorder);
 
         if (posX < 0 || posX >= data.current.chessBoardSize) {
             return;
@@ -239,16 +245,17 @@ const ChessBoard = (props, ref) => {
 
         let geo = ChessUtils.getGeoFromPosIdx(data.current.chessBoardSize, {x: posX, y: posY});
 
-        emits("onChessStep", {geo: geo});
+        if (props.onChessStep) {
+            props.onChessStep({$geo: geo});
+        }
     }
 
 
     return (
         <div className={showBoard === true ? "chess-board" : "chess-board with-board"}>
-            <div ref={domChessBoardRef} className="wrap">
+            <div className="wrap">
                 <canvas ref={domChessBoardCanvasRef}
                         width={canvasWidth} height={canvasHeight}
-                        style={{width: data.current.canvas.boardBorder, height: data.current.canvas.boardBorder}}
                         onClick={onCanvasClick}/>
             </div>
         </div>

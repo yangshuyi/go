@@ -1,6 +1,6 @@
 .chess-board {
     width: 100%;
-    height: calc( 100vh - 130px );
+    height: calc( 100vh - 285px );
     background: lightgrey;
 }
 
@@ -19,5 +19,5 @@
 
 .chess-board > .wrap > canvas {
      width: 100%;
-     height: 100%;
+     aspect-ratio: 1/1;
  }
