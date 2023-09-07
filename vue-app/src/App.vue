@@ -7,48 +7,6 @@ import {useRoute, useRouter} from "vue-router";
 
 import { Octokit } from "octokit";
 
-
-import { Base64 } from "js-base64";
-
-let code = Base64.encode("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")
-console.log("code:"+code);
-
-const octokit = new Octokit({
-    auth: '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',
-});
-
-let releaseList =await octokit.request('GET /repos/{owner}/{repo}/releases', {
-    owner: 'yangshuyi',
-    repo: 'go',
-    headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-    }
-});
-
-console.log(JSON.stringify(releaseList, null,4));
-
-let releaseAssetList = await octokit.request('GET /repos/{owner}/{repo}/releases/{release_id}/assets', {
-    owner: 'yangshuyi',
-    repo: 'go',
-    release_id: '119920840',
-    headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-    }
-});
-
-console.log(JSON.stringify(releaseAssetList, null,4));
-
-let asset  = await octokit.request('GET /repos/{owner}/{repo}/releases/assets/{asset_id}', {
-    owner: 'yangshuyi',
-    repo: 'go',
-    asset_id: '124627038',
-    headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-    }
-})
-
-console.log(JSON.stringify(asset, null,4));
-
 const windowSize = reactive({});
 provide("windowSize", windowSize);
 

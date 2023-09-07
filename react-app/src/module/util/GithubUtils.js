@@ -4,7 +4,7 @@ import {Octokit} from "octokit";
 import {AxiosUtils, DateUtils} from "sirius-common-utils";
 import {Base64} from "js-base64";
 
-let token = Base64.decode("Z2l0aHViX3BhdF8xMUFCNFNZTUkwZWZ2Z1NQN2RtYjZiX2YxOUxrU2VJeGlvTGpCTlVJVGRodDRLcnQwMUlObGpSaE5IV3JBREZjYWlPNzNEVlJWR3NoTDVEYVRO");
+let token = Base64.decode("Z2l0aHViX3BhdF8xMUFCNFNZTUkwZTdpOFdvUjBEVGVYX1NyNVNDYzh6WTYwTHV5M0NCT2lBM1UwNjJLVGNNUVJwUnRrSHNpRWc4SGpIWEI1UVdTSFlHR0VvM1R3");
 
 let octokit = null;
 
@@ -15,7 +15,6 @@ async function init() {
 }
 
 async function fetchAllAssets() {
-    debugger;
     let releaseListResp = await octokit.request('GET /repos/{owner}/{repo}/releases', {
         owner: 'yangshuyi',
         repo: 'go',
@@ -54,7 +53,6 @@ async function fetchAllAssets() {
 }
 
 async function downloadAssetData(assetDownloadUrl) {
-    debugger;
     let assetData = await AxiosUtils.getFormData(assetDownloadUrl + `?_t=${new Date().getTime()}`);
     return assetData;
 }
