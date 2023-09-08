@@ -11,7 +11,7 @@ import GithubUtils from "../util/GithubUtils";
 import BookUtils from "../../components/book/BookUtils";
 import TagUtils from "../../components/tag/TagUtils";
 import ProblemUtils from "../util/ProblemUtils";
-import DataVersionUtils from "../../components/data-version/DataVersionUtils";
+import ConfigUtils from "../../components/config/ConfigUtils";
 
 function DataMaintenancePage(props) {
     const navigate = useNavigate();
@@ -44,6 +44,9 @@ function DataMaintenancePage(props) {
             await refreshRemoteDataInfo(false);
         }
         await refreshLocalDataInfo(false);
+
+        let showBoard = await ConfigUtils.getShowBoardFlag();
+        setShowBoard(showBoard);
     }
 
     const refreshRemoteDataInfo = async (showMsgFlag) => {
@@ -57,7 +60,7 @@ function DataMaintenancePage(props) {
 
     const refreshLocalDataInfo = async (showMsgFlag) => {
         setLocalDataInfo({
-            dataVersion: await DataVersionUtils.getDataVersion(),
+            dataVersion: await ConfigUtils.getDataVersion(),
             count: await ProblemUtils.queryCount(),
         });
 
@@ -75,7 +78,7 @@ function DataMaintenancePage(props) {
         await BookUtils.syncFromRemote(assetData);
         await TagUtils.syncFromRemote(assetData);
         await ProblemUtils.syncFromRemote(assetData);
-        await DataVersionUtils.updateDataVersion(remoteDataInfo.dataVersion);
+        await ConfigUtils.updateDataVersion(remoteDataInfo.dataVersion);
 
         await refreshLocalDataInfo(false);
 
@@ -88,6 +91,18 @@ function DataMaintenancePage(props) {
         await DataVersionUtils.refreshDataVersion();
 
         await refreshLocalDataInfo(false);
+
+        if (showMsgFlag) {
+            DialogUtils.showSuccessMessage("Success");
+        }
+    }
+
+    const [showBoard, setShowBoard] = useState(true);
+    const handleShowBoardChange = async (showMsgFlag) => {
+        let newShowBoard = !showBoard;
+        setShowBoard(newShowBoard);
+
+        await ConfigUtils.setShowBoardFlag(newShowBoard);
 
         if (showMsgFlag) {
             DialogUtils.showSuccessMessage("Success");
@@ -113,8 +128,8 @@ function DataMaintenancePage(props) {
                 <List header="远程数据">
                     <List.Item extra={
                         <Space>
-                            <Button size='mini' color='primary' fill='outline' loading='auto' onClick={refreshRemoteDataInfo}>刷新</Button>
-                            <Button size='mini' color='primary' fill='outline' loading='auto' disabled={!remoteDataInfo.dataVersion} onClick={downloadRemoteData}>下载</Button>
+                            <Button size='mini' color='primary' fill='outline' loading='auto' onClick={()=>refreshRemoteDataInfo(true)}>刷新</Button>
+                            <Button size='mini' color='primary' fill='outline' loading='auto' disabled={!remoteDataInfo.dataVersion} onClick={()=>downloadRemoteData(true)}>下载</Button>
                         </Space>
                     }>
                         操作
@@ -141,6 +156,12 @@ function DataMaintenancePage(props) {
                         数据量
                     </List.Item>
                 </List>
+                <List header="系统配置">
+                    <List.Item extra={<Switch value={showBoard} onChange={()=>handleShowBoardChange(true)}/>}>
+                        展示棋盘
+                    </List.Item>
+                </List>
+
             </div>
         </div>
     )

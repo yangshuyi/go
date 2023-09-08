@@ -1,12 +1,13 @@
 import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
-import {CheckList, List, Radio, Space, Switch} from "antd-mobile";
+import {Button, CheckList, List, Radio, Space, Switch} from "antd-mobile";
 import {XmsPicker, XmsSpinView} from "sirius-react-mobile";
 import ProblemUtils from "../../module/util/ProblemUtils";
 import ChessBoard from "./ChessBoard";
 import {BackwardOutlined, CaretLeftOutlined, EyeFilled, HeartFilled} from "@ant-design/icons";
 import Constants from "../../Constants";
+import ConfigUtils from "../config/ConfigUtils";
 
 
 function GameView(props) {
@@ -16,27 +17,38 @@ function GameView(props) {
     const [showMark, setShowMark] = useState(false);
     const [showBoard, setShowBoard] = useState(true);
     const [currNextStep, setCurrNextStep] = useState(null);
+    const stepList  = useRef([]); //每一手
 
 
     const init = async () => {
         setShowMark(false);
 
-        reset();
+        let showBoard = await ConfigUtils.getShowBoardFlag();
+        setShowBoard(showBoard);
+
+        reset(showMark);
     }
 
     const handleBoardReady = () => {
         init();
     }
 
-    const reset = () => {
+    const handleShowMarkChange = () => {
+        let newShowMark = !showMark;
+        setShowMark(newShowMark);
+        reset(newShowMark);
+    }
+
+
+
+    const reset = (showMark) => {
         let game = JSON.parse(JSON.stringify(props.game));
-        game.$stepList = []; //每一手
-        game.$currChessBoard = {}; //当前棋盘上的棋子信息
+         game.$currChessBoard = {}; //当前棋盘上的棋子信息
         game.$currChessBoard = game.chessBoard;
         setGame(game);
         setCurrNextStep(game.nextChessType); //下一手
 
-        domChessBoardRef.current.init(game.chessBoardSize, showMark, showBoard);
+        domChessBoardRef.current.init(game.chessBoardSize, showMark);
         _.each(game.$currChessBoard, (chess) => {
             domChessBoardRef.current.drawChess(chess);
         });
@@ -51,14 +63,14 @@ function GameView(props) {
             domChessBoardRef.current.clearChess(chess);
         }
 
-        game.$stepList.push({
+        stepList.current.push({
             action: action,
             chess: chess
         });
     }
 
     const stepBackward = () => {
-        let lastStep = game.$stepList.pop();
+        let lastStep = stepList.current.pop();
         if (!lastStep) {
             return;
         }
@@ -131,42 +143,22 @@ function GameView(props) {
                 当前手
             </List.Item>
 
-            <List.Item extra={<Switch value={showMark} onChange={setShowMark}/>}>
+            <List.Item extra={<Switch value={showMark} onChange={handleShowMarkChange}/>}>
                 展示标记
             </List.Item>
-            <List.Item extra={<Switch value={showBoard} onChange={setShowBoard}/>}>
-                展示棋盘
+            <List.Item extra={
+                <Space>
+                    <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={()=>reset(showMark)}>还原</Button>
+                    <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={stepBackward}>上一步</Button>
+                </Space>
+            }>
+                操作
             </List.Item>
         </List>
 
-        <ChessBoard ref={domChessBoardRef} onBoardReady={handleBoardReady} onChessStep={handleChessStep}/>
-
-        {/*<div className="game-view-action-bar">*/}
-        {/*    <div className={showMark ? "action-bar-item selected" : "action-bar-item unselected"}*/}
-        {/*         onClick={() => setShowMark(!showMark)}*/}
-        {/*    >*/}
-        {/*        <div className="icon"><BackwardOutlined style={{fontSize: '22px'}}/></div>*/}
-        {/*        <div className="text">标记</div>*/}
-        {/*    </div>*/}
-        {/*    <div className={showBoard ? "action-bar-item selected" : "action-bar-item unselected"}*/}
-        {/*         onClick={() => setShowBoard(!showBoard)}*/}
-        {/*    >*/}
-        {/*        <div className="icon"><BackwardOutlined style={{fontSize: '22px'}}/></div>*/}
-        {/*        <div className="text">棋盘</div>*/}
-        {/*    </div>*/}
-        {/*    <div className={game.$stepList.length === 0 ? "action-bar-item selected" : "action-bar-item unselected"}*/}
-        {/*         onClick={() => reset()}*/}
-        {/*    >*/}
-        {/*        <div className="icon"><BackwardOutlined style={{fontSize: '22px'}}/></div>*/}
-        {/*        <div className="text">还原</div>*/}
-        {/*    </div>*/}
-        {/*    <div className={game.$stepList.length === 0 ? "action-bar-item selected" : "action-bar-item unselected"}*/}
-        {/*         onClick={() => stepBackward()}*/}
-        {/*    >*/}
-        {/*        <div className="icon"><CaretLeftOutlined style={{fontSize: '22px'}}/></div>*/}
-        {/*        <div className="text">上一步</div>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
+        <ChessBoard ref={domChessBoardRef}
+                    showBoard={showBoard}
+                    onBoardReady={handleBoardReady} onChessStep={handleChessStep}/>
     </div>
 
 }

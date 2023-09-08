@@ -29,6 +29,8 @@ function ProblemFilterView(props) {
         if (props.onChange) {
             props.onChange(form.getFieldsValue());
         }
+
+        setCollapsed(true);
     }
 
     return (formData == null ? null :

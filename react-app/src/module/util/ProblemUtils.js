@@ -34,31 +34,28 @@ async function filterProblemList(filterParam) {
 
     let filteredList = [];
     if (filterParam) {
-        filteredList = await db.problems.where((problem) => {
-            if (filterParam.books && !_.isEmpty(filterParam.books)) {
+        filteredList = await db.problems.toArray();
+        filteredList =_.filter(filteredList, (problem) => {
+            if (!_.isEmpty(filterParam.books)) {
                 if (!_.includes(filterParam.books, problem.book)) {
                     return false;
                 }
             }
-
-            if (filterParam.tags && !_.isEmpty(filterParam.tags)) {
+            if (!_.isEmpty(filterParam.tags)) {
                 if (!_.intersection(filterParam.tags, problem.tags)) {
                     return false;
                 }
             }
-
             if (filterParam.onlyHardFlag === true) {
                 if (problem.hardFlag !== true) {
                     return false;
                 }
             }
-
             if (filterParam.ignoreNewFlag === true) {
                 if (problem.level === Constants.LEVEL_OPTIONS[3].value) {
                     return false;
                 }
             }
-
             return true;
         });
     } else {
@@ -121,7 +118,7 @@ async function loadProblemByFilteredOrderIdx(orderIdx = 0) {
 async function loadProblemById(problemId) {
     let db = await getGlobalDb();
 
-    let problem = db.problems.get(problemId);
+    let problem = await db.problems.get(problemId);
     if (problem == null) {
         console.error(`Could not find Problem by id: ${problemId}`);
     }

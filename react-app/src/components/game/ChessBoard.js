@@ -33,7 +33,6 @@ const ChessBoard = (props, ref) => {
 
     const [canvasWidth, setCanvasWidth] = useState(null);
     const [canvasHeight, setCanvasHeight] = useState(null);
-    const [showBoard, setShowBoard] = useState(true);
 
     useEffect(() => {
         if (pageInitialized.current) {
@@ -57,7 +56,7 @@ const ChessBoard = (props, ref) => {
         })
     }, [domChessBoardCanvasRef.current]);
 
-    const init = async (chessBoardSize, showMark = false, showBoard = false) => {
+    const init = async (chessBoardSize, showMark = false) => {
         data.current.chessBoardSize = chessBoardSize;
         data.current.showMark = showMark;
 
@@ -85,9 +84,9 @@ const ChessBoard = (props, ref) => {
         let ctx = data.current.canvas.ctx;
         ctx.save();
 
-        ctx.strokeStyle = "red";
-        ctx.fillStyle = "yellow";
-
+        ctx.beginPath();
+        ctx.fillStyle = "rgba(255, 255, 255, 0)";
+        ctx.fillRect(0, 0, data.current.canvas.boardBorder, data.current.canvas.boardBorder);
         ctx.restore();
     }
 
@@ -205,10 +204,10 @@ const ChessBoard = (props, ref) => {
         ctx.clearRect(-data.current.canvas.unitBorder / 2, -data.current.canvas.unitBorder / 2, data.current.canvas.unitBorder, data.current.canvas.unitBorder);
 
         ctx.beginPath();
-        if (posIdx.x == 0) {
+        if (posIdx.x === 0) {
             ctx.moveTo(0, 0);
             ctx.lineTo(data.current.canvas.unitBorder / 2, 0);
-        } else if (posIdx.x == (data.current.chessBoardSize - 1)) {
+        } else if (posIdx.x === (data.current.chessBoardSize - 1)) {
             ctx.moveTo(-data.current.canvas.unitBorder / 2, 0);
             ctx.lineTo(0, 0);
         } else {
@@ -218,10 +217,10 @@ const ChessBoard = (props, ref) => {
         ctx.stroke();
 
         ctx.beginPath();
-        if (posIdx.y == 0) {
+        if (posIdx.y === 0) {
             ctx.moveTo(0, 0);
             ctx.lineTo(0, data.current.canvas.unitBorder / 2);
-        } else if (posIdx.y == (data.current.chessBoardSize - 1)) {
+        } else if (posIdx.y === (data.current.chessBoardSize - 1)) {
             ctx.moveTo(0, -data.current.canvas.unitBorder / 2);
             ctx.lineTo(0, 0);
         } else {
@@ -252,7 +251,7 @@ const ChessBoard = (props, ref) => {
 
 
     return (
-        <div className={showBoard === true ? "chess-board" : "chess-board with-board"}>
+        <div className={props.showBoard === true ? "chess-board with-board": "chess-board"}>
             <div className="wrap">
                 <canvas ref={domChessBoardCanvasRef}
                         width={canvasWidth} height={canvasHeight}

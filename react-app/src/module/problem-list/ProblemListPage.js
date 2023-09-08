@@ -103,8 +103,10 @@ function ProblemListPage(props) {
                 right={<Button color="primary" fill="solid" size="small" onClick={() => navToProblemMgmtPage(null)}>新增棋局</Button>}
             >棋局列表</NavBar>
 
+            <ProblemFilterView onChange={handleFilterChange}/>
+
             <div className="xms-page-content with-padding-top">
-                <ProblemFilterView onChange={handleFilterChange}/>
+
                 <List>
                     {listData.map((problem, idx) => {
                         return (

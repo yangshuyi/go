@@ -15,10 +15,9 @@ async function getGlobalDb() {
 
 async function updateDataVersion(dataVersion) {
     let db = await getGlobalDb();
-    await db.dataVersion.clear();
-    await db.dataVersion.put({
-        id: DateUtils.getCurrentDate().getTime(),
-        dataVersion: dataVersion
+    await db.configs.put({
+        key: "dataVersion",
+        value: dataVersion
     });
 }
 
@@ -29,11 +28,22 @@ async function refreshDataVersion() {
 
 async function getDataVersion() {
     let db = await getGlobalDb();
-    let list = await db.dataVersion.toArray();
-    if (_.isEmpty(list)) {
-        return null;
-    }
-    return list[0].dataVersion;
+    let record = await db.configs.get("dataVersion")
+    return _.get(record, 'value');
+}
+
+async function setShowBoardFlag(flag) {
+    let db = await getGlobalDb();
+    await db.configs.put({
+        key: "showBoard",
+        value: flag
+    });
+}
+
+async function getShowBoardFlag() {
+    let db = await getGlobalDb();
+    let record = await db.configs.get("showBoard")
+    return _.get(record, 'value', 'false')
 }
 
 
@@ -41,4 +51,7 @@ export default {
     updateDataVersion: updateDataVersion,
     refreshDataVersion: refreshDataVersion,
     getDataVersion: getDataVersion,
+
+    getShowBoardFlag: getShowBoardFlag,
+    setShowBoardFlag: setShowBoardFlag,
 }

@@ -1,5 +1,14 @@
 .problem-filter-view {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 998;
 
+    background: var(--adm-color-border);
+
+    padding-top: 50px;
+    border-top: 1px solid var(--adm-border-color);
+    border-bottom: 1px solid var(--adm-border-color);
 }
 
 .problem-filter-view .problem-filter-view-header{
@@ -30,4 +39,8 @@
 
 .problem-filter-view .button-bar{
     padding: var(--margin-base);
+}
+
+.problem-list-page .xms-page-content.with-padding-top {
+    padding-top: 92px;
 }

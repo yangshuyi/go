@@ -9,12 +9,12 @@ let globalDb = null;
 
 async function init() {
     globalDb = new Dexie('GO');
-    globalDb.version(4).stores({
+    globalDb.version(1).stores({
         problems: '++problemId',
         filteredProblems: 'orderIdx',
         books: 'bookName',
         tags: 'tagName',
-        dataVersion: 'id',
+        configs: 'key',
     });
     return globalDb;
 }
