@@ -20,19 +20,32 @@ function ProblemTestPage(props) {
     const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
 
     useEffect(() => {
-        if (!location.state.problemId) {
-            console.log(`problemId is null`);
+        if (location.state.idx == null) {
+            console.log(`idx is null`);
             return;
         }
-        init(location.state.problemId);
+        init(location.state.idx);
     }, []);
 
     const [formData, setFormData] = useState();
-    const [hasNextProblem, setHasNextProblem] = useState(false);
+    const [nextProblemIdx, setNextProblemIdx] = useState(null);
 
-    let init = async (problemId) => {
-        let problem = await ProblemUtils.loadProblemById(problemId);
+    let init = async (orderIdx) => {
+        setFormData(null);
+        let problem = await ProblemUtils.loadProblemByFilteredOrderIdx(orderIdx);
+        if (problem == null) {
+            console.error(`Could not find Problem by idx: ${orderIdx}`);
+            return;
+        }
         setFormData(problem);
+
+        let nextProblemIdx = orderIdx + 1;
+        let nextProblem = await ProblemUtils.loadProblemByFilteredOrderIdx(nextProblemIdx);
+        if (nextProblem) {
+            setNextProblemIdx(nextProblemIdx);
+        } else {
+            setNextProblemIdx(null);
+        }
     }
 
     const modifiedObj = useRef();
@@ -41,18 +54,23 @@ function ProblemTestPage(props) {
     }
 
     const navBack = async () => {
-        if(modifiedObj.current){
+        if (modifiedObj.current) {
             await ProblemUtils.saveProblem(modifiedObj.current);
         }
         NavigateUtils.navigateBack(navigate, location, {});
     }
 
+    const handleNextProblem = async () => {
+        if (nextProblemIdx) {
+            await init(nextProblemIdx);
+        }
+    }
 
     return (formData == null ? <XmsSpinView/> :
             <div className="problem-test-page">
                 <NavBar
                     onBack={() => navBack()}
-                    right={hasNextProblem ? <Button color="primary" fill="solid" size="small" onClick={() => handleNextProblem()}>下一局</Button> : null}
+                    right={nextProblemIdx ? <Button color="primary" fill="solid" size="small" onClick={() => handleNextProblem()}>下一局</Button> : null}
                 >
                     <div>{formData.$introValue}</div>
                 </NavBar>

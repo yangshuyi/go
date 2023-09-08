@@ -5,14 +5,21 @@ import {AxiosUtils, DateUtils} from "sirius-common-utils";
 import {Base64} from "js-base64";
 
 let destToken = "dSMjI2gjIyMzIyMjVCMjI3QjIyM5IyMjMCMjI2EjIyNwIyMjWiMjI1QjIyNSIyMjeSMjI28jIyNWIyMjUiMjI0IjIyN4IyMjRSMjI1MjIyNhIyMjbCMjI1YjIyNTIyMjUSMjI1ojIyMxIyMjYSMjI3EjIyMxIyMjayMjI2MjIyNGIyMjRiMjI1YjIyNVIyMjayMjI0IjIyN6IyMjVSMjIzIjIyM0IyMjRyMjI1YjIyNXIyMjTiMjI1QjIyNTIyMjUCMjI04jIyNUIyMjUiMjI3cjIyMxIyMjbSMjI2QjIyMwIyMjOCMjI1cjIyNiIyMjWSMjI04jIyNHIyMjVyMjIzIjIyNvIyMjayMjI1kjIyNpIyMjSiMjI1cjIyNPIyMjMCMjI0UjIyNUIyMjZCMjI1cjIyNWIyMjMCMjI1gjIyNEIyMjWiMjI0cjIyNPIyMjVSMjI2wjIyMzIyMjTiMjI0kjIyNKIyMjVSMjI2UjIyNIIyMjcCMjI1YjIyNXIyMjdyMjI2sjIyNVIyMjVCMjI1ojIyNOIyMjRiMjI04jIyNDIyMjRiMjI1UjIyNNIyMjeCMjIzgjIyNGIyMjZCMjI2gjIyNCIyMjMyMjI1gjIyNpIyMjViMjI0gjIyNhIyMjMCMjI2wjIyMyIyMjWg==";
-let octokit = null;
+let globalOctokit = null;
 
 let onlineFlag = false;
 
 async function init() {
-    octokit = new Octokit({
+    globalOctokit = new Octokit({
         auth: getToken(destToken)
     });
+}
+
+async function getOctokit(){
+    if(!globalOctokit){
+        await init();
+    }
+    return globalOctokit;
 }
 
 function genToken() {
@@ -27,14 +34,15 @@ function genToken() {
 
 function getToken() {
     let token1 = Base64.decode(destToken);
-    let token2 = _.split(token1,"###");
+    let token2 = _.split(token1, "###");
     let token3 = _.reverse(token2);
-    let token4 = _.join(token3,'');
+    let token4 = _.join(token3, '');
     let token = Base64.decode(token4);
     return token;
 }
 
 async function fetchAllAssets() {
+    let octokit = await getOctokit();
     let releaseListResp = await octokit.request('GET /repos/{owner}/{repo}/releases', {
         owner: 'yangshuyi',
         repo: 'go',
@@ -77,40 +85,25 @@ async function downloadAssetData(assetDownloadUrl) {
     return assetData;
 }
 
-// downloadGameData: async function () {
-// let timestamp = new Date().getTime();
-// let url = `${remoteServerAddress}/acquisition/system/data/load/${key}?_t=${timestamp}`;
-//
-// let data = await CccisAxiosUtils.getData(url);
-// if (data == null) {
-//     return null;
-// }
-//
-// if (data.value) {
-//     data.valueObj = JSON.parse(data.value);
-// }
-//
-// CccisLoggerUtils.debug(JSON.stringify(data.valueObj));
-//
-// return data.valueObj ;
-// }
-// ,
-//
-// uploadGameData: async function (dataList) {
-// let url = `${remoteServerAddress}/acquisition/system/data/save`;
-//
-// let dataObj = {
-//     key: key,
-//     value: JSON.stringify(dataList),
-//     timestamp: new Date()
-// }
-// await CccisAxiosUtils.postData(url, dataObj);
-// }
-// }
-// ;
+async function loadRemoteDataInfo() {
+    let assetList = await fetchAllAssets();
+    if (assetList.length > 1) {
+        console.log(`Found multiple asset list: ${_.map(assetList, 'assetName')}`);
+    }
+
+    let asset = assetList[0];
+    let assetData = await downloadAssetData(assetList[0].downloadUrl);
+
+    return {
+        dataVersion: asset.updatedDate,
+        assetData: assetData,
+        count: assetData.length,
+    }
+}
 
 export default {
     init: init,
     fetchAllAssets: fetchAllAssets,
     downloadAssetData: downloadAssetData,
+    loadRemoteDataInfo: loadRemoteDataInfo,
 }

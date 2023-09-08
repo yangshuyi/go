@@ -1,0 +1,96 @@
+.home-page .xms-page-content {
+    width: 100%;
+
+    padding-left: var(--margin-base);
+    padding-right: var(--margin-base);
+}
+
+.home-page .xms-page-content .module{
+    margin-top: var(--margin-base);
+}
+
+.home-page .xms-page-content .module .module-name{
+    font-weight: bold;
+    font-size: var(--font-size-title);
+    padding: var(--margin-base)
+}
+
+.home-page .xms-page-content .module .module-page{
+    width: 100%;
+    height: 100%;
+
+
+    display: grid;
+    grid-template-columns: 30fr 35fr 35fr;
+
+    column-gap: var(--margin-2x);
+    row-gap: var(--margin-2x);
+
+    align-items: center;
+    justify-items: center;
+}
+
+.home-page .xms-page-content .module .module-page .module-page-item {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+
+    aspect-ratio: 4/4;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.module-page-item> .icon-container {
+    flex: 1;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.module-page-item > .text-container {
+
+    font-size: var(--font-size-title);
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 0px) {
+    .home-page .xms-page-content .module .module-page {
+        grid-template-columns:  repeat(1, minmax(0, 1fr));
+        column-gap: var(--margin-2x);
+        row-gap: var(--margin-2x);
+    }
+}
+
+@media (min-width: 360px) {
+    .home-page .xms-page-content .module .module-page{
+        grid-template-columns:  repeat(2, minmax(0, 1fr));
+        column-gap: var(--margin-2x);
+        row-gap: var(--margin-2x);
+    }
+}
+
+@media (min-width: 410px) {
+    .home-page .xms-page-content .module .module-page {
+        grid-template-columns:  repeat(3, minmax(0, 1fr));
+        column-gap: var(--margin-base);
+        row-gap: var(--margin-base);
+    }
+}
+
+@media (min-width: 610px) {
+    .home-page .xms-page-content .module .module-page {
+        grid-template-columns:  repeat(4, minmax(0, 1fr));
+        column-gap: var(--margin-2x);
+        row-gap: var(--margin-2x);
+    }
+}

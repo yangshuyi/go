@@ -64,7 +64,7 @@ function ProblemListPage(props) {
             setListData([]);
         }
 
-        let result = await ProblemUtils.queryByPage(null, pageNo.current, pageSize.current);
+        let result = await ProblemUtils.queryFilteredProblemByPage(pageNo.current, pageSize.current);
 
         if (result) {
             setListData((oldData)=>{
@@ -83,11 +83,11 @@ function ProblemListPage(props) {
         });
     }
 
-    const navToProblemTestPage = (problem) => {
+    const navToProblemTestPage = (idx) => {
         NavigateUtils.navigateTo(navigate, Constants.ROUTER.PROBLEM_TEST.path, {
             state: {
                 key: currPageKey,
-                problemId: problem.id,
+                idx: idx,
             },
         });
     }
@@ -106,7 +106,7 @@ function ProblemListPage(props) {
             <div className="xms-page-content with-padding-top">
                 <ProblemFilterView onChange={handleFilterChange}/>
                 <List>
-                    {listData.map((problem, i) => {
+                    {listData.map((problem, idx) => {
                         return (
                             <SwipeAction key={problem.id} rightActions={[
                                 {
@@ -122,7 +122,7 @@ function ProblemListPage(props) {
                                 <List.Item prefix={problem.$levelIcon}
                                            description={problem.$introLabel}
                                            arrow={false} extra={problem.hardFlag ? <HeartFilled style={{fontSize: '22px', color: 'red'}}/> : null}
-                                           onClick={() => navToProblemTestPage(problem)}
+                                           onClick={() => navToProblemTestPage(idx)}
                                 >
                                     <div className="flex-row">
                                         <div>{problem.$introValue}</div>

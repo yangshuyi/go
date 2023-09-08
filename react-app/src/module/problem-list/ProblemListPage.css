@@ -14,7 +14,6 @@
 }
 
 .problem-filter-view .problem-filter-view-body{
-
 }
 
 .problem-filter-view .problem-filter-view-body.invisible{
@@ -27,4 +26,8 @@
 
 .problem-filter-view .list-item.visited {
     background: lightgrey;
+}
+
+.problem-filter-view .button-bar{
+    padding: var(--margin-base);
 }

@@ -1,7 +1,6 @@
 .chess-board {
     width: 100%;
     height: calc( 100vh - 285px );
-    background: lightgrey;
 }
 
 .chess-board.with-board > .wrap {

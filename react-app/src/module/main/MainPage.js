@@ -5,8 +5,8 @@ import './MainPage.css';
 
 import {HashRouter, Route, useNavigate, Outlet} from "react-router-dom";
 import {XmsSpinView} from "sirius-react-mobile";
-import GithubUtils from "../util/GithubUtils";
-import ProblemUtils from "../util/ProblemUtils";
+import BookUtils from "../../components/book/BookUtils";
+import TagUtils from "../../components/tag/TagUtils";
 
 function MainPage(props) {
     const pageInitialized = useRef(false);
@@ -24,17 +24,12 @@ function MainPage(props) {
     }, []);
 
     const init = async () => {
-        let problemList = [];
-        let assetList = await GithubUtils.fetchAllAssets();
-        for (let i = 0; i < assetList.length; i++) {
-            assetList[i].problemList = await GithubUtils.downloadAssetData(assetList[i].downloadUrl);
-            problemList = _.union(problemList, assetList[i].problemList);
-        }
-        console.log(`Totally find ${problemList.length} problems`);
-
-        ProblemUtils.init(problemList);
-
-        setDataInitialized(true);
+        Promise.all([
+            BookUtils.init(),
+            TagUtils.init(),
+        ]).then(() => {
+            setDataInitialized(true);
+        });
     }
 
     return <>{dataInitialized ? <Outlet/> : <XmsSpinView/>}</>;

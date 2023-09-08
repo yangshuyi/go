@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 import {CheckList} from "antd-mobile";
 import {XmsPicker} from "sirius-react-mobile";
-import ProblemUtils from "../../module/util/ProblemUtils";
+import TagUtils from "./TagUtils";
 
 
 function TagPicker(props) {
@@ -15,7 +15,7 @@ function TagPicker(props) {
     const [tagOptions, setTagOptions] = useState([]);
 
     const init = async () => {
-        setTagOptions(ProblemUtils.getTags());
+        setTagOptions(TagUtils.getTagOptions());
     }
 
     const itemRender = (item, props) => {

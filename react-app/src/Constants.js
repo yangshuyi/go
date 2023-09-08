@@ -17,6 +17,9 @@ let Constants = {
         PROBLEM_MGMT: {
             path: '/main/problem/ProblemMgmtPage'
         },
+        DATA_MAINTENANCE:{
+            path: '/main/data/DataMaintenance'
+        }
     },
 
     CHESS_TYPE: {

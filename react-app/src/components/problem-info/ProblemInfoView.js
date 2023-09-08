@@ -10,10 +10,10 @@ import {ExclamationCircleFill, RedoOutline, StarFill, StarOutline} from "antd-mo
 import {useLocation} from "react-router";
 import {DownOutlined, HeartFilled, UpOutlined} from "@ant-design/icons";
 import {XmsInput, XmsPicker, XmsTextArea} from "sirius-react-mobile";
-import TagPicker from "../../components/tag-picker/TagPicker";
-import LevelPicker from "../level-picker/LevelPicker";
+import TagPicker from "../tag/TagPicker";
+import LevelPicker from "../level/LevelPicker";
 import Constants from "../../Constants";
-import BookPicker from "../book-picker/BookPicker";
+import BookPicker from "../book/BookPicker";
 
 
 function ProblemInfoView(props) {

@@ -3,10 +3,10 @@ import _ from 'lodash';
 
 import './ProblemListPage.css';
 
-import {Button, Collapse, Form, Switch} from "antd-mobile";
+import {Button, Collapse, Form, Space, Switch} from "antd-mobile";
 import {DownOutlined, UpOutlined} from "@ant-design/icons";
-import BookPicker from "../../components/book-picker/BookPicker";
-import TagPicker from "../../components/tag-picker/TagPicker";
+import BookPicker from "../../components/book/BookPicker";
+import TagPicker from "../../components/tag/TagPicker";
 
 
 function ProblemFilterView(props) {
@@ -24,6 +24,12 @@ function ProblemFilterView(props) {
     const [form] = Form.useForm();
     const [formData, setFormData] = useState();
     const [collapsed, setCollapsed] = useState(true);
+
+    const handleFilterChange = () => {
+        if (props.onChange) {
+            props.onChange(form.getFieldsValue());
+        }
+    }
 
     return (formData == null ? null :
             <div className="problem-filter-view">
@@ -46,6 +52,11 @@ function ProblemFilterView(props) {
                             <Switch/>
                         </Form.Item>
                     </Form>
+
+                    <div className="button-bar">
+                        <Button color="primary" block onClick={() => handleFilterChange()}>应用</Button>
+                    </div>
+
                 </div>
             </div>
     )

@@ -4,6 +4,7 @@ import _ from 'lodash';
 import {CheckList} from "antd-mobile";
 import {XmsPicker} from "sirius-react-mobile";
 import ProblemUtils from "../../module/util/ProblemUtils";
+import BookUtils from "./BookUtils";
 
 
 function BookPicker(props) {
@@ -15,7 +16,7 @@ function BookPicker(props) {
     const [bookOptions, setBookOptions] = useState([]);
 
     const init = async () => {
-        setBookOptions(ProblemUtils.getBooks());
+        setBookOptions(BookUtils.getBookOptions);
     }
 
     const itemRender = (item, props) => {

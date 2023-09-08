@@ -11,6 +11,7 @@ import HomePage from "./module/home/HomePage";
 import {DomUtils} from "sirius-common-utils";
 import {SpinUtils, XmsRouterListener} from "sirius-react-mobile";
 import GithubUtils from "./module/util/GithubUtils";
+import DataMaintenancePage from "./module/data-maintenance/DataMaintenancePage";
 
 
 function Entrance(props) {
@@ -56,6 +57,8 @@ function Entrance(props) {
                                     </KeepAlive>
                                 }/>
                                 <Route path={Constants.ROUTER.PROBLEM_TEST.path} element={<ProblemTestPage/>}/>
+
+                                <Route path={Constants.ROUTER.DATA_MAINTENANCE.path} element={<DataMaintenancePage/>}/>
                             </Route>
                         </Routes>
                     </HashRouter>

@@ -2,59 +2,39 @@ import _ from 'lodash';
 
 import {DateUtils, StringUtils} from "sirius-common-utils";
 import Constants from "../../Constants";
-import TagUtils from "./TagUtils";
+import DexieDbUtils from "./DexieDbUtils";
 
-let problemMap = [];
-let bookList = [];
-let tagList = [];
-let filteredProblemList = [];
+let globalDb = null;
 
-function init(assetList) {
-
-    let bookMap = _.groupBy(assetList, 'book');
-    bookList = [];
-    _.each(bookMap, (items, bookName) => {
-        bookList.push({
-            bookName: bookName,
-            problemCnt: items.length,
-            keyword: StringUtils.buildKeyword(bookName),
-        })
-    });
-    bookList = _.orderBy(bookList, ['problemCnt'], ['desc']);
-
-    let tagMap = {};
-    _.each(assetList, (problem) => {
-        buildProblemFromRemote(problem);
-        problemMap[problem.id] = problem;
-
-        _.each(problem.tags, (tag) => {
-            if (!tag) {
-                return;
-            }
-            let tagObj = tagMap[tag];
-            if (!tagObj) {
-                tagObj = {tagName: tag, problemCnt: 0, keyword: StringUtils.buildKeyword(tag)};
-                tagMap[tag] = tagObj;
-            }
-            tagObj.problemCnt++;
-        });
-    });
-    tagList = _.map(tagMap);
-    tagList = _.orderBy(tagList, ['problemCnt'], ['desc']);
+async function getGlobalDb() {
+    if (!globalDb) {
+        globalDb = await DexieDbUtils.getConn();
+    }
+    return globalDb;
 }
 
+async function syncFromRemote(assetList) {
+    let problemList = [];
+    _.each(assetList, (asset) => {
+        problemList.push(asset);
+    });
 
-function getBooks() {
-    return bookList;
-}
+    let db = await getGlobalDb();
+    await db.problems.clear();
 
-function getTags() {
-    return tagList;
+    for (let i = 0; i < problemList.length; i++) {
+        await saveProblem(problemList[i]);
+    }
+    //await db.problems.bulkPut(problemList);
 }
 
 async function filterProblemList(filterParam) {
+    let db = await getGlobalDb();
+    await db.filteredProblems.clear();
+
+    let filteredList = [];
     if (filterParam) {
-        filteredProblemList = _.filter(problemMap, (problem) => {
+        filteredList = await db.problems.where((problem) => {
             if (filterParam.books && !_.isEmpty(filterParam.books)) {
                 if (!_.includes(filterParam.books, problem.book)) {
                     return false;
@@ -82,50 +62,99 @@ async function filterProblemList(filterParam) {
             return true;
         });
     } else {
-        filteredProblemList = _.values(problemMap);
+        filteredList = await db.problems.toArray();
     }
 
-    return filteredProblemList;
+    let filteredProblemList = [];
+    _.each(filteredList, (problem, idx) => {
+        filteredProblemList.push({
+            orderIdx: idx,
+            problemId: problem.problemId,
+        })
+    });
+
+    await db.filteredProblems.bulkPut(filteredProblemList);
 }
 
-async function queryByPage(filterParam, pageNo, pageSize) {
-    let startIdx = (pageNo - 1) * pageSize;
-    let endIdx = _.min([startIdx + pageSize, filteredProblemList.length]);
+async function queryFilteredProblemByPage(pageNo, pageSize) {
+    console.log(`queryFilteredProblemByPage: ${pageNo}, ${pageSize}`);
 
-    let result = {
-        list: _.slice(filteredProblemList, startIdx, endIdx),
-        hasMoreFlag: endIdx < filteredProblemList.length
-    };
+    let offset = (pageNo - 1) * pageSize;
+    let endIdx = offset + pageSize;
 
-    return new Promise((resolve, error) => {
-        setTimeout(() => {
-            resolve(result);
-        }, 5000)
+    let db = await getGlobalDb();
+
+    let totalCnt = await db.filteredProblems.count();
+    let list = await db.filteredProblems.offset(offset).limit(pageSize).toArray();
+    let problemIdList = _.map(list, 'problemId');
+
+    let problemList = await db.problems.where('problemId').anyOf(problemIdList).toArray();
+    _.each(problemList, (problem) => {
+        buildProblemFormData(problem);
     });
+
+    return {
+        list: problemList,
+        hasMoreFlag: endIdx < totalCnt
+    };
+}
+
+async function queryCount() {
+    let db = await getGlobalDb();
+
+    let totalCnt = await db.problems.count();
+    return totalCnt;
+}
+
+async function loadProblemByFilteredOrderIdx(orderIdx = 0) {
+    let db = await getGlobalDb();
+
+    let record = await db.filteredProblems.get(orderIdx);
+    if (!record) {
+        console.error(`Could not find FilteredProblem by orderIdx: ${orderIdx}`);
+        return null;
+    }
+
+    return await loadProblemById(record.problemId);
 }
 
 async function loadProblemById(problemId) {
-    let problem = problemMap[problemId];
+    let db = await getGlobalDb();
+
+    let problem = db.problems.get(problemId);
     if (problem == null) {
         console.error(`Could not find Problem by id: ${problemId}`);
     }
+
+    buildProblemFormData(problem);
     return problem;
 }
 
 async function saveProblem(problemParam) {
-    let problem = null;
-    if (problemParam.id) {
-        problem = problemMap[problemParam.id];
+    let problemEntity = null;
+    if (problemParam.problemId) {
+        problemEntity = await loadProblemById(problemParam.problemId);
+    }
+    if (!problemEntity) {
+        problemEntity = {};
     }
 
-    buildProblemToRemote(problem, problemParam);
+    problemEntity.id = problemParam.id;
+    problemEntity.book = problemParam.book;
+    problemEntity.title = problemParam.title;
+    problemEntity.desc = problemParam.desc;
+    problemEntity.level = problemParam.level;
+    problemEntity.tags = problemParam.tags;
+    problemEntity.hardFlag = problemParam.hardFlag;
+    problemEntity.chessBoardSize = problemParam.chessBoardSize;
+    problemEntity.chessBoard = problemParam.chessBoard;
+    problemEntity.nextChessType = problemParam.nextChessType;
 
-
-
-    return problem;
+    let db = await getGlobalDb();
+    await db.problems.put(problemEntity);
 }
 
-function buildProblemFromRemote(game) {
+function buildProblemFormData(game) {
     game.$chessBoardSizeText = game.chessBoardSize + "路";
 
     if (!_.isEmpty(game.tags) && game.tags[0] != '') {
@@ -165,7 +194,7 @@ function buildProblemFromRemote(game) {
 }
 
 async function buildProblemToRemote(model, param) {
-    if(model==null){
+    if (model == null) {
         model = {};
         model.id = new Date().getTime() + "";
     }
@@ -180,7 +209,7 @@ async function buildProblemToRemote(model, param) {
     model.nextChessType = param.nextChessType;
     model.chessBoard = param.chessBoard;
 
-    TagUtils.formatGameTagsBeforeUpload(model);
+    // TagUtils.formatGameTagsBeforeUpload(model);
 
     _.each(model.chessBoard, (chess, geo) => {
         delete chess.$geo;
@@ -189,11 +218,14 @@ async function buildProblemToRemote(model, param) {
 
 
 export default {
-    init: init,
-    getBooks: getBooks,
-    getTags: getTags,
+    syncFromRemote: syncFromRemote,
+
+    queryCount: queryCount,
+
     filterProblemList: filterProblemList,
-    queryByPage: queryByPage,
+    queryFilteredProblemByPage: queryFilteredProblemByPage,
+    loadProblemByFilteredOrderIdx: loadProblemByFilteredOrderIdx,
+
     loadProblemById: loadProblemById,
     saveProblem: saveProblem,
 }
