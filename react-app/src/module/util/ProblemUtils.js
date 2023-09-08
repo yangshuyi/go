@@ -28,6 +28,13 @@ async function syncFromRemote(assetList) {
     //await db.problems.bulkPut(problemList);
 }
 
+
+async function queryAll() {
+    let db = await getGlobalDb();
+    let list = await db.problems.toArray();
+    return list;
+}
+
 async function filterProblemList(filterParam) {
     let db = await getGlobalDb();
     await db.filteredProblems.clear();
@@ -218,6 +225,7 @@ export default {
     syncFromRemote: syncFromRemote,
 
     queryCount: queryCount,
+    queryAll: queryAll,
 
     filterProblemList: filterProblemList,
     queryFilteredProblemByPage: queryFilteredProblemByPage,

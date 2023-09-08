@@ -3,11 +3,16 @@ import _ from 'lodash';
 import {Octokit} from "octokit";
 import {AxiosUtils, DateUtils} from "sirius-common-utils";
 import {Base64} from "js-base64";
+import ConfigUtils from "../../components/config/ConfigUtils";
 
 let destToken = "dSMjI2gjIyMzIyMjVCMjI3QjIyM5IyMjMCMjI2EjIyNwIyMjWiMjI1QjIyNSIyMjeSMjI28jIyNWIyMjUiMjI0IjIyN4IyMjRSMjI1MjIyNhIyMjbCMjI1YjIyNTIyMjUSMjI1ojIyMxIyMjYSMjI3EjIyMxIyMjayMjI2MjIyNGIyMjRiMjI1YjIyNVIyMjayMjI0IjIyN6IyMjVSMjIzIjIyM0IyMjRyMjI1YjIyNXIyMjTiMjI1QjIyNTIyMjUCMjI04jIyNUIyMjUiMjI3cjIyMxIyMjbSMjI2QjIyMwIyMjOCMjI1cjIyNiIyMjWSMjI04jIyNHIyMjVyMjIzIjIyNvIyMjayMjI1kjIyNpIyMjSiMjI1cjIyNPIyMjMCMjI0UjIyNUIyMjZCMjI1cjIyNWIyMjMCMjI1gjIyNEIyMjWiMjI0cjIyNPIyMjVSMjI2wjIyMzIyMjTiMjI0kjIyNKIyMjVSMjI2UjIyNIIyMjcCMjI1YjIyNXIyMjdyMjI2sjIyNVIyMjVCMjI1ojIyNOIyMjRiMjI04jIyNDIyMjRiMjI1UjIyNNIyMjeCMjIzgjIyNGIyMjZCMjI2gjIyNCIyMjMyMjI1gjIyNpIyMjViMjI0gjIyNhIyMjMCMjI2wjIyMyIyMjWg==";
 let globalOctokit = null;
 
 let onlineFlag = false;
+
+/**
+ * https://docs.github.com/en/rest?ref=daveabrock.com&apiVersion=2022-11-28
+ */
 
 async function init() {
     globalOctokit = new Octokit({
@@ -15,8 +20,8 @@ async function init() {
     });
 }
 
-async function getOctokit(){
-    if(!globalOctokit){
+async function getOctokit() {
+    if (!globalOctokit) {
         await init();
     }
     return globalOctokit;
@@ -68,7 +73,8 @@ async function fetchAllAssets() {
                     updatedDate: assetItem.updated_at,
                     downloadUrl: assetItem.browser_download_url,
                 }
-            })
+            }),
+            assetUploadUrl: releaseItem.upload_url
         }
     });
 
@@ -77,12 +83,39 @@ async function fetchAllAssets() {
     if (_.isEmpty(releaseList)) {
         return [];
     }
-    return releaseList[0].assets;
+
+    let release = releaseList[0];
+
+    await ConfigUtils.setGithubReleaseId(release.releaseId);
+    await ConfigUtils.setGithubAssetUploadUrl(release.assetUploadUrl);
+
+    return release.assets;
 }
 
 async function downloadAssetData(assetDownloadUrl) {
     let assetData = await AxiosUtils.getFormData(assetDownloadUrl + `?_t=${new Date().getTime()}`);
     return assetData;
+}
+
+async function uploadAssetData(assetData) {
+    let assetUploadUrl = await ConfigUtils.getGithubAssetUploadUrl();
+    let localDataVersion = await ConfigUtils.getDataVersion();
+
+    let blob = new Blob([JSON.stringify(assetData)], {type: "text/json"});
+
+    let octokit = await getOctokit();
+    await octokit.request({
+        method: "POST",
+        url: assetUploadUrl,
+        headers: {
+            "content-type": "text/plain",
+        },
+        data: blob,
+        name: localDataVersion+".json",
+        label: localDataVersion,
+    });
+
+
 }
 
 async function loadRemoteDataInfo() {
@@ -91,8 +124,13 @@ async function loadRemoteDataInfo() {
         console.log(`Found multiple asset list: ${_.map(assetList, 'assetName')}`);
     }
 
+    //永远取最新的数据包
     let asset = assetList[0];
-    let assetData = await downloadAssetData(assetList[0].downloadUrl);
+
+    await ConfigUtils.setGithubAssetId(asset.assetId);
+    await ConfigUtils.setGithubAssetName(asset.assetName);
+
+    let assetData = await downloadAssetData(asset.downloadUrl);
 
     return {
         dataVersion: asset.updatedDate,
@@ -106,4 +144,5 @@ export default {
     fetchAllAssets: fetchAllAssets,
     downloadAssetData: downloadAssetData,
     loadRemoteDataInfo: loadRemoteDataInfo,
+    uploadAssetData: uploadAssetData,
 }

@@ -46,6 +46,62 @@ async function getShowBoardFlag() {
     return _.get(record, 'value', 'false')
 }
 
+async function setGithubReleaseId(releaseId) {
+    let db = await getGlobalDb();
+    await db.configs.put({
+        key: "githubReleaseId",
+        value: releaseId
+    });
+}
+
+async function getGithubReleaseId() {
+    let db = await getGlobalDb();
+    let record = await db.configs.get("githubReleaseId")
+    return _.get(record, 'value')
+}
+
+async function setGithubAssetId(assetId) {
+    let db = await getGlobalDb();
+    await db.configs.put({
+        key: "githubAssetId",
+        value: assetId
+    });
+}
+
+async function getGithubAssetId() {
+    let db = await getGlobalDb();
+    let record = await db.configs.get("githubAssetId")
+    return _.get(record, 'value')
+}
+
+async function setGithubAssetName(assetName) {
+    let db = await getGlobalDb();
+    await db.configs.put({
+        key: "githubAssetName",
+        value: assetName
+    });
+}
+
+async function getGithubAssetName() {
+    let db = await getGlobalDb();
+    let record = await db.configs.get("githubAssetName")
+    return _.get(record, 'value')
+}
+
+async function setGithubAssetUploadUrl(assetUploadUrl) {
+    let db = await getGlobalDb();
+    await db.configs.put({
+        key: "githubAssetUploadUrl",
+        value: assetUploadUrl
+    });
+}
+
+async function getGithubAssetUploadUrl() {
+    let db = await getGlobalDb();
+    let record = await db.configs.get("githubAssetUploadUrl")
+    return _.get(record, 'value')
+}
+
 
 export default {
     updateDataVersion: updateDataVersion,
@@ -54,4 +110,16 @@ export default {
 
     getShowBoardFlag: getShowBoardFlag,
     setShowBoardFlag: setShowBoardFlag,
+
+    setGithubReleaseId: setGithubReleaseId,
+    getGithubReleaseId: getGithubReleaseId,
+
+    setGithubAssetId: setGithubAssetId,
+    getGithubAssetId: getGithubAssetId,
+
+    setGithubAssetName: setGithubAssetName,
+    getGithubAssetName: getGithubAssetName,
+
+    setGithubAssetUploadUrl: setGithubAssetUploadUrl,
+    getGithubAssetUploadUrl: getGithubAssetUploadUrl,
 }

@@ -80,7 +80,7 @@ function DataMaintenancePage(props) {
         await ProblemUtils.syncFromRemote(assetData);
         await ConfigUtils.updateDataVersion(remoteDataInfo.dataVersion);
 
-        await refreshLocalDataInfo(false);
+        await refreshRemoteDataInfo(false);
 
         if (showMsgFlag) {
             DialogUtils.showSuccessMessage("Success");
@@ -88,9 +88,12 @@ function DataMaintenancePage(props) {
     }
 
     const uploadLocalData = async (showMsgFlag) => {
-        await DataVersionUtils.refreshDataVersion();
+        await ConfigUtils.refreshDataVersion();
 
-        await refreshLocalDataInfo(false);
+        let problemList = await ProblemUtils.queryAll();
+        await GithubUtils.uploadAssetData(problemList);
+
+        await refre(false);
 
         if (showMsgFlag) {
             DialogUtils.showSuccessMessage("Success");
