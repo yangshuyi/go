@@ -15,9 +15,9 @@ function GameView(props) {
 
     const [game, setGame] = useState();
     const [showMark, setShowMark] = useState(false);
-    const [showBoard, setShowBoard] = useState(true);
+    const [showBoard, setShowBoard] = useState(false);
     const [currNextStep, setCurrNextStep] = useState(null);
-    const stepList  = useRef([]); //每一手
+    const stepList = useRef([]); //每一手
 
 
     const init = async () => {
@@ -40,13 +40,14 @@ function GameView(props) {
     }
 
 
-
     const reset = (showMark) => {
         let game = JSON.parse(JSON.stringify(props.game));
-         game.$currChessBoard = {}; //当前棋盘上的棋子信息
+        game.$currChessBoard = {}; //当前棋盘上的棋子信息
         game.$currChessBoard = game.chessBoard;
         setGame(game);
         setCurrNextStep(game.nextChessType); //下一手
+
+        stepList.current = [];
 
         domChessBoardRef.current.init(game.chessBoardSize, showMark);
         _.each(game.$currChessBoard, (chess) => {
@@ -143,12 +144,12 @@ function GameView(props) {
                 当前手
             </List.Item>
 
-            <List.Item extra={<Switch value={showMark} onChange={handleShowMarkChange}/>}>
+            <List.Item extra={<Switch checked={showMark} onChange={handleShowMarkChange}/>}>
                 展示标记
             </List.Item>
             <List.Item extra={
                 <Space>
-                    <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={()=>reset(showMark)}>还原</Button>
+                    <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={() => reset(showMark)}>还原</Button>
                     <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={stepBackward}>上一步</Button>
                 </Space>
             }>

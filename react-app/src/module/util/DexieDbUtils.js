@@ -10,7 +10,7 @@ let globalDb = null;
 async function init() {
     globalDb = new Dexie('GO');
     globalDb.version(1).stores({
-        problems: '++problemId',
+        problems: 'id',
         filteredProblems: 'orderIdx',
         books: 'bookName',
         tags: 'tagName',

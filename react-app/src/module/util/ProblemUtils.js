@@ -73,7 +73,7 @@ async function filterProblemList(filterParam) {
     _.each(filteredList, (problem, idx) => {
         filteredProblemList.push({
             orderIdx: idx,
-            problemId: problem.problemId,
+            problemId: problem.id,
         })
     });
 
@@ -92,7 +92,7 @@ async function queryFilteredProblemByPage(pageNo, pageSize) {
     let list = await db.filteredProblems.offset(offset).limit(pageSize).toArray();
     let problemIdList = _.map(list, 'problemId');
 
-    let problemList = await db.problems.where('problemId').anyOf(problemIdList).toArray();
+    let problemList = await db.problems.where('id').anyOf(problemIdList).toArray();
     _.each(problemList, (problem) => {
         buildProblemFormData(problem);
     });
@@ -122,22 +122,31 @@ async function loadProblemByFilteredOrderIdx(orderIdx = 0) {
     return await loadProblemById(record.problemId);
 }
 
-async function loadProblemById(problemId) {
+async function loadProblemById(id) {
     let db = await getGlobalDb();
 
-    let problem = await db.problems.get(problemId);
+    let problem = await db.problems.get(id);
     if (problem == null) {
-        console.error(`Could not find Problem by id: ${problemId}`);
+        console.error(`Could not find Problem by id: ${id}`);
+        return null;
     }
 
     buildProblemFormData(problem);
     return problem;
 }
 
+async function deleteProblemById(id){
+    let db = await getGlobalDb();
+
+    await db.problems.delete(id);
+}
+
 async function saveProblem(problemParam) {
+    let db = await getGlobalDb();
+
     let problemEntity = null;
-    if (problemParam.problemId) {
-        problemEntity = await loadProblemById(problemParam.problemId);
+    if (problemParam.id) {
+        problemEntity = await db.problems.get(problemParam.id);
     }
     if (!problemEntity) {
         problemEntity = {};
@@ -153,8 +162,8 @@ async function saveProblem(problemParam) {
     problemEntity.chessBoardSize = problemParam.chessBoardSize;
     problemEntity.chessBoard = problemParam.chessBoard;
     problemEntity.nextChessType = problemParam.nextChessType;
+    problemEntity.modifyDate = problemParam.modifyDate || DateUtils.getCurrentDate().getTime();
 
-    let db = await getGlobalDb();
     await db.problems.put(problemEntity);
 }
 
@@ -197,30 +206,6 @@ function buildProblemFormData(game) {
     delete game.currNextStep;
 }
 
-async function buildProblemToRemote(model, param) {
-    if (model == null) {
-        model = {};
-        model.id = new Date().getTime() + "";
-    }
-    model.book = param.book;
-    model.title = param.title;
-    model.desc = param.desc;
-    model.modifyDate = DateUtils.getCurrentDate().getTime();
-    model.chessBoardSize = param.chessBoardSize;
-    model.tags = param.tags;
-    model.level = param.level;
-    model.hardFlag = param.hardFlag;
-    model.nextChessType = param.nextChessType;
-    model.chessBoard = param.chessBoard;
-
-    // TagUtils.formatGameTagsBeforeUpload(model);
-
-    _.each(model.chessBoard, (chess, geo) => {
-        delete chess.$geo;
-    });
-}
-
-
 export default {
     syncFromRemote: syncFromRemote,
 
@@ -233,4 +218,5 @@ export default {
 
     loadProblemById: loadProblemById,
     saveProblem: saveProblem,
+    deleteProblemById: deleteProblemById,
 }

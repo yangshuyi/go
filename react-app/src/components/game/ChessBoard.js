@@ -85,8 +85,7 @@ const ChessBoard = (props, ref) => {
         ctx.save();
 
         ctx.beginPath();
-        ctx.fillStyle = "rgba(255, 255, 255, 0)";
-        ctx.fillRect(0, 0, data.current.canvas.boardBorder, data.current.canvas.boardBorder);
+        ctx.clearRect(0, 0, data.current.canvas.boardBorder, data.current.canvas.boardBorder);
         ctx.restore();
     }
 

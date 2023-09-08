@@ -30,7 +30,7 @@ function ProblemInfoView(props) {
         setFormData(formData);
     }
 
-    const floatPanelHeightMin = 88;
+    const floatPanelHeightMin = 100;
     const floatPanelHeightMax = 500;
     const [currFloatPanelHeight, setCurrFloatingPanelHeight] = useState();
     const [currFloatPanelMinState, setCurrFloatPanelMinState] = useState(true);
@@ -81,7 +81,7 @@ function ProblemInfoView(props) {
 
     return (formData == null ? null :
             <>
-            <FloatingPanel className="problem-info-view"
+            <FloatingPanel className="problem-info-view" style={{ '--header-height': '40px'}}
                            anchors={[floatPanelHeightMin, floatPanelHeightMax]}
                            onHeightChange={handleFloatingPanelHeightChange}
             >
@@ -99,9 +99,6 @@ function ProblemInfoView(props) {
                         </Form.Item>
                         <Form.Item label="标签" name="tags">
                             <TagPicker mode="multiple"/>
-                        </Form.Item>
-                        <Form.Item label="级别" name="level">
-                            <LevelPicker/>
                         </Form.Item>
                     </Form>
             </FloatingPanel>

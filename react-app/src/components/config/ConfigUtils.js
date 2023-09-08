@@ -43,7 +43,7 @@ async function setShowBoardFlag(flag) {
 async function getShowBoardFlag() {
     let db = await getGlobalDb();
     let record = await db.configs.get("showBoard")
-    return _.get(record, 'value', 'false')
+    return _.get(record, 'value', true)
 }
 
 async function setGithubReleaseId(releaseId) {

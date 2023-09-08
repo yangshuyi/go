@@ -28,7 +28,7 @@ function ProblemTestPage(props) {
     }, []);
 
     const [formData, setFormData] = useState();
-    const [nextProblemIdx, setNextProblemIdx] = useState(null);
+    const [nextOrderIdx, setNextOrderIdx] = useState(null);
 
     let init = async (orderIdx) => {
         setFormData(null);
@@ -39,12 +39,12 @@ function ProblemTestPage(props) {
         }
         setFormData(problem);
 
-        let nextProblemIdx = orderIdx + 1;
-        let nextProblem = await ProblemUtils.loadProblemByFilteredOrderIdx(nextProblemIdx);
+        let nextOrderIdx = orderIdx + 1;
+        let nextProblem = await ProblemUtils.loadProblemByFilteredOrderIdx(nextOrderIdx);
         if (nextProblem) {
-            setNextProblemIdx(nextProblemIdx);
+            setNextOrderIdx(nextOrderIdx);
         } else {
-            setNextProblemIdx(null);
+            setNextOrderIdx(null);
         }
     }
 
@@ -55,14 +55,16 @@ function ProblemTestPage(props) {
 
     const navBack = async () => {
         if (modifiedObj.current) {
-            await ProblemUtils.saveProblem(modifiedObj.current);
+            let problem = {}
+            _.assign(problem, formData, modifiedObj.current);
+            await ProblemUtils.saveProblem(problem);
         }
         NavigateUtils.navigateBack(navigate, location, {});
     }
 
     const handleNextProblem = async () => {
-        if (nextProblemIdx) {
-            await init(nextProblemIdx);
+        if (nextOrderIdx) {
+            await init(nextOrderIdx);
         }
     }
 
@@ -70,7 +72,7 @@ function ProblemTestPage(props) {
             <div className="problem-test-page">
                 <NavBar
                     onBack={() => navBack()}
-                    right={nextProblemIdx ? <Button color="primary" fill="solid" size="small" onClick={() => handleNextProblem()}>下一局</Button> : null}
+                    right={nextOrderIdx ? <Button color="primary" fill="solid" size="small" onClick={() => handleNextProblem()}>下一局</Button> : null}
                 >
                     <div>{formData.$introValue}</div>
                 </NavBar>

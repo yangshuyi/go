@@ -80,7 +80,7 @@ function DataMaintenancePage(props) {
         await ProblemUtils.syncFromRemote(assetData);
         await ConfigUtils.updateDataVersion(remoteDataInfo.dataVersion);
 
-        await refreshRemoteDataInfo(false);
+        await refreshLocalDataInfo(false);
 
         if (showMsgFlag) {
             DialogUtils.showSuccessMessage("Success");
@@ -100,7 +100,7 @@ function DataMaintenancePage(props) {
         }
     }
 
-    const [showBoard, setShowBoard] = useState(true);
+    const [showBoard, setShowBoard] = useState(false);
     const handleShowBoardChange = async (showMsgFlag) => {
         let newShowBoard = !showBoard;
         setShowBoard(newShowBoard);
@@ -131,8 +131,8 @@ function DataMaintenancePage(props) {
                 <List header="远程数据">
                     <List.Item extra={
                         <Space>
-                            <Button size='mini' color='primary' fill='outline' loading='auto' onClick={()=>refreshRemoteDataInfo(true)}>刷新</Button>
-                            <Button size='mini' color='primary' fill='outline' loading='auto' disabled={!remoteDataInfo.dataVersion} onClick={()=>downloadRemoteData(true)}>下载</Button>
+                            <Button size='mini' color='primary' fill='outline' loading='auto' onClick={() => refreshRemoteDataInfo(true)}>刷新</Button>
+                            <Button size='mini' color='primary' fill='outline' loading='auto' disabled={!remoteDataInfo.dataVersion} onClick={() => downloadRemoteData(true)}>下载</Button>
                         </Space>
                     }>
                         操作
@@ -160,7 +160,7 @@ function DataMaintenancePage(props) {
                     </List.Item>
                 </List>
                 <List header="系统配置">
-                    <List.Item extra={<Switch value={showBoard} onChange={()=>handleShowBoardChange(true)}/>}>
+                    <List.Item extra={<Switch checked={showBoard} onChange={()=>handleShowBoardChange(true)}/>}>
                         展示棋盘
                     </List.Item>
                 </List>

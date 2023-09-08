@@ -67,11 +67,18 @@ function ProblemListPage(props) {
         let result = await ProblemUtils.queryFilteredProblemByPage(pageNo.current, pageSize.current);
 
         if (result) {
-            setListData((oldData)=>{
+            setListData((oldData) => {
                 return [...oldData, ...result.list];
             });
             setHasMoreFlag(result.hasMoreFlag);
         }
+    }
+
+    const handleDeleteProblem = (problem) => {
+        ProblemUtils.deleteProblemById(problem.id);
+
+        let newListData = _.reject(listData, {id: problem.id});
+        setListData(newListData);
     }
 
     const navToProblemMgmtPage = (problem) => {
@@ -112,12 +119,16 @@ function ProblemListPage(props) {
                         return (
                             <SwipeAction key={problem.id} rightActions={[
                                 {
+                                    key: 'del',
+                                    text: '删除',
+                                    color: 'danger',
+                                    onClick: () => handleDeleteProblem(problem),
+                                },
+                                {
                                     key: 'mgmt',
                                     text: '管理',
                                     color: 'primary',
-                                    onClick: () => {
-                                        navToProblemMgmtPage(problem)
-                                    },
+                                    onClick: () => navToProblemMgmtPage(problem),
                                 },
                             ]}
                             >
@@ -128,7 +139,7 @@ function ProblemListPage(props) {
                                 >
                                     <div className="flex-row">
                                         <div>{problem.$introValue}</div>
-                                        {problem.$visited?<EyeFilled />:null}
+                                        {problem.$visited ? <EyeFilled/> : null}
                                     </div>
                                 </List.Item>
                             </SwipeAction>
