@@ -5,10 +5,10 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-    "build": "cd vue-app && npm install && npm run build && cd ../",
-    "browser": "npm run build && cordova run browser",
-    "android": "npm run build && cordova platform rm android && cordova platform add android && cordova build android",
-    "ios": "npm run build && cordova platform rm ios && cordova platform add ios && cordova build ios",
+    "build": "cd react-app && npm install && npm run build && cd ../",
+    "browser": "cordova run browser",
+    "android": "cordova platform rm android && cordova platform add android && cordova build android",
+    "ios": "cordova platform rm ios && cordova platform add ios && cordova build ios",
     "build-android": "npm run build && cordova build android",
     "release-android": "npm run build && cordova build android --release",
     "build-ios": "npm run build && cordova build ios"
@@ -22,6 +22,8 @@
     "cordova-android": "^10.1.2",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "~4.5.1",
+    "cordova-plugin-file": "^8.0.0",
+    "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-screen-orientation": "^3.0.2",
     "cordova-plugin-splashscreen": "^6.0.2",
     "cordova-plugin-stylus": "^0.2.1",
@@ -31,14 +33,15 @@
   "cordova": {
     "platforms": [
       "browser",
-      "ios",
-      "android"
+      "ios"
     ],
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-stylus": {},
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-file": {}
     }
   }
 }
