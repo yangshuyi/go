@@ -95,7 +95,6 @@ async function fetchAllAssets() {
 }
 
 async function downloadAssetData(assetDownloadUrl) {
-    debugger;
     let assetData = null;
     if (FetchPlugin.isPluginAvailable()) {
         assetData = await FetchPlugin.download(assetDownloadUrl);

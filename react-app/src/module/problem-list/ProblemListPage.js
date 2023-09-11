@@ -7,7 +7,6 @@ import {useNavigate} from "react-router-dom";
 import {useActivate, useAliveController} from "react-activation";
 import {Button, InfiniteScroll, List, NavBar, PullToRefresh, SwipeAction, Tabs} from "antd-mobile";
 import {useLocation} from "react-router";
-import GameUtils from "../util/game-utils";
 import Constants from "../../Constants";
 import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
 import ProblemUtils from "../util/ProblemUtils";

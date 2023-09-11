@@ -4,13 +4,11 @@ import _ from 'lodash';
 import './ProblemTestPage.css';
 
 import {useNavigate} from "react-router-dom";
-import {Button, InfiniteScroll, List, NavBar, PullToRefresh, SwipeAction, Tabs} from "antd-mobile";
+import {Button, NavBar} from "antd-mobile";
 import {useLocation} from "react-router";
 import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
 import ProblemInfoView from "../../components/problem-info/ProblemInfoView";
-import ChessBoard from "../../components/game/ChessBoard";
 import ProblemUtils from "../util/ProblemUtils";
-import GameUtils from "../util/game-utils";
 import GameView from "../../components/game/GameView";
 
 

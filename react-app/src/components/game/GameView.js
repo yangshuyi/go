@@ -8,6 +8,7 @@ import ChessBoard from "./ChessBoard";
 import {BackwardOutlined, CaretLeftOutlined, EyeFilled, HeartFilled} from "@ant-design/icons";
 import Constants from "../../Constants";
 import ConfigUtils from "../config/ConfigUtils";
+import ChessUtils from "../../module/util/ChessUtils";
 
 
 function GameView(props) {
@@ -56,9 +57,16 @@ function GameView(props) {
     }
 
     function stepForward(action, chess) {
+        let tiziList = null;
         if (action === 'add') {
             game.$currChessBoard[chess.$geo] = chess;
             domChessBoardRef.current.drawChess(chess);
+
+            tiziList = ChessUtils.checkTizi(game.chessBoardSize, chess, game.$currChessBoard);
+            _.each(tiziList, (oppositeChess) => {
+                delete game.$currChessBoard[oppositeChess.$geo];
+                domChessBoardRef.current.clearChess(oppositeChess);
+            });
         } else if (action === 'remove') {
             delete game.$currChessBoard[chess.$geo];
             domChessBoardRef.current.clearChess(chess);
@@ -66,7 +74,8 @@ function GameView(props) {
 
         stepList.current.push({
             action: action,
-            chess: chess
+            chess: chess,
+            tiziList: tiziList,
         });
     }
 
@@ -79,6 +88,11 @@ function GameView(props) {
         if (lastStep.action === 'add') {
             delete game.$currChessBoard[lastStep.chess.$geo];
             domChessBoardRef.current?.clearChess(lastStep.chess);
+
+            _.each(lastStep.tiziList, (oppositeChess) => {
+                game.$currChessBoard[oppositeChess.$geo] = oppositeChess;
+                domChessBoardRef.current?.drawChess(oppositeChess);
+            });
         } else if (lastStep.action === 'remove') {
             game.$currChessBoard[lastStep.chess.$geo] = lastStep.chess;
             domChessBoardRef.current?.drawChess(lastStep.chess);

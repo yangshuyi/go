@@ -67,8 +67,132 @@ function getGeoLabelByIdx(chessBoardSize, rowOrCol, idx) {
     }
 }
 
+
+function checkTizi(chessBoardSize, currChessObj, chessBoard) {
+    let chessType = currChessObj.type;
+    let oppositeChessType = Constants.CHESS_TYPE[chessType].nextStep;
+
+    let oppositeChessList = getAroundChess(chessBoardSize, currChessObj, oppositeChessType, chessBoard);
+    let tiziList = [];
+    _.each(oppositeChessList, (oppositeChess) => {
+        let allOppositeChessMap = getAllOppositeChessList(chessBoardSize, oppositeChess, {}, chessBoard);
+        let checkTizi = true;
+        _.each(allOppositeChessMap, (oppositeChessObj) => {
+            let hasQi = isChessHasQi(chessBoardSize, oppositeChessObj, chessBoard);
+            if (hasQi) {
+                checkTizi = false;
+                return false;
+            }
+        });
+
+        if (checkTizi) {
+            tiziList = _.union(tiziList, _.values(allOppositeChessMap));
+        }
+    });
+
+    if (_.isEmpty(tiziList)) {
+        return null;
+    } else {
+        console.log("checkTizi: " + tiziList);
+        return tiziList;
+    }
+}
+
+function getAroundChess(chessBoardSize, currChessObj, currChessType, chessBoard) {
+    let chessPos = getPosIdxFromGeo(chessBoardSize, currChessObj.$geo);
+    if (!chessPos) {
+        return;
+    }
+
+    let array = [];
+    let geo = null;
+    if (chessPos.x > 0) {
+        //check left
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x - 1, y: chessPos.y});
+        if (chessBoard[geo]?.type === currChessType) {
+            array.push(chessBoard[geo]);
+        }
+    }
+    if (chessPos.x < (chessBoardSize - 1)) {
+        //check right
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x + 1, y: chessPos.y});
+        if (chessBoard[geo]?.type === currChessType) {
+            array.push(chessBoard[geo]);
+        }
+    }
+    if (chessPos.y > 0) {
+        //check bottom
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x, y: chessPos.y - 1});
+        if (chessBoard[geo]?.type === currChessType) {
+            array.push(chessBoard[geo]);
+        }
+    }
+    if (chessPos.y < (chessBoardSize - 1)) {
+        //check top
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x, y: chessPos.y + 1});
+        if (chessBoard[geo]?.type === currChessType) {
+            array.push(chessBoard[geo]);
+        }
+    }
+
+    return array;
+}
+
+
+function isChessHasQi(chessBoardSize, currChessObj, chessBoard) {
+    let chessPos = getPosIdxFromGeo(chessBoardSize, currChessObj.$geo);
+    if (chessPos.x > 0) {
+        //check left
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x - 1, y: chessPos.y});
+        if (chessBoard[geo] == null) {
+            return true;
+        }
+    }
+    if (chessPos.x < (chessBoardSize - 1)) {
+        //check right
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x + 1, y: chessPos.y});
+        if (chessBoard[geo] == null) {
+            return true;
+        }
+    }
+    if (chessPos.y > 0) {
+        //check bottom
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x, y: chessPos.y - 1});
+        if (chessBoard[geo] == null) {
+            return true;
+        }
+    }
+    if (chessPos.y < (chessBoardSize - 1)) {
+        //check top
+        let geo = getGeoFromPosIdx(chessBoardSize, {x: chessPos.x, y: chessPos.y + 1});
+        if (chessBoard[geo] == null) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+function getAllOppositeChessList(chessBoardSize, currChessObj, existedChessMap, chessBoard) {
+    if (existedChessMap[currChessObj.$geo] != null) {
+        //already checked.
+        return;
+    }
+
+    existedChessMap[currChessObj.$geo] = currChessObj;
+
+    let _aroundChessList = getAroundChess(chessBoardSize, currChessObj, currChessObj.type, chessBoard);
+    _.each(_aroundChessList, function (_aroundChessObj) {
+        getAllOppositeChessList(chessBoardSize, _aroundChessObj, existedChessMap, chessBoard);
+    });
+
+    return existedChessMap;
+}
+
 export default {
     getPosIdxFromGeo: getPosIdxFromGeo,
     getGeoFromPosIdx: getGeoFromPosIdx,
     getGeoLabelByIdx: getGeoLabelByIdx,
+
+    checkTizi: checkTizi
 };
