@@ -44,9 +44,17 @@ function HomePage(props) {
         });
     }
 
+    function exit(e) {
+        if (navigator.app) {
+            navigator.app.exitApp();
+        }
+    }
+
     return (
         <div className="home-page">
-            <NavBar backArrow={false}>
+            <NavBar backArrow={false}
+                    right={<Button color="primary" fill="solid" size="small" onClick={() => exit()}>退出</Button>}
+            >
                 GO
             </NavBar>
 

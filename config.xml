@@ -20,17 +20,16 @@
     <platform name="android">
         <allow-intent href="market:*" />
 
-        <preference name="SplashScreenDelay" value="1000"/>
-        <preference name="AutoHideSplashScreen" value="true"/>
-        <preference name="FadeSplashScreen" value="false"/>
-
         <preference name="Orientation" value="portrait" />
 
         <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <preference name="AndroidPersistentFileLocation" value="Internal" />
 
-        <preference name="GradlePluginKotlinVersion" value="1.7.21" />
+        <preference name="ShowSplashScreenSpinner" value="true"/>
+        <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#FFFFFF" />
     </platform>
     <platform name="ios">
         <splash width="375" height="812" src="resources/splash-screen.png"/>
