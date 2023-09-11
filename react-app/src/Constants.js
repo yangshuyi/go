@@ -12,7 +12,7 @@ let Constants = {
             path: '/main/problem/ProblemListPage'
         },
         PROBLEM_TEST: {
-            path: '/main/problem/ProblemTestPage'
+            path: '/main/problem/ProblemMgmtPage'
         },
         PROBLEM_MGMT: {
             path: '/main/problem/ProblemMgmtPage'
