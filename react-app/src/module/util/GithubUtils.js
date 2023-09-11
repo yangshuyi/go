@@ -2,10 +2,16 @@ import _ from 'lodash';
 
 import {Octokit} from "octokit";
 import {AxiosUtils, DateUtils} from "sirius-common-utils";
+
+import jsonp from 'jsonp';
+
 import {Base64} from "js-base64";
 import ConfigUtils from "../../components/config/ConfigUtils";
 import FileTransferPlugin from "../../cordova/file-transfer/FileTransferPlugin";
 import FilePlugin from "../../cordova/file/FilePlugin";
+import axios from "axios";
+import request from 'axios-add-jsonp'
+import FetchPlugin from "../../cordova/fetch/FetchPlugin";
 
 let destToken = "dSMjI2gjIyMzIyMjVCMjI3QjIyM5IyMjMCMjI2EjIyNwIyMjWiMjI1QjIyNSIyMjeSMjI28jIyNWIyMjUiMjI0IjIyN4IyMjRSMjI1MjIyNhIyMjbCMjI1YjIyNTIyMjUSMjI1ojIyMxIyMjYSMjI3EjIyMxIyMjayMjI2MjIyNGIyMjRiMjI1YjIyNVIyMjayMjI0IjIyN6IyMjVSMjIzIjIyM0IyMjRyMjI1YjIyNXIyMjTiMjI1QjIyNTIyMjUCMjI04jIyNUIyMjUiMjI3cjIyMxIyMjbSMjI2QjIyMwIyMjOCMjI1cjIyNiIyMjWSMjI04jIyNHIyMjVyMjIzIjIyNvIyMjayMjI1kjIyNpIyMjSiMjI1cjIyNPIyMjMCMjI0UjIyNUIyMjZCMjI1cjIyNWIyMjMCMjI1gjIyNEIyMjWiMjI0cjIyNPIyMjVSMjI2wjIyMzIyMjTiMjI0kjIyNKIyMjVSMjI2UjIyNIIyMjcCMjI1YjIyNXIyMjdyMjI2sjIyNVIyMjVCMjI1ojIyNOIyMjRiMjI04jIyNDIyMjRiMjI1UjIyNNIyMjeCMjIzgjIyNGIyMjZCMjI2gjIyNCIyMjMyMjI1gjIyNpIyMjViMjI0gjIyNhIyMjMCMjI2wjIyMyIyMjWg==";
 let globalOctokit = null;
@@ -97,12 +103,10 @@ async function fetchAllAssets() {
 async function downloadAssetData(assetDownloadUrl) {
     debugger;
     let assetData = null;
-    if(FileTransferPlugin.isPluginAvailable()){
-        let localFileEntry = await FilePlugin.getFile("data.json");
-        let fileEntry = FileTransferPlugin.download(assetDownloadUrl, localFileEntry, true);
-        let fileContent = FilePlugin.readFile(fileEntry);
-        assetData = JSON.parse(fileContent);
-    }else {
+    if (FetchPlugin.isPluginAvailable()) {
+        assetData = await FetchPlugin.download(assetDownloadUrl);
+        console.log("assetData:"+JSON.stringify(assetData));
+    } else {
         let headers = {
             'Content-Type': 'application/octet-stream',
             'accept': 'application/vnd.github+json',
@@ -126,7 +130,7 @@ async function uploadAssetData(assetData) {
             "content-type": "text/plain",
         },
         data: blob,
-        name: localDataVersion+".json",
+        name: localDataVersion + ".json",
         label: localDataVersion,
     });
 

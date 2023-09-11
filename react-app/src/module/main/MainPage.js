@@ -4,7 +4,7 @@ import _ from 'lodash';
 import './MainPage.css';
 
 import {HashRouter, Route, useNavigate, Outlet} from "react-router-dom";
-import {XmsSpinView} from "sirius-react-mobile";
+import {DialogUtils, XmsSpinView} from "sirius-react-mobile";
 import BookUtils from "../../components/book/BookUtils";
 import TagUtils from "../../components/tag/TagUtils";
 
