@@ -50,7 +50,7 @@ function getToken() {
 
 async function fetchAllAssets() {
     let octokit = await getOctokit();
-    let releaseListResp = await octokit.request('GET /repos/{owner}/{repo}/releases', {
+    let releaseListResp = await octokit.request(`GET /repos/{owner}/{repo}/releases??_t=${new Date().getTime()}`, {
         owner: 'yangshuyi',
         repo: 'go',
         headers: {
@@ -70,6 +70,7 @@ async function fetchAllAssets() {
                 return {
                     assetId: assetItem.id,
                     assetName: assetItem.name,
+                    assetLabel: assetItem.label,
                     size: assetItem.size,
                     createDate: assetItem.created_at,
                     updatedDate: assetItem.updated_at,
@@ -91,6 +92,7 @@ async function fetchAllAssets() {
     await ConfigUtils.setGithubReleaseId(release.releaseId);
     await ConfigUtils.setGithubAssetUploadUrl(release.assetUploadUrl);
 
+    let assets = _.orderBy(release.assets, ['updatedDate'], ['desc']);
     return release.assets;
 }
 
@@ -98,7 +100,7 @@ async function downloadAssetData(assetDownloadUrl) {
     let assetData = null;
     if (FetchPlugin.isPluginAvailable()) {
         assetData = await FetchPlugin.download(assetDownloadUrl);
-        console.log("assetData:"+JSON.stringify(assetData));
+        console.log("assetData:" + JSON.stringify(assetData));
     } else {
         let headers = {
             'Content-Type': 'application/octet-stream',
@@ -115,17 +117,31 @@ async function uploadAssetData(assetData) {
 
     let blob = new Blob([JSON.stringify(assetData)], {type: "text/json"});
 
-    let octokit = await getOctokit();
-    await octokit.request({
-        method: "POST",
-        url: assetUploadUrl,
-        headers: {
-            "content-type": "text/plain",
-        },
-        data: blob,
-        name: localDataVersion + ".json",
-        label: localDataVersion,
-    });
+    console.log('1');
+    if (FetchPlugin.isPluginAvailable()) {
+        assetUploadUrl = assetUploadUrl.replace("{?name,label}", "?name=" + localDataVersion + ".json" + "&label=" + localDataVersion);
+
+        let headers = {
+            'Authorization': 'token ' + getToken(destToken),
+        }
+
+        console.log('url:' + assetUploadUrl);
+        await FetchPlugin.upload(assetUploadUrl, JSON.stringify(assetData), headers);
+        console.log('2');
+    } else {
+        let octokit = await getOctokit();
+        await octokit.request({
+            method: "POST",
+            url: assetUploadUrl,
+            headers: {
+                "content-type": "text/plain",
+            },
+            mode: 'no-cors',
+            data: blob,
+            name: localDataVersion + ".json",
+            label: localDataVersion,
+        });
+    }
 
 
 }
@@ -145,7 +161,7 @@ async function loadRemoteDataInfo() {
     let assetData = await downloadAssetData(asset.downloadUrl);
 
     return {
-        dataVersion: asset.updatedDate,
+        dataVersion: asset.assetLabel,
         assetData: assetData,
         count: assetData.length,
     }

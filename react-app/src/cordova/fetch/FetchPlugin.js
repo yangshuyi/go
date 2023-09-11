@@ -17,7 +17,21 @@ async function download(url){
     return response.json();
 }
 
+async function upload(url, body, headers){
+    if(!isPluginAvailable()){
+        return;
+    }
+
+    let response  = await cordovaFetch(url, {
+        method: 'POST',
+        body: body,
+        headers: headers
+    });
+    return response.json();
+}
+
 export default {
     isPluginAvailable: isPluginAvailable,
     download: download,
+    upload: upload,
 }

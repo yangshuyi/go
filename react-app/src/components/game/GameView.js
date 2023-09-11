@@ -10,8 +10,11 @@ import Constants from "../../Constants";
 import ConfigUtils from "../config/ConfigUtils";
 import ChessUtils from "../../module/util/ChessUtils";
 
+import StepBeep from "../../assets/step.mp3"
+
 
 function GameView(props) {
+    const domAudioRef = useRef();
     const domChessBoardRef = useRef();
 
     const [game, setGame] = useState();
@@ -59,6 +62,9 @@ function GameView(props) {
     function stepForward(action, chess) {
         let tiziList = null;
         if (action === 'add') {
+            domAudioRef.current.currentTime = 0;
+            domAudioRef.current.play();
+
             game.$currChessBoard[chess.$geo] = chess;
             domChessBoardRef.current.drawChess(chess);
 
@@ -170,6 +176,8 @@ function GameView(props) {
                 操作
             </List.Item>
         </List>
+
+        <audio ref={domAudioRef} src={StepBeep} style={{display:'none'}}/>
 
         <ChessBoard ref={domChessBoardRef}
                     showBoard={showBoard}

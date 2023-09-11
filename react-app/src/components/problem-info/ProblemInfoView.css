@@ -22,6 +22,9 @@
 
 .problem-info-view-action-bar .action-bar-item {
     flex: 1;
+    height: 100%;
+
+    border-top: 4px solid var(--adm-color-primary);
 
     display: flex;
     flex-flow: column;
@@ -35,6 +38,10 @@
 
 .problem-info-view-action-bar .action-bar-item .text{
     margin-top: var(--margin-base-half);
+}
+
+.problem-info-view-action-bar .action-bar-item.unselected {
+    border-top: 4px solid transparent;
 }
 
 .problem-info-view-action-bar .action-bar-item.unselected .icon > .anticon {

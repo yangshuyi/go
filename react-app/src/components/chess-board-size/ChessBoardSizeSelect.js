@@ -2,10 +2,9 @@ import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
 import {CheckList} from "antd-mobile";
-import {XmsPicker, XmsSelect} from "sirius-react-mobile";
-import ProblemUtils from "../../module/util/ProblemUtils";
-import BookUtils from "./BookUtils";
+import {XmsPicker} from "sirius-react-mobile";
 import Constants from "../../Constants";
+import XmsSelect from "./XmsSelect";
 
 
 function ChessBoardSizeSelect(props) {
@@ -20,8 +19,8 @@ function ChessBoardSizeSelect(props) {
     }
 
     return (<XmsSelect
-        mode={props.mode} value={props.value} showSearch={true} itemRender={itemRender} disabled={props.disable}
-        options={chessBoardSizeOptions} optionFieldLabel="bookName" optionFieldValue="bookName" optionFieldKeyword="keyword"
+        mode={props.mode} value={props.value} disabled={props.disable}
+        options={chessBoardSizeOptions} optionFieldLabel="text" optionFieldValue="value"
         onChange={props.onChange}
     />)
 }

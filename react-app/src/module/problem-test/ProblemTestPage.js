@@ -32,7 +32,7 @@ function ProblemTestPage(props) {
         setFormData(null);
         let problem = await ProblemUtils.loadProblemByFilteredOrderIdx(orderIdx);
         if (problem == null) {
-            console.error(`Could not find Problem by idx: ${orderIdx}`);
+            console.error(`Could not find Problem by orderIdx: ${orderIdx}`);
             return;
         }
         setFormData(problem);

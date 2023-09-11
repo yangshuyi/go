@@ -28,7 +28,7 @@ function DataMaintenancePage(props) {
         init();
     }, []);
 
-    const [onlineFlag, setOnlineFlag] = useState(false);
+    const [onlineFlag, setOnlineFlag] = useState(true);
     const [remoteDataInfo, setRemoteDataInfo] = useState({
         dataVersion: null,
         cnt: null,
@@ -93,7 +93,7 @@ function DataMaintenancePage(props) {
         let problemList = await ProblemUtils.queryAll();
         await GithubUtils.uploadAssetData(problemList);
 
-        await refre(false);
+        await refreshRemoteDataInfo(false);
 
         if (showMsgFlag) {
             DialogUtils.showSuccessMessage("Success");
