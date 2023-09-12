@@ -93,14 +93,14 @@ async function fetchAllAssets() {
     await ConfigUtils.setGithubAssetUploadUrl(release.assetUploadUrl);
 
     let assets = _.orderBy(release.assets, ['updatedDate'], ['desc']);
-    return release.assets;
+    return assets;
 }
 
 async function downloadAssetData(assetDownloadUrl) {
     let assetData = null;
     if (FetchPlugin.isPluginAvailable()) {
         assetData = await FetchPlugin.download(assetDownloadUrl);
-        console.log("assetData:" + JSON.stringify(assetData));
+        //console.log("assetData:" + JSON.stringify(assetData));
     } else {
         let headers = {
             'Content-Type': 'application/octet-stream',
@@ -146,9 +146,9 @@ async function uploadAssetData(assetData) {
 
 async function loadRemoteDataInfo() {
     let assetList = await fetchAllAssets();
-    if (assetList.length > 1) {
-        console.log(`Found multiple asset list: ${_.map(assetList, 'assetName')}`);
-    }
+    // if (assetList.length > 1) {
+    //     console.log(`Found multiple asset list: ${_.map(assetList, 'assetName')}`);
+    // }
 
     //永远取最新的数据包
     let asset = assetList[0];

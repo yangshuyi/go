@@ -60,7 +60,7 @@ function ProblemMgmtPage(props) {
     const handleDel = async () => {
         let confirmMsg = await DialogUtils.showConfirmDialog("确定要删除么？");
         if (confirmMsg) {
-            await ProblemUtils.deleteProblemById(location.state.problemId);
+            await ProblemUtils.deleteProblemById(location.state.problemId, true);
             await navBack("DEL", location.state.problemId);
         }
 
@@ -72,7 +72,7 @@ function ProblemMgmtPage(props) {
             return;
         }
 
-        await ProblemUtils.saveProblem(problemParam);
+        await ProblemUtils.saveProblem(problemParam, true);
         AppUtils.setLocalStorageObjItem("LAST_PROBLEM", problemParam);
 
         await DialogUtils.showSuccessMessage("Save Successfully");

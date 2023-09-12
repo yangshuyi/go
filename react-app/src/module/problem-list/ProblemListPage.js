@@ -89,8 +89,8 @@ function ProblemListPage(props) {
         }
     }
 
-    const handleDeleteProblem = (problem) => {
-        ProblemUtils.deleteProblemById(problem.id);
+    const handleDeleteProblem = async (problem) => {
+        await ProblemUtils.deleteProblemById(problem.id, true);
 
         let newListData = _.reject(listData, {id: problem.id});
         setListData(newListData);
@@ -153,15 +153,15 @@ function ProblemListPage(props) {
                                     arrow={false} extra={
                                     <div className="flex-row">
                                         <HeartFilled style={{fontSize: '22px', color: problem.hardFlag ? 'red' : 'transparent'}}/>
-                                        <div>E{problem.ebbinghausTimes||0}</div>
+                                        <div>
+                                            <div>E{problem.ebbinghausTimes || 0}</div>
+                                            <EyeFilled style={{color: problem.$visited ? 'black' : 'transparent'}}/>
+                                        </div>
                                     </div>
                                 }
                                     onClick={() => navToProblemTestPage(problem.orderIdx)}
                                 >
-                                    <div className="flex-row">
-                                        <div>{problem.$introValue}</div>
-                                        {problem.$visited ? <EyeFilled/> : null}
-                                    </div>
+                                    <div>{problem.$introValue}</div>
                                 </List.Item>
                             </SwipeAction>
                         )

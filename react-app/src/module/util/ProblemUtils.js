@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {DateUtils, StringUtils} from "sirius-common-utils";
 import Constants from "../../Constants";
 import DexieDbUtils from "./DexieDbUtils";
+import ConfigUtils from "../../components/config/ConfigUtils";
 
 let globalDb = null;
 
@@ -13,19 +14,22 @@ async function getGlobalDb() {
     return globalDb;
 }
 
-async function syncFromRemote(assetList) {
+async function syncFromRemote(assetList, clearFlag) {
     let problemList = [];
     _.each(assetList, (asset) => {
         problemList.push(asset);
     });
 
-    let db = await getGlobalDb();
-    await db.problems.clear();
+    if (clearFlag) {
+        let db = await getGlobalDb();
+        await db.problems.clear();
+        console.log(`clear all problems`);
+    }
 
     for (let i = 0; i < problemList.length; i++) {
-        await saveProblem(problemList[i]);
+        await saveProblem(problemList[i], false);
     }
-    //await db.problems.bulkPut(problemList);
+    console.log(`save all problems`);
 }
 
 
@@ -75,7 +79,7 @@ async function filterProblemList(filterParam) {
     }
 
     _.each(filteredList, (problem, idx) => {
-        problem.ebbinghausOrder = Constants.EBBINGHAUS_TIMES[problem.ebbinghausTimes||0].value + (problem.ebbinghausDays||0);
+        problem.ebbinghausOrder = Constants.EBBINGHAUS_TIMES[problem.ebbinghausTimes || 0].value + (problem.ebbinghausDays || 0);
     });
     filteredList = _.orderBy(filteredList, ['ebbinghausOrder'], ['asc']);
 
@@ -151,25 +155,31 @@ async function loadProblemById(id) {
     return problem;
 }
 
-async function deleteProblemById(id) {
+async function deleteProblemById(id, needToUpdateVersionFlag = true) {
     let db = await getGlobalDb();
 
     await db.problems.delete(id);
+
+    if (needToUpdateVersionFlag) {
+        await ConfigUtils.refreshDataVersion();
+    }
 }
 
-async function saveProblem(problemParam) {
+async function saveProblem(problemParam, needToUpdateVersionFlag = true) {
     let db = await getGlobalDb();
 
     let problemEntity = null;
     if (problemParam.id) {
         problemEntity = await db.problems.get(problemParam.id);
+        if (!problemEntity) {
+            problemEntity = {
+                id: problemParam.id,
+            };
+        }
     } else {
         problemEntity = {
             id: "" + DateUtils.getCurrentDate().getTime()
         };
-    }
-    if (!problemEntity) {
-        console.error(`Could not find problemEntity by id: ${problemParam.id}`);
     }
 
     problemEntity.book = problemParam.book;
@@ -184,9 +194,9 @@ async function saveProblem(problemParam) {
     problemEntity.modifyDate = problemParam.modifyDate || DateUtils.getCurrentDate().getTime();
 
     problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes || 0;
-    if(problemEntity.level === Constants.LEVEL_OPTIONS["2"]){
+    if (problemEntity.level === Constants.LEVEL_OPTIONS["2"]) {
         problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes - 1;
-        if(problemEntity.ebbinghausTimes<0){
+        if (problemEntity.ebbinghausTimes < 0) {
             problemEntity.ebbinghausTimes = 0;
         }
     } else if (problemEntity.level === Constants.LEVEL_OPTIONS["0"]) {
@@ -198,6 +208,10 @@ async function saveProblem(problemParam) {
     problemEntity.ebbinghausDays = Math.floor(DateUtils.getCurrentDate().getTime() / 86400000);
 
     await db.problems.put(problemEntity);
+
+    if (needToUpdateVersionFlag) {
+        await ConfigUtils.refreshDataVersion();
+    }
 }
 
 function generateNewGameTitle(oldTitle) {

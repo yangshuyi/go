@@ -56,7 +56,7 @@ function ProblemTestPage(props) {
         if (modifiedObj.current) {
             let problem = {}
             _.assign(problem, formData, modifiedObj.current);
-            await ProblemUtils.saveProblem(problem);
+            await ProblemUtils.saveProblem(problem, true);
         }
         NavigateUtils.navigateBack(navigate, location, {
             action: 'VIEW',
