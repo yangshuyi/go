@@ -6,7 +6,7 @@ import './ProblemTestPage.css';
 import {useNavigate} from "react-router-dom";
 import {Button, NavBar} from "antd-mobile";
 import {useLocation} from "react-router";
-import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
+import {DialogUtils, NavigateUtils, XmsSpinView} from "sirius-react-mobile";
 import ProblemInfoView from "../../components/problem-info/ProblemInfoView";
 import ProblemUtils from "../util/ProblemUtils";
 import GameView from "../../components/game/GameView";
@@ -32,7 +32,8 @@ function ProblemTestPage(props) {
         setFormData(null);
         let problem = await ProblemUtils.loadProblemByFilteredOrderIdx(orderIdx);
         if (problem == null) {
-            console.error(`Could not find Problem by orderIdx: ${orderIdx}`);
+            await DialogUtils.showAlertMessage(`Could not find Problem by orderIdx: ${orderIdx}`);
+            await navBack();
             return;
         }
         setFormData(problem);
@@ -46,7 +47,7 @@ function ProblemTestPage(props) {
         }
     }
 
-    const modifiedObj = useRef();
+    const modifiedObj = useRef(null);
     const handleProblemChange = async (problem) => {
         modifiedObj.current = problem;
     }
@@ -66,13 +67,26 @@ function ProblemTestPage(props) {
         }
     }
 
+    const handleTitleClick = async () => {
+        if (!formData.id) {
+            return;
+        }
+
+        try {
+            await navigator.clipboard.writeText(formData.id);
+            DialogUtils.showSuccessMessage(`复制ID:${formData.id}成功`);
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+    }
+
     return (formData == null ? <XmsSpinView/> :
             <div className="problem-test-page">
                 <NavBar
                     onBack={() => navBack()}
                     right={nextOrderIdx ? <Button color="primary" fill="solid" size="small" onClick={() => handleNextProblem()}>下一局</Button> : null}
                 >
-                    <div>{formData.$introValue}</div>
+                    <div onClick={handleTitleClick}>{formData.$introValue}</div>
                 </NavBar>
 
                 <div className="xms-page-content">

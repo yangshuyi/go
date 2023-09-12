@@ -7,6 +7,7 @@ import {Button, Collapse, Form, Space, Switch} from "antd-mobile";
 import {DownOutlined, UpOutlined} from "@ant-design/icons";
 import BookPicker from "../../components/book/BookPicker";
 import TagPicker from "../../components/tag/TagPicker";
+import {XmsInput} from "sirius-react-mobile";
 
 
 function ProblemFilterView(props) {
@@ -51,6 +52,9 @@ function ProblemFilterView(props) {
                 </div>
                 <div className={collapsed ? 'problem-filter-view-body display-none' : 'problem-filter-view-body'}>
                     <Form form={form} layout='horizontal' initialValues={formData}>
+                        <Form.Item label="ID" name="id">
+                            <XmsInput/>
+                        </Form.Item>
                         <Form.Item label="书籍" name="books">
                             <BookPicker mode="multiple"/>
                         </Form.Item>

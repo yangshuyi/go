@@ -8,8 +8,8 @@ import {useActivate, useAliveController} from "react-activation";
 import {Button, Collapse, FloatingPanel, Form, List, NavBar, PullToRefresh, Selector, Switch, TabBar, Tabs} from "antd-mobile";
 import {ExclamationCircleFill, RedoOutline, StarFill, StarOutline} from "antd-mobile-icons";
 import {useLocation} from "react-router";
-import {DownOutlined, HeartFilled, UpOutlined} from "@ant-design/icons";
-import {XmsInput, XmsPicker, XmsTextArea} from "sirius-react-mobile";
+import {DownOutlined, EditFilled, HeartFilled, UpOutlined} from "@ant-design/icons";
+import {NavigateUtils, XmsInput, XmsPicker, XmsTextArea} from "sirius-react-mobile";
 import TagPicker from "../tag/TagPicker";
 import LevelPicker from "../level/LevelPicker";
 import Constants from "../../Constants";
@@ -17,6 +17,9 @@ import BookPicker from "../book/BookPicker";
 
 
 function ProblemInfoView(props) {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
 
     useEffect(() => {
         if (props.problem) {
@@ -79,6 +82,15 @@ function ProblemInfoView(props) {
         });
     }
 
+    const navToProblemMgmtPage = ()=>{
+        NavigateUtils.navigateTo(navigate, Constants.ROUTER.PROBLEM_MGMT.path, {
+            state: {
+                key: currPageKey,
+                problemId: props.problem.id,
+            },
+        });
+    }
+
     return (formData == null ? null :
             <>
             <FloatingPanel className="problem-info-view" style={{ '--header-height': '40px'}}
@@ -116,6 +128,12 @@ function ProblemInfoView(props) {
                          onClick={() => handleFieldChange("hardFlag", !formData.hardFlag)}>
                         <div className="icon"><HeartFilled style={{fontSize: '22px', color: 'red'}}/></div>
                         <div className="text">难题</div>
+                    </div>
+
+                    <div className="action-bar-item unselected"
+                         onClick={navToProblemMgmtPage}>
+                        <div className="icon"><EditFilled style={{fontSize: '22px', color: 'var(--adm-color-primary)'}}/></div>
+                        <div className="text">管理</div>
                     </div>
                 </div>
             </>

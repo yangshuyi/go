@@ -42,7 +42,12 @@ async function filterProblemList(filterParam) {
     let filteredList = [];
     if (filterParam) {
         filteredList = await db.problems.toArray();
-        filteredList =_.filter(filteredList, (problem) => {
+        filteredList = _.filter(filteredList, (problem) => {
+            if (!_.isEmpty(filterParam.id)) {
+                if (filterParam.id !== problem.id) {
+                    return false;
+                }
+            }
             if (!_.isEmpty(filterParam.books)) {
                 if (!_.includes(filterParam.books, problem.book)) {
                     return false;
@@ -91,7 +96,7 @@ async function queryFilteredProblemByPage(pageNo, pageSize) {
     let totalCnt = await db.filteredProblems.count();
     let list = await db.filteredProblems.offset(offset).limit(pageSize).toArray();
     let map = {};
-    _.each(list, (item)=>{
+    _.each(list, (item) => {
         map[item.problemId] = item.orderIdx;
     })
 
@@ -139,7 +144,7 @@ async function loadProblemById(id) {
     return problem;
 }
 
-async function deleteProblemById(id){
+async function deleteProblemById(id) {
     let db = await getGlobalDb();
 
     await db.problems.delete(id);
@@ -153,7 +158,7 @@ async function saveProblem(problemParam) {
         problemEntity = await db.problems.get(problemParam.id);
     } else {
         problemEntity = {
-            id: ""+DateUtils.getCurrentDate().getTime()
+            id: "" + DateUtils.getCurrentDate().getTime()
         };
     }
     if (!problemEntity) {

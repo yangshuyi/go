@@ -2,9 +2,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
 import {CheckList} from "antd-mobile";
-import {XmsPicker} from "sirius-react-mobile";
+import {XmsPicker, XmsSelect} from "sirius-react-mobile";
 import Constants from "../../Constants";
-import XmsSelect from "./XmsSelect";
 
 
 function ChessBoardSizeSelect(props) {

@@ -67,10 +67,10 @@ let Constants = {
         }
     ],
     LEVEL_OPTIONS: {
-        "0": {value: "0", text: '通过', icon: <CheckCircleFilled style={{fontSize: '22px', color: 'green'}}/>},
-        "1": {value: "1", text: '巩固', icon: <WarningFilled style={{fontSize: '22px', color: 'orange'}}/>},
-        "2": {value: "2", text: '错误', icon: <StarFilled style={{fontSize: '22px', color: 'red'}}/>},
-        "3": {value: "3", text: '新题', icon: <QuestionCircleFilled style={{fontSize: '22px', color: 'gray'}}/>},
+        "0": {value: "0", text: '通过', icon: <CheckCircleFilled style={{fontSize: '22px', color: 'green'}}/>, bgColor: '#00FF0011'},
+        "1": {value: "1", text: '巩固', icon: <WarningFilled style={{fontSize: '22px', color: 'orange'}}/>, bgColor: '#FF8C0011'},
+        "2": {value: "2", text: '错误', icon: <StarFilled style={{fontSize: '22px', color: 'red'}}/>, bgColor: '#FF000011'},
+        "3": {value: "3", text: '新题', icon: <QuestionCircleFilled style={{fontSize: '22px', color: 'gray'}}/>, bgColor: '#80808011'},
     },
 };
 
