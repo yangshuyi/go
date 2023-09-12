@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {forwardRef, useEffect, useImperativeHandle, useRef, useState} from 'react';
 import _ from 'lodash';
 
 
@@ -11,9 +11,16 @@ import TagPicker from "../../components/tag/TagPicker";
 import BookPicker from "../../components/book/BookPicker";
 import LevelPicker from "../../components/level/LevelPicker";
 import GameView from "./GameView";
+import ProblemUtils from "../util/ProblemUtils";
+import {FormUtils} from "sirius-common-utils";
 
 
-function ProblemFormView(props) {
+const ProblemFormView = (props, ref) => {
+    useImperativeHandle(ref, () => {
+        return {
+            getFormData: getFormData
+        }
+    });
 
     useEffect(() => {
         if (props.problem) {
@@ -31,6 +38,19 @@ function ProblemFormView(props) {
     const [formData, setFormData] = useState();
 
     const chessBoardSize = Form.useWatch('chessBoardSize', form);
+
+    const getFormData = async () => {
+        try {
+            await form.validateFields();
+
+            let formData = form.getFieldsValue();
+            formData.id = props.problem.id;
+
+            return formData;
+        } catch (e) {
+            FormUtils.scrollToFirstError(e);
+        }
+    }
 
     return (formData == null ? null :
             <>
@@ -69,7 +89,9 @@ function ProblemFormView(props) {
     )
 }
 
-export default ProblemFormView;
+const WrapProblemFormView = forwardRef(ProblemFormView);
+
+export default WrapProblemFormView;
 
 
 

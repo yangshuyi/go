@@ -49,8 +49,9 @@ async function saveBook(bookParam) {
     if (!bookEntity) {
         bookEntity = {};
     }
-    bookEntity.problemCnt = bookParam.problemCnt;
-    bookEntity.keyword = bookParam.keyword;
+    bookEntity.bookName = bookParam.bookName;
+    bookEntity.problemCnt = bookParam.problemCnt || 0;
+    bookEntity.keyword = StringUtils.buildKeyword(bookParam.bookName);
 
     let db = await DexieDbUtils.getConn();
     await db.books.put(bookEntity);

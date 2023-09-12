@@ -12,7 +12,7 @@ function GameView(props) {
 
     const [markChessFlag, setMarkChessFlag] = useState();
     const [chessType, setChessType] = useState(null);
-    const chessBoard = useRef([]);
+    const chessBoard = useRef({});
 
     useEffect(() => {
         if(props.chessBoardSize) {
@@ -22,7 +22,7 @@ function GameView(props) {
 
 
     const init = async () => {
-        chessBoard.current = props.value;
+        chessBoard.current = props.value || {};
         setChessType(Constants.CHESS_TYPE.B.value);
         setMarkChessFlag(false);
     }
@@ -79,7 +79,7 @@ function GameView(props) {
 
     const handleChanged = () => {
         if (props.onChange) {
-            props.onChange(chessBoard);
+            props.onChange(chessBoard.current);
         }
     }
 

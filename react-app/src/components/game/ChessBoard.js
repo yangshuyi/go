@@ -4,6 +4,7 @@ import _ from 'lodash';
 import './ChessBoard.css';
 import ChessUtils from "../../module/util/ChessUtils";
 import Constants from "../../Constants";
+import {DomUtils} from "sirius-common-utils";
 
 const ChessBoard = (props, ref) => {
     useImperativeHandle(ref, () => {
@@ -26,8 +27,8 @@ const ChessBoard = (props, ref) => {
             boardBorder: 0, //棋盘边长
             unitBorder: 0, //格子边长
             padding: 0, //棋盘边距
-            domElemLeft:0,
-            domElemTop:0,
+            domElemLeft: 0,
+            domElemTop: 0,
         },
     });
 
@@ -53,7 +54,7 @@ const ChessBoard = (props, ref) => {
 
         setTimeout(() => {
             props.onBoardReady();
-        })
+        }, 1000)
     }, [domChessBoardCanvasRef.current]);
 
     const init = async (chessBoardSize, showMark = false) => {
@@ -74,7 +75,7 @@ const ChessBoard = (props, ref) => {
     }
 
     function drawCanvas() {
-        let ctx =   data.current.canvas.ctx;
+        let ctx = data.current.canvas.ctx;
         // ctx.scale(data.current.canvas.scale, data.current.canvas.scale);
         drawPadding();
         drawLine(ctx);
@@ -232,8 +233,9 @@ const ChessBoard = (props, ref) => {
     }
 
     function onCanvasClick(event) {
-        let posX = Math.round(((event.pageX - data.current.canvas.domElemLeft - data.current.canvas.padding)) / data.current.canvas.unitBorder);
-        let posY = Math.round(((event.pageY - data.current.canvas.domElemTop - data.current.canvas.padding)) / data.current.canvas.unitBorder);
+        let offset = DomUtils.offset(domChessBoardCanvasRef.current);
+        let posX = Math.round(((event.pageX - offset.left - data.current.canvas.padding)) / data.current.canvas.unitBorder);
+        let posY = Math.round(((event.pageY - offset.top - data.current.canvas.padding)) / data.current.canvas.unitBorder);
 
         if (posX < 0 || posX >= data.current.chessBoardSize) {
             return;
@@ -250,7 +252,7 @@ const ChessBoard = (props, ref) => {
 
 
     return (
-        <div className={props.showBoard === true ? "chess-board with-board": "chess-board"}>
+        <div className={props.showBoard === true ? "chess-board with-board" : "chess-board"}>
             <div className="wrap">
                 <canvas ref={domChessBoardCanvasRef}
                         width={canvasWidth} height={canvasHeight}

@@ -29,13 +29,21 @@ function ProblemListPage(props) {
         setInitLoadingFlag(false);
     }
 
-    useActivate(() => {
+    useActivate(async () => {
         let {fromPageKey, param} = NavigateUtils.getPageResult();
         if (currPageKey === fromPageKey) {
-            // if (param?.needRefreshFlag) {
-            //     executeQuery(false);
-            // }
-
+            if (param?.action === "DEL") {
+                let newListData = _.reject(listData, {id: param.problemId});
+                setListData(newListData);
+            } else if (param?.action === "SAVE") {
+                let newListData = [...listData];
+                let newData = _.find(listData, {id: param.problemId});
+                if (newData) {
+                    let model = await ProblemUtils.loadProblemById(newData.id);
+                    _.assign(newData, model);
+                }
+                setListData(newListData);
+            }
         }
     });
 
@@ -116,7 +124,7 @@ function ProblemListPage(props) {
                 <List>
                     {listData.map((problem) => {
                         return (
-                            <SwipeAction key={problem.orderIdx} rightActions={[
+                            <SwipeAction key={problem.orderIdx} closeOnAction={true} rightActions={[
                                 {
                                     key: 'del',
                                     text: '删除',

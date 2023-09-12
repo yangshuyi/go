@@ -21,13 +21,23 @@ function ProblemFilterView(props) {
         setFormData(formData);
     }
 
+
     const [form] = Form.useForm();
     const [formData, setFormData] = useState();
     const [collapsed, setCollapsed] = useState(true);
+    const [filterActiveFlag, setFilterActiveFlag] = useState(false);
 
     const handleFilterChange = () => {
         if (props.onChange) {
-            props.onChange(form.getFieldsValue());
+            let filterParam = form.getFieldsValue();
+
+            if(_.isEmpty(filterParam)){
+                setFilterActiveFlag(false);
+            }else{
+                setFilterActiveFlag(true);
+            }
+
+            props.onChange(filterParam);
         }
 
         setCollapsed(true);
@@ -36,8 +46,8 @@ function ProblemFilterView(props) {
     return (formData == null ? null :
             <div className="problem-filter-view">
                 <div className="problem-filter-view-header" onClick={() => setCollapsed(!collapsed)}>
-                    <div className="flex-1">列表过滤面板</div>
-                    {collapsed ? <UpOutlined/> : <DownOutlined/>}
+                    <div className={filterActiveFlag?"active caption":"caption"}>列表过滤面板</div>
+                    {collapsed ? <DownOutlined/> : <UpOutlined/>}
                 </div>
                 <div className={collapsed ? 'problem-filter-view-body display-none' : 'problem-filter-view-body'}>
                     <Form form={form} layout='horizontal' initialValues={formData}>

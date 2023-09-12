@@ -151,12 +151,15 @@ async function saveProblem(problemParam) {
     let problemEntity = null;
     if (problemParam.id) {
         problemEntity = await db.problems.get(problemParam.id);
+    } else {
+        problemEntity = {
+            id: ""+DateUtils.getCurrentDate().getTime()
+        };
     }
     if (!problemEntity) {
-        problemEntity = {};
+        console.error(`Could not find problemEntity by id: ${problemParam.id}`);
     }
 
-    problemEntity.id = problemParam.id;
     problemEntity.book = problemParam.book;
     problemEntity.title = problemParam.title;
     problemEntity.desc = problemParam.desc;
@@ -171,10 +174,22 @@ async function saveProblem(problemParam) {
     await db.problems.put(problemEntity);
 }
 
+function generateNewGameTitle(oldTitle) {
+    let array = _.split(oldTitle, '-');
+    let lastTitleSegment = array[array.length - 1];
+
+    let number = _.toNumber(lastTitleSegment);
+    if (!Number.isNaN(number)) {
+        array[array.length - 1] = number + 1;
+    }
+    return _.join(array, '-');
+}
+
+
 function buildProblemFormData(game) {
     game.$chessBoardSizeText = game.chessBoardSize + "路";
 
-    if (!_.isEmpty(game.tags) && game.tags[0] != '') {
+    if (!_.isEmpty(game.tags) && game.tags[0] !== '') {
         game.$tagsText = _.join(game.tags, ",");
     } else {
         game.$tagsText = '';
@@ -223,4 +238,6 @@ export default {
     loadProblemById: loadProblemById,
     saveProblem: saveProblem,
     deleteProblemById: deleteProblemById,
+
+    generateNewGameTitle: generateNewGameTitle,
 }

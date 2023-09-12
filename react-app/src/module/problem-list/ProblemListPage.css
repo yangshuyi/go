@@ -22,6 +22,14 @@
     background: var(--adm-color-background);
 }
 
+.problem-filter-view .problem-filter-view-header .caption{
+    flex: 1;
+}
+
+.problem-filter-view .problem-filter-view-header .caption.active{
+   color: var(--adm-color-primary);
+}
+
 .problem-filter-view .problem-filter-view-body{
 }
 
