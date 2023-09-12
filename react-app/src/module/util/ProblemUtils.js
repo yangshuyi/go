@@ -90,11 +90,15 @@ async function queryFilteredProblemByPage(pageNo, pageSize) {
 
     let totalCnt = await db.filteredProblems.count();
     let list = await db.filteredProblems.offset(offset).limit(pageSize).toArray();
-    let problemIdList = _.map(list, 'problemId');
+    let map = {};
+    _.each(list, (item)=>{
+        map[item.problemId] = item.orderIdx;
+    })
 
-    let problemList = await db.problems.where('id').anyOf(problemIdList).toArray();
+    let problemList = await db.problems.where('id').anyOf(_.keys(map)).toArray();
     _.each(problemList, (problem) => {
         buildProblemFormData(problem);
+        problem.orderIdx = map[problem.id];
     });
 
     return {

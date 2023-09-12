@@ -114,9 +114,9 @@ function ProblemListPage(props) {
             <div className="xms-page-content with-padding-top">
 
                 <List>
-                    {listData.map((problem, idx) => {
+                    {listData.map((problem) => {
                         return (
-                            <SwipeAction key={problem.id} rightActions={[
+                            <SwipeAction key={problem.orderIdx} rightActions={[
                                 {
                                     key: 'del',
                                     text: '删除',
@@ -134,7 +134,7 @@ function ProblemListPage(props) {
                                 <List.Item prefix={problem.$levelIcon}
                                            description={problem.$introLabel}
                                            arrow={false} extra={problem.hardFlag ? <HeartFilled style={{fontSize: '22px', color: 'red'}}/> : null}
-                                           onClick={() => navToProblemTestPage(idx)}
+                                           onClick={() => navToProblemTestPage(problem.orderIdx)}
                                 >
                                     <div className="flex-row">
                                         <div>{problem.$introValue}</div>
