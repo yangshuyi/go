@@ -37,10 +37,18 @@ function ProblemListPage(props) {
                 setListData(newListData);
             } else if (param?.action === "SAVE") {
                 let newListData = [...listData];
-                let newData = _.find(listData, {id: param.problemId});
-                if (newData) {
-                    let model = await ProblemUtils.loadProblemById(newData.id);
-                    _.assign(newData, model);
+                let listItem = _.find(listData, {id: param.problemId});
+                if (listItem) {
+                    let model = await ProblemUtils.loadProblemById(listItem.id);
+                    _.assign(listItem, model);
+                    listItem.$visited = true;
+                }
+                setListData(newListData);
+            } else if (param?.action === "VIEW") {
+                let newListData = [...listData];
+                let listItem = _.find(listData, {id: param.problemId});
+                if (listItem) {
+                    listItem.$visited = true;
                 }
                 setListData(newListData);
             }
@@ -139,10 +147,16 @@ function ProblemListPage(props) {
                                 },
                             ]}
                             >
-                                <List.Item prefix={problem.$levelIcon}
-                                           description={problem.$introLabel}
-                                           arrow={false} extra={problem.hardFlag ? <HeartFilled style={{fontSize: '22px', color: 'red'}}/> : null}
-                                           onClick={() => navToProblemTestPage(problem.orderIdx)}
+                                <List.Item
+                                    prefix={problem.$levelIcon}
+                                    description={problem.$introLabel}
+                                    arrow={false} extra={
+                                    <div className="flex-row">
+                                        <HeartFilled style={{fontSize: '22px', color: problem.hardFlag ? 'red' : 'transparent'}}/>
+                                        <div>E{problem.ebbinghausTimes||0}</div>
+                                    </div>
+                                }
+                                    onClick={() => navToProblemTestPage(problem.orderIdx)}
                                 >
                                     <div className="flex-row">
                                         <div>{problem.$introValue}</div>

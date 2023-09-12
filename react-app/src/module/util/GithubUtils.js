@@ -117,7 +117,6 @@ async function uploadAssetData(assetData) {
 
     let blob = new Blob([JSON.stringify(assetData)], {type: "text/json"});
 
-    console.log('1');
     if (FetchPlugin.isPluginAvailable()) {
         assetUploadUrl = assetUploadUrl.replace("{?name,label}", "?name=" + localDataVersion + ".json" + "&label=" + localDataVersion);
 
@@ -127,7 +126,6 @@ async function uploadAssetData(assetData) {
 
         console.log('url:' + assetUploadUrl);
         await FetchPlugin.upload(assetUploadUrl, JSON.stringify(assetData), headers);
-        console.log('2');
     } else {
         let octokit = await getOctokit();
         await octokit.request({

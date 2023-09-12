@@ -74,6 +74,11 @@ async function filterProblemList(filterParam) {
         filteredList = await db.problems.toArray();
     }
 
+    _.each(filteredList, (problem, idx) => {
+        problem.ebbinghausOrder = Constants.EBBINGHAUS_TIMES[problem.ebbinghausTimes||0].value + (problem.ebbinghausDays||0);
+    });
+    filteredList = _.orderBy(filteredList, ['ebbinghausOrder'], ['asc']);
+
     let filteredProblemList = [];
     _.each(filteredList, (problem, idx) => {
         filteredProblemList.push({
@@ -81,6 +86,8 @@ async function filterProblemList(filterParam) {
             problemId: problem.id,
         })
     });
+
+    filteredProblemList = _.orderBy(filteredProblemList, [''])
 
     await db.filteredProblems.bulkPut(filteredProblemList);
 }
@@ -175,6 +182,20 @@ async function saveProblem(problemParam) {
     problemEntity.chessBoard = problemParam.chessBoard;
     problemEntity.nextChessType = problemParam.nextChessType;
     problemEntity.modifyDate = problemParam.modifyDate || DateUtils.getCurrentDate().getTime();
+
+    problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes || 0;
+    if(problemEntity.level === Constants.LEVEL_OPTIONS["2"]){
+        problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes - 1;
+        if(problemEntity.ebbinghausTimes<0){
+            problemEntity.ebbinghausTimes = 0;
+        }
+    } else if (problemEntity.level === Constants.LEVEL_OPTIONS["0"]) {
+        problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes + 1;
+        if (problemEntity.ebbinghausTimes > 5) {
+            problemEntity.ebbinghausTimes = 5;
+        }
+    }
+    problemEntity.ebbinghausDays = Math.floor(DateUtils.getCurrentDate().getTime() / 86400000);
 
     await db.problems.put(problemEntity);
 }

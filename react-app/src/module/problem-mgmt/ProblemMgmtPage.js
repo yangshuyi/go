@@ -43,7 +43,7 @@ function ProblemMgmtPage(props) {
                 problem = {
                     chessBoardSize: 11,
                     nextChessType: Constants.CHESS_TYPE.B.value,
-                    level: Constants.LEVEL_OPTIONS["0"].value,
+                    level: Constants.LEVEL_OPTIONS["3"].value,
                 };
             } else {
                 problem = {

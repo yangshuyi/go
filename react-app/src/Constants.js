@@ -72,6 +72,26 @@ let Constants = {
         "2": {value: "2", text: '错误', icon: <StarFilled style={{fontSize: '22px', color: 'red'}}/>, bgColor: '#FF000011'},
         "3": {value: "3", text: '新题', icon: <QuestionCircleFilled style={{fontSize: '22px', color: 'gray'}}/>, bgColor: '#80808011'},
     },
+// <li>第一个记忆周期：5分钟 </li>
+// <li>第二个记忆周期：30分钟</li>
+// <li>第三个记忆周期：12小时</li>
+// <li>第四个记忆周期：1天</li>
+// <li>第五个记忆周期：2天</li>
+// <li>第六个记忆周期：4天</li>
+// <li>第七个记忆周期：7天</li>
+// <li>第八个记忆周期：15天</li>
+// <li>第九个记忆周期：31天</li>
+    EBBINGHAUS_TIMES: {
+        0: {value: 0},
+        1: {value: 1},
+        2: {value: 2},
+        3: {value: 4},
+        4: {value: 7},
+        5: {value: 15},
+        6: {value: 31},
+        7: {value: 60},
+        8: {value: 120},
+    }
 };
 
 export default Constants;

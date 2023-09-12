@@ -91,6 +91,7 @@ function DataMaintenancePage(props) {
         await ConfigUtils.refreshDataVersion();
 
         let problemList = await ProblemUtils.queryAll();
+        problemList = _.orderBy(problemList, ['id'], ['asc']);
         await GithubUtils.uploadAssetData(problemList);
 
         await refreshRemoteDataInfo(false);

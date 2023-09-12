@@ -58,7 +58,10 @@ function ProblemTestPage(props) {
             _.assign(problem, formData, modifiedObj.current);
             await ProblemUtils.saveProblem(problem);
         }
-        NavigateUtils.navigateBack(navigate, location, {});
+        NavigateUtils.navigateBack(navigate, location, {
+            action: 'VIEW',
+            problemId: formData.id,
+        });
     }
 
     const handleNextProblem = async () => {
@@ -74,7 +77,7 @@ function ProblemTestPage(props) {
 
         try {
             await navigator.clipboard.writeText(formData.id);
-            DialogUtils.showSuccessMessage(`复制ID:${formData.id}成功`);
+            await DialogUtils.showSuccessMessage(`复制ID:${formData.id}成功`);
         } catch (err) {
             console.error('Failed to copy: ', err);
         }
