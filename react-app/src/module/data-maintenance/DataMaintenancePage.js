@@ -141,6 +141,18 @@ function DataMaintenancePage(props) {
         }
     }
 
+    const [screenOrientationLandscape, setScreenOrientationLandscape] = useState(false);
+    const handleScreenOrientationLandscapeChange = async (showMsgFlag) => {
+        let screenOrientationLandscape = !screenOrientationLandscape;
+        setScreenOrientationLandscape(screenOrientationLandscape);
+
+        await ConfigUtils.setScreenOrientationLandscape(screenOrientationLandscape);
+
+        if (showMsgFlag) {
+            DialogUtils.showSuccessMessage("Success");
+        }
+    }
+
     const navBack = async (needRefreshFlag) => {
         NavigateUtils.navigateBack(navigate, location, {});
     }
@@ -192,6 +204,9 @@ function DataMaintenancePage(props) {
                     <List header="系统配置">
                         <List.Item extra={<Switch checked={showBoard} onChange={() => handleShowBoardChange(true)}/>}>
                             展示棋盘
+                        </List.Item>
+                        <List.Item extra={<Switch checked={screenOrientationLandscape} onChange={() => handleScreenOrientationLandscapeChange(true)}/>}>
+                            横屏布局
                         </List.Item>
                     </List>
 

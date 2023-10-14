@@ -46,6 +46,20 @@ async function getShowBoardFlag() {
     return _.get(record, 'value', true)
 }
 
+async function setScreenOrientationLandscape(screenOrientationLandscape) {
+    let db = await getGlobalDb();
+    await db.configs.put({
+        key: "screenOrientationLandscape",
+        value: screenOrientationLandscape
+    });
+}
+
+async function getScreenOrientationLandscape() {
+    let db = await getGlobalDb();
+    let record = await db.configs.get("screenOrientationLandscape")
+    return _.get(record, 'value', true)
+}
+
 async function setGithubReleaseId(releaseId) {
     let db = await getGlobalDb();
     await db.configs.put({
@@ -110,6 +124,9 @@ export default {
 
     getShowBoardFlag: getShowBoardFlag,
     setShowBoardFlag: setShowBoardFlag,
+
+    getScreenOrientationLandscape: getScreenOrientationLandscape,
+    setScreenOrientationLandscape: setScreenOrientationLandscape,
 
     setGithubReleaseId: setGithubReleaseId,
     getGithubReleaseId: getGithubReleaseId,

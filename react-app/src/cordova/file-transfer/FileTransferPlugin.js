@@ -1,5 +1,3 @@
-import {CheckCircleFilled, QuestionCircleFilled, StarFilled, WarningFilled} from "@ant-design/icons";
-
 /**
  * https://github.com/apache/cordova-plugin-file-transfer
  */
