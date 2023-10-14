@@ -30,14 +30,8 @@
     overflow-y: auto;
 }
 
-/*.problem-list-view-landscape > .list-area > .list-view > .list-container > .wrap {*/
-/*    height: 100%;*/
-
-/*}*/
-
 .problem-list-view-landscape > .game-area {
     flex: 0;
     height: 100%;
     aspect-ratio: 1;
-    background: blue;
 }
