@@ -35,3 +35,8 @@
     height: 100%;
     aspect-ratio: 1;
 }
+
+.problem-list-view-landscape > .game-area .chess-board{
+    height: 100%;
+    width: auto;
+}

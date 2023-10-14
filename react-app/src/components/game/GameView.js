@@ -1,11 +1,10 @@
 import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
+import './GameView.css'
+
 import {Button, CheckList, List, Radio, Space, Switch} from "antd-mobile";
-import {XmsPicker, XmsSpinView} from "sirius-react-mobile";
-import ProblemUtils from "../../module/util/ProblemUtils";
 import ChessBoard from "./ChessBoard";
-import {BackwardOutlined, CaretLeftOutlined, EyeFilled, HeartFilled} from "@ant-design/icons";
 import Constants from "../../Constants";
 import ConfigUtils from "../config/ConfigUtils";
 import ChessUtils from "../../module/util/ChessUtils";
@@ -151,33 +150,60 @@ function GameView(props) {
 
 
     return <div className="game-view">
-        <List>
-            <List.Item extra={
-                <Radio.Group value={currNextStep} onChange={setCurrNextStep}>
-                    <Space direction='horizontal'>
-                        <Radio value='B'>黑棋</Radio>
-                        <Radio value='W'>白棋</Radio>
-                        <Radio value='C'>清除</Radio>
+        {props.singleRow === true ?
+            <div className="single-row">
+                <div className="flex-row">
+                    <label>当前手</label>
+                    <div>
+                        <Radio.Group value={currNextStep} onChange={setCurrNextStep}>
+                            <Space direction='horizontal'>
+                                <Radio value='B'>黑棋</Radio>
+                                <Radio value='W'>白棋</Radio>
+                                <Radio value='C'>清除</Radio>
+                            </Space>
+                        </Radio.Group>
+                    </div>
+                </div>
+                <div className="flex-1"></div>
+                <div className="flex-row">
+                    <label>操作</label>
+                    <div>
+                        <Space>
+                            <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={() => reset(showMark)}>还原</Button>
+                            <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={stepBackward}>上一步</Button>
+                        </Space>
+                    </div>
+                </div>
+            </div>
+            :
+            <List>
+                <List.Item extra={
+                    <Radio.Group value={currNextStep} onChange={setCurrNextStep}>
+                        <Space direction='horizontal'>
+                            <Radio value='B'>黑棋</Radio>
+                            <Radio value='W'>白棋</Radio>
+                            <Radio value='C'>清除</Radio>
+                        </Space>
+                    </Radio.Group>
+                }>
+                    当前手
+                </List.Item>
+
+                <List.Item extra={<Switch checked={showMark} onChange={handleShowMarkChange}/>}>
+                    展示标记
+                </List.Item>
+                <List.Item extra={
+                    <Space>
+                        <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={() => reset(showMark)}>还原</Button>
+                        <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={stepBackward}>上一步</Button>
                     </Space>
-                </Radio.Group>
-            }>
-                当前手
-            </List.Item>
+                }>
+                    操作
+                </List.Item>
+            </List>
+        }
 
-            <List.Item extra={<Switch checked={showMark} onChange={handleShowMarkChange}/>}>
-                展示标记
-            </List.Item>
-            <List.Item extra={
-                <Space>
-                    <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={() => reset(showMark)}>还原</Button>
-                    <Button size='mini' color='primary' fill='outline' loading='auto' disabled={stepList.current.length === 0} onClick={stepBackward}>上一步</Button>
-                </Space>
-            }>
-                操作
-            </List.Item>
-        </List>
-
-        <audio ref={domAudioRef} src={StepBeep} style={{display:'none'}}/>
+        <audio ref={domAudioRef} src={StepBeep} style={{display: 'none'}}/>
 
         <ChessBoard ref={domChessBoardRef}
                     showBoard={showBoard}

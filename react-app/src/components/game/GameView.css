@@ -28,3 +28,15 @@
 .game-view-action-bar .action-bar-item.unselected .icon > .anticon {
     color: lightgrey !important;
 }
+
+.game-view .single-row {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-base);
+
+    height: 50px;
+    font-size: 18px;
+
+    background: white;
+    padding: 0px var(--margin-base);
+}

@@ -29,6 +29,7 @@ function ProblemListViewLandscape(props) {
 
     const handleDeleteProblem = async (problem) => {
         setProblemFormData(null);
+        setPageTitle("棋局列表");
     }
 
     const navToProblemMgmtPage = (problem) => {
@@ -42,6 +43,7 @@ function ProblemListViewLandscape(props) {
             return;
         }
         setProblemFormData(problem);
+        setPageTitle(problem.$introValue);
     }
 
     const [problemFormData, setProblemFormData] = useState();
@@ -70,7 +72,7 @@ function ProblemListViewLandscape(props) {
                 </div>
                 <div className="game-area">
                     {problemFormData ?
-                        <GameView game={problemFormData}/>
+                        <GameView singleRow={true} game={problemFormData}/>
                         : null
                     }
                 </div>
