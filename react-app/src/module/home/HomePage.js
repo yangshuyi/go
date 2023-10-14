@@ -54,7 +54,14 @@ function HomePage(props) {
         }
     }
 
-    return (screenOrientationLandscape ?
+    return (
+        <div className="home-page">
+            <NavBar backArrow={false}
+                    right={<Button color="primary" fill="solid" size="small" onClick={() => exit()}>退出</Button>}
+            >
+                GO
+            </NavBar>
+            {screenOrientationLandscape ?
             <HomePageLandscape menuArray={menuArray}
                                onNavToPage={navToPage}
                                onExit={exit}/>
@@ -62,6 +69,8 @@ function HomePage(props) {
             <HomePagePortrait menuArray={menuArray}
                               onNavToPage={navToPage}
                               onExit={exit}/>
+            }
+        </div>
     )
 }
 

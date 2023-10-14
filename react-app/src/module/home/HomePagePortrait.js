@@ -24,27 +24,13 @@ function HomePagePortrait(props) {
         }
     }
 
-    function exit() {
-        if (props.onExit) {
-            props.onExit()
-        }
-    }
-
     return (
-        <div className="home-page">
-            <NavBar backArrow={false}
-                    right={<Button color="primary" fill="solid" size="small" onClick={() => exit()}>退出</Button>}
-            >
-                GO
-            </NavBar>
-
-            <div className="xms-page-content with-padding-top padding">
-                <Space direction='vertical' block={true}>
-                    {props.menuArray.map((menu) => (
-                        <Button key={menu.text} color="primary" block onClick={() => navToPage(menu)}>{menu.text}</Button>
-                    ))}
-                </Space>
-            </div>
+        <div className="xms-page-content with-padding-top padding">
+            <Space direction='vertical' block={true}>
+                {props.menuArray.map((menu) => (
+                    <Button key={menu.text} color="primary" block onClick={() => navToPage(menu)}>{menu.text}</Button>
+                ))}
+            </Space>
         </div>
     )
 }
