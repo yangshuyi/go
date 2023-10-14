@@ -44,12 +44,14 @@ function ProblemMgmtPage(props) {
                     chessBoardSize: 11,
                     nextChessType: Constants.CHESS_TYPE.B.value,
                     level: Constants.LEVEL_OPTIONS["3"].value,
+                    chessList: [],
                 };
             } else {
                 problem = {
                     ...lastProblem,
                     id: null,
                     title: ProblemUtils.generateNewGameTitle(lastProblem.title),
+                    chessList: [],
                 }
             }
             problem.$title = "新建棋局";

@@ -9,13 +9,14 @@ import ChessBoard from "../../components/game/ChessBoard";
 
 function GameView(props) {
     const domChessBoardRef = useRef();
+    const chessBoardReadyFlag = useRef(false);
 
     const [markChessFlag, setMarkChessFlag] = useState();
     const [chessType, setChessType] = useState(null);
     const chessBoard = useRef({});
 
     useEffect(() => {
-        if(props.chessBoardSize) {
+        if (props.chessBoardSize) {
             init();
         }
     }, [props.value, props.chessBoardSize]);
@@ -25,14 +26,16 @@ function GameView(props) {
         chessBoard.current = props.value || {};
         setChessType(Constants.CHESS_TYPE.B.value);
         setMarkChessFlag(false);
+        reset();
     }
 
     const handleBoardReady = () => {
+        chessBoardReadyFlag.current = true;
         reset();
     }
 
     const reset = () => {
-        if(props.chessBoardSize) {
+        if (chessBoardReadyFlag.current === true && props.chessBoardSize) {
             domChessBoardRef.current.init(props.chessBoardSize, true);
             _.each(chessBoard.current, (chess) => {
                 domChessBoardRef.current.drawChess(chess);
