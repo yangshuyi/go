@@ -143,10 +143,10 @@ function DataMaintenancePage(props) {
 
     const [screenOrientationLandscape, setScreenOrientationLandscape] = useState(false);
     const handleScreenOrientationLandscapeChange = async (showMsgFlag) => {
-        let screenOrientationLandscape = !screenOrientationLandscape;
-        setScreenOrientationLandscape(screenOrientationLandscape);
+        let newScreenOrientationLandscape = !screenOrientationLandscape;
+        setScreenOrientationLandscape(newScreenOrientationLandscape);
 
-        await ConfigUtils.setScreenOrientationLandscape(screenOrientationLandscape);
+        await ConfigUtils.setScreenOrientationLandscape(newScreenOrientationLandscape);
 
         if (showMsgFlag) {
             DialogUtils.showSuccessMessage("Success");

@@ -1,22 +1,23 @@
 import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
-import './ProblemListPage.css';
 
 import {useNavigate} from "react-router-dom";
 import {useActivate, useAliveController} from "react-activation";
 import {Button, InfiniteScroll, List, NavBar, PullToRefresh, SwipeAction, Tabs} from "antd-mobile";
 import {useLocation} from "react-router";
-import Constants from "../../Constants";
 import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
-import ProblemUtils from "../util/ProblemUtils";
+import ProblemUtils from "../../util/ProblemUtils";
 import {EyeFilled, HeartFilled, StarFilled} from "@ant-design/icons";
-import ProblemFilterView from "./ProblemFilterView";
+import ProblemFilterView from "./../ProblemFilterView";
+import Constants from "../../../Constants";
 
 
-function ProblemListPage(props) {
+function ProblemListViewPortrait(props) {
     const navigate = useNavigate();
     const location = useLocation();
+    const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
+
 
     useEffect(() => {
         init();
@@ -89,28 +90,43 @@ function ProblemListPage(props) {
     }
 
     const handleDeleteProblem = async (problem) => {
-        if (props.onDeleteProblem) {
-            props.onDeleteProblem(problem)
-        }
+        await ProblemUtils.deleteProblemById(problem.id, true);
 
         let newListData = _.reject(listData, {id: problem.id});
         setListData(newListData);
     }
 
     const navToProblemMgmtPage = (problem) => {
-        if (props.onNavToProblemMgmtPage) {
-            props.onNavToProblemMgmtPage(problem)
-        }
+        NavigateUtils.navigateTo(navigate, Constants.ROUTER.PROBLEM_MGMT.path, {
+            state: {
+                key: currPageKey,
+                problemId: problem?.id,
+            },
+        });
     }
 
     const navToProblemTestPage = (idx) => {
-        if (props.onNavToProblemTestPage) {
-            props.onNavToProblemTestPage(idx)
+        NavigateUtils.navigateTo(navigate, Constants.ROUTER.PROBLEM_TEST.path, {
+            state: {
+                key: currPageKey,
+                idx: idx,
+            },
+        });
+    }
+
+    const navBack = async (needRefreshFlag) => {
+        if(props.onNavBack){
+            props.onNavBack(needRefreshFlag)
         }
     }
 
     return (
-        <>
+        <div className="problem-list-page">
+            <NavBar
+                onBack={() => navBack(false)}
+                right={<Button color="primary" fill="solid" size="small" onClick={() => navToProblemMgmtPage(null)}>新增棋局</Button>}
+            >棋局列表</NavBar>
+
             <ProblemFilterView onChange={handleFilterChange}/>
             <div className="xms-page-content with-padding-top">
                 <List>
@@ -153,11 +169,11 @@ function ProblemListPage(props) {
                 </List>
                 {initLoadingFlag ? <XmsSpinView/> : <InfiniteScroll loadMore={handleLoadMore} hasMore={hasMoreFlag}/>}
             </div>
-        </>
+        </div>
     )
 }
 
-export default ProblemListPage;
+export default ProblemListViewPortrait;
 
 
 
