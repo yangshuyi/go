@@ -8,23 +8,18 @@ import {Button, NavBar, Space} from "antd-mobile";
 import {useLocation} from "react-router";
 import Constants from "../../Constants";
 import {NavigateUtils} from "sirius-react-mobile";
+import ConfigUtils from "../../components/config/ConfigUtils";
+import HomePageLandscape from "./HomePageLandscape";
+import HomePagePortrait from "./HomePagePortrait";
 
 function HomePage(props) {
+    const [screenOrientationLandscape, setScreenOrientationLandscape] = useState(() => ConfigUtils.getScreenOrientationLandscape());
+
     const navigate = useNavigate();
     const location = useLocation();
     const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
 
     const pageInitialized = useRef(false);
-
-    const [menuArray, setMenuArray] = useState([
-        {
-            text: '死活题', path: Constants.ROUTER.PROBLEM_LIST.path,
-        },
-        {
-            text: '数据维护', path: Constants.ROUTER.DATA_MAINTENANCE.path,
-        },
-    ])
-
     useEffect(() => {
         if (pageInitialized.current) {
             return;
@@ -36,6 +31,15 @@ function HomePage(props) {
 
     }
 
+    const [menuArray, setMenuArray] = useState([
+        {
+            text: '死活题', path: Constants.ROUTER.PROBLEM_LIST.path,
+        },
+        {
+            text: '数据维护', path: Constants.ROUTER.DATA_MAINTENANCE.path,
+        },
+    ])
+
     const navToPage = async (menu) => {
         NavigateUtils.navigateTo(navigate, menu.path, {
             state: {
@@ -44,28 +48,20 @@ function HomePage(props) {
         });
     }
 
-    function exit(e) {
+    function exit() {
         if (navigator.app) {
             navigator.app.exitApp();
         }
     }
 
-    return (
-        <div className="home-page">
-            <NavBar backArrow={false}
-                    right={<Button color="primary" fill="solid" size="small" onClick={() => exit()}>退出</Button>}
-            >
-                GO
-            </NavBar>
-
-            <div className="xms-page-content with-padding-top padding">
-                <Space direction='vertical' block={true}>
-                    {menuArray.map((menu) => (
-                        <Button key={menu.text} color="primary" block onClick={() => navToPage(menu)}>{menu.text}</Button>
-                    ))}
-                </Space>
-            </div>
-        </div>
+    return (screenOrientationLandscape ?
+            <HomePageLandscape menuArray={menuArray}
+                               onNavToPage={navToPage}
+                               onExit={exit}/>
+            :
+            <HomePagePortrait menuArray={menuArray}
+                              onNavToPage={navToPage}
+                              onExit={exit}/>
     )
 }
 
