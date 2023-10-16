@@ -11,6 +11,7 @@ import ProblemUtils from "../../util/ProblemUtils";
 import ListView from "./ListView";
 import GameView from "../../../components/game/GameView";
 import {Button, NavBar} from "antd-mobile";
+import ProblemInfoActionBarVertical from "../../../components/problem-info/ProblemInfoActionBarVertical";
 
 
 function ProblemListViewLandscape(props) {
@@ -47,7 +48,10 @@ function ProblemListViewLandscape(props) {
     }
 
     const [problemFormData, setProblemFormData] = useState();
-
+    const handleProblemChanged = async (problemFormData) => {
+        setProblemFormData(problemFormData);
+        await ProblemUtils.saveProblem(problemFormData, true);
+    }
 
     const navBack = async (needRefreshFlag) => {
         if (props.onNavBack) {
@@ -73,6 +77,12 @@ function ProblemListViewLandscape(props) {
                 <div className="game-area">
                     {problemFormData ?
                         <GameView singleRow={true} game={problemFormData}/>
+                        : null
+                    }
+                </div>
+                <div className="game-action-bar-area">
+                    {problemFormData ?
+                        <ProblemInfoActionBarVertical problem={problemFormData} onChange={handleProblemChanged}/>
                         : null
                     }
                 </div>

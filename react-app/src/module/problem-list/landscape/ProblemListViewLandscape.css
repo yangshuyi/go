@@ -26,7 +26,7 @@
 }
 
 .problem-list-view-landscape > .list-area > .list-view > .list-container {
-    padding-top: 40px;
+    padding-top: 50px;
     height: 100%;
     overflow-y: auto;
 }
@@ -36,3 +36,13 @@
     height: 100%;
     aspect-ratio: 1;
 }
+
+.problem-list-view-landscape > .game-area > .game-view >.chess-board > .wrap > canvas{
+    width: initial;
+    height: 100%;
+}
+
+.problem-list-view-landscape > .game-action-bar-area {
+
+}
+

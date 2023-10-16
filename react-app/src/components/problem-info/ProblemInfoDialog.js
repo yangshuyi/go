@@ -16,7 +16,7 @@ import Constants from "../../Constants";
 import BookPicker from "../book/BookPicker";
 
 
-function ProblemInfoView(props) {
+function ProblemInfoViewDialog(props) {
     const navigate = useNavigate();
     const location = useLocation();
     const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
@@ -115,7 +115,7 @@ function ProblemInfoView(props) {
                     </Form>
             </FloatingPanel>
 
-                <div className="problem-info-view-action-bar horizontal">
+                <div className="problem-info-view-action-bar">
                     {levelOptions.map((levelOption) => (
                         <div key={levelOption.value} className={levelOption.value === formData.level ? "action-bar-item selected" : "action-bar-item unselected"}
                              onClick={() => handleFieldChange("level", levelOption.value)}>
