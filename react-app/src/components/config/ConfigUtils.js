@@ -57,7 +57,6 @@ async function setScreenOrientationLandscape(screenOrientationLandscape) {
 async function getScreenOrientationLandscape() {
     let db = await getGlobalDb();
     let record = await db.configs.get("screenOrientationLandscape")
-    debugger;
     return _.get(record, 'value', true)
 }
 

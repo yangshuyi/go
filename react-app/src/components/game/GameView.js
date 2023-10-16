@@ -208,6 +208,9 @@ function GameView(props) {
         <ChessBoard ref={domChessBoardRef}
                     showBoard={showBoard}
                     onBoardReady={handleBoardReady} onChessStep={handleChessStep}/>
+
+
+
     </div>
 
 }

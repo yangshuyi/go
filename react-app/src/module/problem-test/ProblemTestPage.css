@@ -1,30 +1,10 @@
-.problem-filter-view {
+.problem-test-page {
 
 }
 
-.problem-filter-view .problem-filter-view-header{
-    height: 40px;
+.problem-test-page .xms-page-content {
+    height: 100vh;
 
     display: flex;
-    align-items: center;
-
-    padding: 0px var(--margin-base);
-
-    background: var(--adm-color-background);
-}
-
-.problem-filter-view .problem-filter-view-body{
-
-}
-
-.problem-filter-view .problem-filter-view-body.invisible{
-    visibility: hidden;
-}
-
-.problem-filter-view .list-item {
-    background: red;
-}
-
-.problem-filter-view .list-item.visited {
-    background: lightgrey;
+    flex-direction: column;
 }

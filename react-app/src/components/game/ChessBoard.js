@@ -254,7 +254,8 @@ const ChessBoard = (props, ref) => {
     return (
         <div className={props.showBoard === true ? "chess-board with-board" : "chess-board"}>
             <div className="wrap">
-                <canvas ref={domChessBoardCanvasRef} style={{visibility:"hidden"}}
+                <canvas ref={domChessBoardCanvasRef}
+                        // style={{visibility:"hidden"}}
                         width={canvasWidth} height={canvasHeight}
                         onClick={onCanvasClick}/>
             </div>

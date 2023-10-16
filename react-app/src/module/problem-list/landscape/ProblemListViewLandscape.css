@@ -36,16 +36,3 @@
     height: 100%;
     aspect-ratio: 1;
 }
-
-.problem-list-view-landscape > .game-area > .game-view {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.problem-list-view-landscape > .game-area .chess-board {
-    flex: 1;
-    padding: var(--margin-base);
-}

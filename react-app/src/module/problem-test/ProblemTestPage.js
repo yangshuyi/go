@@ -94,6 +94,7 @@ function ProblemTestPage(props) {
 
                 <div className="xms-page-content">
                     <GameView game={formData}/>
+                    <div style={{height:'100px'}}></div>
                 </div>
 
                 <ProblemInfoView problem={formData} onChange={handleProblemChange}/>
