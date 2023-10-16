@@ -7,12 +7,12 @@
     height: 100vh;
 }
 
-.problem-list-view-landscape > .list-area{
+.problem-list-view-landscape > .list-area {
     flex: 1;
     padding: 0px var(--margin-base);
 }
 
-.problem-list-view-landscape > .list-area > .list-view{
+.problem-list-view-landscape > .list-area > .list-view {
     position: relative;
     height: 100%;
 }
@@ -24,6 +24,7 @@
     width: 100%;
     padding-top: initial;
 }
+
 .problem-list-view-landscape > .list-area > .list-view > .list-container {
     padding-top: 40px;
     height: 100%;
@@ -36,7 +37,15 @@
     aspect-ratio: 1;
 }
 
-.problem-list-view-landscape > .game-area .chess-board{
+.problem-list-view-landscape > .game-area > .game-view {
+    width: 100%;
     height: 100%;
-    width: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.problem-list-view-landscape > .game-area .chess-board {
+    flex: 1;
+    padding: var(--margin-base);
 }

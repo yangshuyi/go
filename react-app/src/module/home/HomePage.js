@@ -7,28 +7,37 @@ import {useNavigate} from "react-router-dom";
 import {Button, NavBar, Space} from "antd-mobile";
 import {useLocation} from "react-router";
 import Constants from "../../Constants";
-import {NavigateUtils} from "sirius-react-mobile";
+import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
 import ConfigUtils from "../../components/config/ConfigUtils";
 import HomePageLandscape from "./HomePageLandscape";
 import HomePagePortrait from "./HomePagePortrait";
 
 function HomePage(props) {
-    const [screenOrientationLandscape, setScreenOrientationLandscape] = useState(() => ConfigUtils.getScreenOrientationLandscape());
+    const pageInitialized = useRef(false);
+    const [dataInitialized, setDataInitialized] = useState(false);
+
+    const [screenOrientationLandscape, setScreenOrientationLandscape] = useState();
 
     const navigate = useNavigate();
     const location = useLocation();
     const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
 
-    const pageInitialized = useRef(false);
     useEffect(() => {
         if (pageInitialized.current) {
             return;
         }
-        init();
+        pageInitialized.current = true;
+
+        if (!dataInitialized) {
+            init();
+        }
     }, []);
 
-    const init = async () => {
+    let init = async () => {
+        let screenOrientationLandscape = await ConfigUtils.getScreenOrientationLandscape()
+        setScreenOrientationLandscape(screenOrientationLandscape)
 
+        setDataInitialized(true);
     }
 
     const [menuArray, setMenuArray] = useState([
@@ -54,7 +63,7 @@ function HomePage(props) {
         }
     }
 
-    return (
+    return (dataInitialized !== true ? <XmsSpinView/> :
         <div className="home-page">
             <NavBar backArrow={false}
                     right={<Button color="primary" fill="solid" size="small" onClick={() => exit()}>退出</Button>}

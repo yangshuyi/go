@@ -15,32 +15,44 @@ import ProblemFilterView from "./ProblemFilterView";
 import ConfigUtils from "../../components/config/ConfigUtils";
 import ProblemListViewPortrait from "./portrait/ProblemListViewPortrait";
 import ProblemListViewLandscape from "./landscape/ProblemListViewLandscape";
+import BookUtils from "../../components/book/BookUtils";
+import TagUtils from "../../components/tag/TagUtils";
 
 
 function ProblemListPage(props) {
-    const [screenOrientationLandscape, setScreenOrientationLandscape] = useState(() => ConfigUtils.getScreenOrientationLandscape());
+    const pageInitialized = useRef(false);
+    const [dataInitialized, setDataInitialized] = useState(false);
 
+    const [screenOrientationLandscape, setScreenOrientationLandscape] = useState();
     const navigate = useNavigate();
 
     useEffect(() => {
-        init();
+        if (pageInitialized.current) {
+            return;
+        }
+        pageInitialized.current = true;
+
+        if (!dataInitialized) {
+            init();
+        }
     }, []);
 
     let init = async () => {
+        let screenOrientationLandscape = await ConfigUtils.getScreenOrientationLandscape()
+        setScreenOrientationLandscape(screenOrientationLandscape)
+
+        setDataInitialized(true);
     }
 
     const navBack = async (needRefreshFlag) => {
         NavigateUtils.navigateBack(navigate, location, {});
     }
 
-    return (
-
-
-        screenOrientationLandscape ?
-            <ProblemListViewLandscape onNavBack={navBack}/>
-            :
-            <ProblemListViewPortrait onNavBack={navBack}/>
-
+    return (dataInitialized !== true ? <XmsSpinView/> :
+            screenOrientationLandscape === true ?
+                <ProblemListViewLandscape onNavBack={navBack}/>
+                :
+                <ProblemListViewPortrait onNavBack={navBack}/>
     )
 }
 

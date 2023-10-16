@@ -58,6 +58,9 @@ function DataMaintenancePage(props) {
         let showBoard = await ConfigUtils.getShowBoardFlag();
         setShowBoard(showBoard);
 
+        let screenOrientationLandscape = await ConfigUtils.getScreenOrientationLandscape();
+        setScreenOrientationLandscape(screenOrientationLandscape)
+
         setDataInitialized(true);
     }
 
