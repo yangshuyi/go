@@ -7,8 +7,6 @@
 }
 
 .problem-info-view-action-bar{
-    border-top: 1px solid var(--adm-color-border);
-
     display: flex;
     align-items: center;
 
@@ -16,6 +14,8 @@
 }
 
 .problem-info-view-action-bar.horizontal{
+    border-top: 1px solid var(--adm-color-border);
+
     position: fixed;
     z-index: 1000;
     bottom: 0px;

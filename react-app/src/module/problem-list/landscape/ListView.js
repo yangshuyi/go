@@ -100,9 +100,9 @@ function ListView(props) {
         }
     }
 
-    const navToProblemTestPage = (idx) => {
+    const navToProblemTestPage = (problem) => {
         if (props.onNavToProblemTestPage) {
-            props.onNavToProblemTestPage(idx)
+            props.onNavToProblemTestPage(problem)
         }
     }
 
@@ -141,7 +141,7 @@ function ListView(props) {
                                         </div>
                                     </div>
                                 }
-                                    onClick={() => navToProblemTestPage(problem.orderIdx)}
+                                    onClick={() => navToProblemTestPage(problem)}
                                 >
                                     <div>{problem.$introValue}</div>
                                 </List.Item>

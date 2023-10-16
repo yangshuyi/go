@@ -32,17 +32,5 @@
 }
 
 .problem-list-view-landscape > .game-area {
-    flex: 0;
-    height: 100%;
-    aspect-ratio: 1;
-}
-
-.problem-list-view-landscape > .game-area > .game-view >.chess-board > .wrap > canvas{
-    width: initial;
     height: 100%;
 }
-
-.problem-list-view-landscape > .game-action-bar-area {
-
-}
-

@@ -12,6 +12,7 @@ import ListView from "./ListView";
 import GameView from "../../../components/game/GameView";
 import {Button, NavBar} from "antd-mobile";
 import ProblemInfoActionBarVertical from "../../../components/problem-info/ProblemInfoActionBarVertical";
+import ProblemTestViewLandscape from "../../problem-test/landscape/ProblemTestViewLandscape";
 
 
 function ProblemListViewLandscape(props) {
@@ -29,7 +30,7 @@ function ProblemListViewLandscape(props) {
     const [pageTitle, setPageTitle] = useState()
 
     const handleDeleteProblem = async (problem) => {
-        setProblemFormData(null);
+        setSelectedProblem(null);
         setPageTitle("棋局列表");
     }
 
@@ -37,20 +38,28 @@ function ProblemListViewLandscape(props) {
         alert("navToProblemMgmtPage")
     }
 
-    const navToProblemTestPage = async (orderIdx) => {
-        let problem = await ProblemUtils.loadProblemByFilteredOrderIdx(orderIdx);
+    const navToProblemTestPage = async (problem) => {
         if (problem == null) {
-            await DialogUtils.showAlertMessage(`Could not find Problem by orderIdx: ${orderIdx}`);
-            return;
+             return;
         }
-        setProblemFormData(problem);
+
         setPageTitle(problem.$introValue);
+        setSelectedProblem(problem);
     }
 
-    const [problemFormData, setProblemFormData] = useState();
-    const handleProblemChanged = async (problemFormData) => {
-        setProblemFormData(problemFormData);
-        await ProblemUtils.saveProblem(problemFormData, true);
+    const [selectedProblem, setSelectedProblem] = useState(null);
+
+    const handleTitleClick = async () => {
+        if (!selectedProblem) {
+            return;
+        }
+
+        try {
+            await navigator.clipboard.writeText(selectedProblem.id);
+            await DialogUtils.showSuccessMessage(`复制ID:${selectedProblem.id}成功`);
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
     }
 
     const navBack = async (needRefreshFlag) => {
@@ -64,7 +73,9 @@ function ProblemListViewLandscape(props) {
             <NavBar
                 onBack={() => navBack(false)}
                 left={<Button color="primary" fill="solid" size="small" onClick={() => navToProblemMgmtPage(null)}>新增棋局</Button>}
-            >{pageTitle}</NavBar>
+            >
+                <div onClick={handleTitleClick}>{pageTitle}</div>
+            </NavBar>
 
             <div className="xms-page-content with-padding-top problem-list-view-landscape">
                 <div className="list-area">
@@ -75,17 +86,12 @@ function ProblemListViewLandscape(props) {
                     />
                 </div>
                 <div className="game-area">
-                    {problemFormData ?
-                        <GameView singleRow={true} game={problemFormData}/>
+                    {selectedProblem ?
+                        <ProblemTestViewLandscape problemOrderIdx={selectedProblem.orderIdx}/>
                         : null
                     }
                 </div>
-                <div className="game-action-bar-area">
-                    {problemFormData ?
-                        <ProblemInfoActionBarVertical problem={problemFormData} onChange={handleProblemChanged}/>
-                        : null
-                    }
-                </div>
+
             </div>
         </div>
     )
