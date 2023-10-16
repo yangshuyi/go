@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {forwardRef, useEffect, useImperativeHandle, useRef, useState} from 'react';
 import _ from 'lodash';
 
 
@@ -11,9 +11,13 @@ import {EyeFilled, HeartFilled, StarFilled} from "@ant-design/icons";
 import ProblemUtils from "../../util/ProblemUtils";
 import ProblemFilterView from "../ProblemFilterView";
 
-function ListView(props) {
-    const navigate = useNavigate();
-    const location = useLocation();
+const ListView = (props, ref) => {
+    useImperativeHandle(ref, () => {
+        return {
+            updateProblem: updateProblem,
+            deleteProblem: deleteProblem,
+        }
+    });
 
     useEffect(() => {
         init();
@@ -25,31 +29,21 @@ function ListView(props) {
         setInitLoadingFlag(false);
     }
 
-    useActivate(async () => {
-        let {fromPageKey, param} = NavigateUtils.getPageResult();
-        if (props.currPageKey === fromPageKey) {
-            if (param?.action === "DEL") {
-                let newListData = _.reject(listData, {id: param.problemId});
-                setListData(newListData);
-            } else if (param?.action === "SAVE") {
-                let newListData = [...listData];
-                let listItem = _.find(listData, {id: param.problemId});
-                if (listItem) {
-                    let model = await ProblemUtils.loadProblemById(listItem.id);
-                    _.assign(listItem, model);
-                    listItem.$visited = true;
-                }
-                setListData(newListData);
-            } else if (param?.action === "VIEW") {
-                let newListData = [...listData];
-                let listItem = _.find(listData, {id: param.problemId});
-                if (listItem) {
-                    listItem.$visited = true;
-                }
-                setListData(newListData);
-            }
+    let updateProblem = async (problemId) => {
+        let newListData = [...listData];
+        let listItem = _.find(newListData, {id: problemId});
+        if (listItem) {
+            let model = await ProblemUtils.loadProblemById(listItem.id);
+            _.assign(listItem, model);
+            listItem.$visited = true;
         }
-    });
+        setListData(newListData);
+    }
+
+    let deleteProblem = async (problemId) => {
+        let newListData = _.reject(listData, {id: problemId});
+        setListData(newListData);
+    }
 
     const handleFilterChange = async (filterParam) => {
         await ProblemUtils.filterProblemList(filterParam);
@@ -90,8 +84,7 @@ function ListView(props) {
             props.onDeleteProblem(problem)
         }
 
-        let newListData = _.reject(listData, {id: problem.id});
-        setListData(newListData);
+        await deleteProblem(problem.id)
     }
 
     const navToProblemMgmtPage = (problem) => {
@@ -101,6 +94,8 @@ function ListView(props) {
     }
 
     const navToProblemTestPage = (problem) => {
+        problem.$visited = true;
+
         if (props.onNavToProblemTestPage) {
             props.onNavToProblemTestPage(problem)
         }
@@ -155,7 +150,10 @@ function ListView(props) {
     )
 }
 
-export default ListView;
+
+const WrapListView = forwardRef(ListView);
+
+export default WrapListView;
 
 
 

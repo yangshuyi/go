@@ -164,6 +164,12 @@ function GameView(props) {
                         </Radio.Group>
                     </div>
                 </div>
+                <div className="flex-row">
+                    <label>展示标记</label>
+                    <div>
+                        <Switch checked={showMark} onChange={handleShowMarkChange}/>
+                    </div>
+                </div>
                 <div className="flex-1"></div>
                 <div className="flex-row">
                     <label>操作</label>

@@ -45,7 +45,7 @@
 .game-view .single-row {
     display: flex;
     align-items: center;
-    gap: var(--margin-base);
+    gap: var(--margin-2x);
 
     height: 50px;
     font-size: 18px;

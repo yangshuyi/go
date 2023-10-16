@@ -16,8 +16,7 @@ import ProblemTestViewLandscape from "../../problem-test/landscape/ProblemTestVi
 
 
 function ProblemListViewLandscape(props) {
-    const navigate = useNavigate();
-    const location = useLocation();
+    const domListViewRef = useRef();
 
     useEffect(() => {
         init();
@@ -43,11 +42,16 @@ function ProblemListViewLandscape(props) {
              return;
         }
 
+        problem.$visited = true;
         setPageTitle(problem.$introValue);
         setSelectedProblem(problem);
     }
 
     const [selectedProblem, setSelectedProblem] = useState(null);
+
+    const handleProblemChanged = async (newProblemFormData) => {
+        domListViewRef.current.updateProblem(newProblemFormData.id);
+    }
 
     const handleTitleClick = async () => {
         if (!selectedProblem) {
@@ -79,7 +83,7 @@ function ProblemListViewLandscape(props) {
 
             <div className="xms-page-content with-padding-top problem-list-view-landscape">
                 <div className="list-area">
-                    <ListView
+                    <ListView ref={domListViewRef}
                         onDeleteProblem={handleDeleteProblem}
                         onNavToProblemMgmtPage={navToProblemMgmtPage}
                         onNavToProblemTestPage={navToProblemTestPage}
@@ -87,7 +91,7 @@ function ProblemListViewLandscape(props) {
                 </div>
                 <div className="game-area">
                     {selectedProblem ?
-                        <ProblemTestViewLandscape problemOrderIdx={selectedProblem.orderIdx}/>
+                        <ProblemTestViewLandscape problemOrderIdx={selectedProblem.orderIdx} onProblemChanged={handleProblemChanged}/>
                         : null
                     }
                 </div>
