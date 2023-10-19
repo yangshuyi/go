@@ -3,8 +3,10 @@ import _ from 'lodash';
 
 import './ProblemInfoView.css';
 
-import {DownOutlined, EditFilled, HeartFilled, UpOutlined} from "@ant-design/icons";
+import {AlertOutlined, DownOutlined, EditFilled, HeartFilled, UpOutlined} from "@ant-design/icons";
 import Constants from "../../Constants";
+import {Popover, Toast} from "antd-mobile";
+import ProblemInfoPopup from "./ProblemInfoPopup";
 
 
 function ProblemInfoViewActionBarVertical(props) {
@@ -35,8 +37,25 @@ function ProblemInfoViewActionBarVertical(props) {
         });
     }
 
-    const openProblemMgmtPage = () => {
+    const handlePopupChange = (newProblem) => {
+        setFormData((oldData) => {
+            let newData = {...oldData};
+            // TODO
+            // newData[''] = newProblem.a;
 
+            if (props.onChange) {
+                props.onChange(newData);
+            }
+            return newData;
+        });
+    }
+
+    const [problemInfoPopupVisible, setProblemInfoPVisible] = useState(false);
+    const onOpenProblemInfoPopup = () => {
+        setProblemInfoPVisible(true)
+    }
+    const onCloseProblemInfoPopup = () => {
+        setProblemInfoPVisible(false)
     }
 
 
@@ -57,12 +76,30 @@ function ProblemInfoViewActionBarVertical(props) {
                         <div className="text">难题</div>
                     </div>
 
-                    <div className="action-bar-item unselected"
-                         onClick={openProblemMgmtPage}>
+                    <div className="action-bar-item selected">
+                        <Popover content={`标签：${formData.tags}`} trigger='click' placement='left' defaultVisible={false}>
+                            <>
+                                <div className="icon"><AlertOutlined style={{fontSize: '22px', color: 'var(--adm-color-primary)'}}/></div>
+                                <div className="text">提示</div>
+                            </>
+                        </Popover>
+                    </div>
+
+                    <div className="action-bar-item selected"
+                         onClick={onOpenProblemInfoPopup}>
                         <div className="icon"><EditFilled style={{fontSize: '22px', color: 'var(--adm-color-primary)'}}/></div>
                         <div className="text">管理</div>
                     </div>
                 </div>
+
+                {problemInfoPopupVisible ?
+                    <ProblemInfoPopup problem={formData}
+                                      onChange={handlePopupChange}
+                                      onClose={onCloseProblemInfoPopup}>
+                    </ProblemInfoPopup>
+                    :
+                    null
+                }
             </>
     )
 }

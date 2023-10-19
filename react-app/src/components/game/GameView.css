@@ -8,7 +8,6 @@
 
 .game-view > .chess-board {
     flex: 1;
-    padding: var(--margin-base);
 }
 
 .game-view-action-bar{
