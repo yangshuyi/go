@@ -58,7 +58,7 @@ async function filterProblemList(filterParam) {
                 }
             }
             if (!_.isEmpty(filterParam.tags)) {
-                if (!_.intersection(filterParam.tags, problem.tags)) {
+                if (_.isEmpty(_.intersection(filterParam.tags, problem.tags))) {
                     return false;
                 }
             }
@@ -194,12 +194,13 @@ async function saveProblem(problemParam, needToUpdateVersionFlag = true) {
     problemEntity.modifyDate = problemParam.modifyDate || DateUtils.getCurrentDate().getTime();
 
     problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes || 0;
-    if (problemEntity.level === Constants.LEVEL_OPTIONS["2"]) {
+    //做对一次times+1, 做错一次times-1
+    if (problemEntity.level === Constants.LEVEL_OPTIONS["2"].value) {
         problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes - 1;
         if (problemEntity.ebbinghausTimes < 0) {
             problemEntity.ebbinghausTimes = 0;
         }
-    } else if (problemEntity.level === Constants.LEVEL_OPTIONS["0"]) {
+    } else if (problemEntity.level === Constants.LEVEL_OPTIONS["0"].value) {
         problemEntity.ebbinghausTimes = problemEntity.ebbinghausTimes + 1;
         if (problemEntity.ebbinghausTimes > 5) {
             problemEntity.ebbinghausTimes = 5;

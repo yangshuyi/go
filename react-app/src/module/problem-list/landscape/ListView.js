@@ -30,14 +30,17 @@ const ListView = (props, ref) => {
     }
 
     let updateProblem = async (problemId) => {
+        let model = await ProblemUtils.loadProblemById(problemId);
+
         let newListData = [...listData];
         let listItem = _.find(newListData, {id: problemId});
         if (listItem) {
-            let model = await ProblemUtils.loadProblemById(listItem.id);
             _.assign(listItem, model);
             listItem.$visited = true;
         }
         setListData(newListData);
+
+        return model;
     }
 
     let deleteProblem = async (problemId) => {

@@ -39,9 +39,7 @@ function ProblemInfoViewActionBarVertical(props) {
 
     const handlePopupChange = (newProblem) => {
         setFormData((oldData) => {
-            let newData = {...oldData};
-            // TODO
-            // newData[''] = newProblem.a;
+            let newData = {...oldData, ...newProblem};
 
             if (props.onChange) {
                 props.onChange(newData);

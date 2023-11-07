@@ -10,6 +10,7 @@ import ConfigUtils from "../config/ConfigUtils";
 import ChessUtils from "../../module/util/ChessUtils";
 
 import StepBeep from "../../assets/step.mp3"
+import {SpinUtils} from "sirius-react-mobile";
 
 
 function GameView(props) {
@@ -44,6 +45,8 @@ function GameView(props) {
 
 
     const reset = (showMark) => {
+        SpinUtils.start();
+
         let game = JSON.parse(JSON.stringify(props.game));
         game.$currChessBoard = {}; //当前棋盘上的棋子信息
         game.$currChessBoard = game.chessBoard;
@@ -56,6 +59,8 @@ function GameView(props) {
         _.each(game.$currChessBoard, (chess) => {
             domChessBoardRef.current.drawChess(chess);
         });
+
+        SpinUtils.complete();
     }
 
     function stepForward(action, chess) {

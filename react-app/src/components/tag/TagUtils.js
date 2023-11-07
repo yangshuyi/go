@@ -51,7 +51,14 @@ function getTags() {
 
 function getTagOptions() {
     let tags = getTags();
-    return _.orderBy(tags, ['problemCnt'], ['desc']);
+    _.each(tags, (tag)=>{
+        if(tag.problemCnt === 0) {
+            tag.$orderIdx = Number.MAX_VALUE;
+        }else{
+            tag.$orderIdx =tag.problemCnt;
+        }
+    })
+    return _.orderBy(tags, ['$orderIdx'], ['desc']);
 }
 
 async function saveTag(tagParam) {
@@ -59,7 +66,8 @@ async function saveTag(tagParam) {
     if (!tagEntity) {
         tagEntity = {};
     }
-    tagEntity.problemCnt = tagParam.problemCnt;
+    tagEntity.tagName = tagParam.tagName;
+    tagEntity.problemCnt = tagParam.problemCnt || 0;
     tagEntity.keyword = tagParam.keyword;
 
     let db = await DexieDbUtils.getConn();

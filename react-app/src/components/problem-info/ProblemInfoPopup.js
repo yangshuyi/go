@@ -37,11 +37,12 @@ function ProblemInfoPopup(props) {
     const handleBtnClick = async () => {
         if (modifiedObj.current) {
             if (props.onChange) {
-                props.onChange(modifiedObj);
+                props.onChange(modifiedObj.current);
             }
-            if (props.onClose) {
-                props.onClose();
-            }
+        }
+
+        if (props.onClose) {
+            props.onClose();
         }
     }
 

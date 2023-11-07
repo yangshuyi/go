@@ -50,7 +50,8 @@ function ProblemListViewLandscape(props) {
     const [selectedProblem, setSelectedProblem] = useState(null);
 
     const handleProblemChanged = async (newProblemFormData) => {
-        domListViewRef.current.updateProblem(newProblemFormData.id);
+        let problem = await domListViewRef.current.updateProblem(newProblemFormData.id);
+        setPageTitle(problem.$introValue);
     }
 
     const handleTitleClick = async () => {
