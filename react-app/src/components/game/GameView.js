@@ -60,12 +60,15 @@ function GameView(props) {
         });
     }
 
+    /**
+     *
+     * @param action
+     * @param chess
+     * @returns {boolean} - false: 没有添加成功
+     */
     function stepForward(action, chess) {
         let tiziList = null;
         if (action === 'add') {
-            domAudioRef.current.currentTime = 0;
-            domAudioRef.current.play();
-
             game.$currChessBoard[chess.$geo] = chess;
             domChessBoardRef.current.drawChess(chess);
 
@@ -74,6 +77,15 @@ function GameView(props) {
                 delete game.$currChessBoard[oppositeChess.$geo];
                 domChessBoardRef.current.clearChess(oppositeChess);
             });
+            let isJingRuDian = ChessUtils.checkJingRuDian(game.chessBoardSize, chess, game.$currChessBoard);
+            if (isJingRuDian) {
+                delete game.$currChessBoard[chess.$geo];
+                domChessBoardRef.current.clearChess(chess);
+                return false;
+            }
+
+            domAudioRef.current.currentTime = 0;
+            domAudioRef.current.play();
         } else if (action === 'remove') {
             delete game.$currChessBoard[chess.$geo];
             domChessBoardRef.current.clearChess(chess);
@@ -84,6 +96,8 @@ function GameView(props) {
             chess: chess,
             tiziList: tiziList,
         });
+
+        return true;
     }
 
     const stepBackward = () => {
@@ -114,7 +128,7 @@ function GameView(props) {
             //删除棋子
             if (chess) {
                 //棋盘上有棋子
-                stepForward('remove', chess);
+                let result = stepForward('remove', chess);
             } else {
                 //棋盘上没有棋子
             }
@@ -134,10 +148,12 @@ function GameView(props) {
                     marked: false,
                     $geo: geo
                 };
-                stepForward('add', newChess);
+                let result = stepForward('add', newChess);
 
-                //调整下一步
-                setCurrNextStep(chessType.nextStep);
+                if(result) {
+                    //调整下一步
+                    setCurrNextStep(chessType.nextStep);
+                }
             }
         }
     }
@@ -209,7 +225,6 @@ function GameView(props) {
         <ChessBoard ref={domChessBoardRef}
                     showBoard={showBoard}
                     onBoardReady={handleBoardReady} onChessStep={handleChessStep}/>
-
 
 
     </div>

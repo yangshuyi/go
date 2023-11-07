@@ -68,33 +68,20 @@ function getGeoLabelByIdx(chessBoardSize, rowOrCol, idx) {
 }
 
 function checkJingRuDian(chessBoardSize, currChessObj, chessBoard) {
-    let chessType = currChessObj.type;
-    let oppositeChessType = Constants.CHESS_TYPE[chessType].nextStep;
+    //step1: get around chess with self
+    let globalHasQi = false;
 
-    let oppositeChessList = getAroundChess(chessBoardSize, currChessObj, oppositeChessType, chessBoard);
-    let tiziList = [];
-    _.each(oppositeChessList, (oppositeChess) => {
-        let allOppositeChessMap = getAllOppositeChessList(chessBoardSize, oppositeChess, {}, chessBoard);
-        let checkTizi = true;
-        _.each(allOppositeChessMap, (oppositeChessObj) => {
-            let hasQi = isChessHasQi(chessBoardSize, oppositeChessObj, chessBoard);
-            if (hasQi) {
-                checkTizi = false;
-                return false;
-            }
-        });
+    let allMyChessMap = getAllOppositeChessList(chessBoardSize, currChessObj, {}, chessBoard);
 
-        if (checkTizi) {
-            tiziList = _.union(tiziList, _.values(allOppositeChessMap));
+    _.each(allMyChessMap, (myChessObj) => {
+        let hasQi = isChessHasQi(chessBoardSize, myChessObj, chessBoard);
+        if (hasQi) {
+            globalHasQi = true;
+            return false;
         }
     });
 
-    if (_.isEmpty(tiziList)) {
-        return null;
-    } else {
-        console.log("checkTizi: " + tiziList);
-        return tiziList;
-    }
+    return !globalHasQi;
 }
 
 
@@ -224,5 +211,6 @@ export default {
     getGeoFromPosIdx: getGeoFromPosIdx,
     getGeoLabelByIdx: getGeoLabelByIdx,
 
-    checkTizi: checkTizi
+    checkTizi: checkTizi,
+    checkJingRuDian: checkJingRuDian,
 };
