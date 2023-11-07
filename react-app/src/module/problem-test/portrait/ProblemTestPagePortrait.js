@@ -95,7 +95,7 @@ function ProblemTestPagePortrait(props) {
                 </NavBar>
 
                 <div className="xms-page-content">
-                    <GameView game={formData}/>
+                    <GameView game={formData} singleRow={false}/>
                     <div style={{height:'100px'}}></div>
                 </div>
 

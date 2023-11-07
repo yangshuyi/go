@@ -17,6 +17,9 @@ let Constants = {
         PROBLEM_MGMT: {
             path: '/main/problem/ProblemMgmtPage'
         },
+        GAME_PLAY: {
+            path: '/main/game/PlayPage'
+        },
         DATA_MAINTENANCE:{
             path: '/main/data/DataMaintenance'
         }

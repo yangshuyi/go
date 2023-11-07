@@ -1,0 +1,10 @@
+.game-play-page {
+
+}
+
+.game-play-page .xms-page-content {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}

@@ -66,7 +66,7 @@ function GameView(props) {
      * @param chess
      * @returns {boolean} - false: 没有添加成功
      */
-    const stepForward = useCallback((action, chess) => {
+    const stepForward = (action, chess) => {
         let tiziList = null;
         if (action === 'add') {
             game.$currChessBoard[chess.$geo] = chess;
@@ -98,7 +98,7 @@ function GameView(props) {
         });
 
         return true;
-    }, []);
+    }
 
     const stepBackward = () => {
         let lastStep = stepList.current.pop();

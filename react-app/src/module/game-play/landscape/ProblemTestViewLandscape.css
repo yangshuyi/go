@@ -1,0 +1,27 @@
+.problem-test-view-landscape {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.problem-test-view-landscape  {
+
+}
+
+
+.problem-test-view-landscape > .game-view >.chess-board > .wrap > canvas{
+    width: initial;
+    height: 100%;
+}
+
+.problem-test-view-landscape > .game-action-bar-area.vertical {
+    width: 70px;
+}
+
+
+.problem-test-view-landscape > .game-view >.chess-board > .wrap > canvas{
+    width: initial;
+    height: 100%;
+}

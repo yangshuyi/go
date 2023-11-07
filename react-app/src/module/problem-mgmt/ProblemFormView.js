@@ -82,7 +82,7 @@ const ProblemFormView = (props, ref) => {
                     </Form.Item>
                     <Form.Header>棋盘</Form.Header>
                     <Form.Item name="chessBoard" layout="vertical" rules={[{required: true}]}>
-                        <GameView chessBoardSize={chessBoardSize}/>
+                        <GameView chessBoardSize={chessBoardSize} singleRow={true}/>
                     </Form.Item>
                 </Form>
             </>

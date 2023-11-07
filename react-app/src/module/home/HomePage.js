@@ -45,6 +45,9 @@ function HomePage(props) {
             text: '死活题', path: Constants.ROUTER.PROBLEM_LIST.path,
         },
         {
+            text: '下棋', path: Constants.ROUTER.GAME_PLAY.path,
+        },
+        {
             text: '数据维护', path: Constants.ROUTER.DATA_MAINTENANCE.path,
         },
     ])
