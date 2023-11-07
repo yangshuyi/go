@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
 import './GameView.css'
@@ -33,9 +33,9 @@ function GameView(props) {
         reset(showMark);
     }
 
-    const handleBoardReady = () => {
+    const handleBoardReady = useCallback(() => {
         init();
-    }
+    }, []);
 
     const handleShowMarkChange = () => {
         let newShowMark = !showMark;
@@ -66,7 +66,7 @@ function GameView(props) {
      * @param chess
      * @returns {boolean} - false: 没有添加成功
      */
-    function stepForward(action, chess) {
+    const stepForward = useCallback((action, chess) => {
         let tiziList = null;
         if (action === 'add') {
             game.$currChessBoard[chess.$geo] = chess;
@@ -98,7 +98,7 @@ function GameView(props) {
         });
 
         return true;
-    }
+    }, []);
 
     const stepBackward = () => {
         let lastStep = stepList.current.pop();
@@ -150,7 +150,7 @@ function GameView(props) {
                 };
                 let result = stepForward('add', newChess);
 
-                if(result) {
+                if (result) {
                     //调整下一步
                     setCurrNextStep(chessType.nextStep);
                 }

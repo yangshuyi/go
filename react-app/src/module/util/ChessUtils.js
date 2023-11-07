@@ -116,6 +116,9 @@ function checkTizi(chessBoardSize, currChessObj, chessBoard) {
 }
 
 function getAroundChess(chessBoardSize, currChessObj, currChessType, chessBoard) {
+  if(currChessObj==null) {
+      debugger;
+  }
     let chessPos = getPosIdxFromGeo(chessBoardSize, currChessObj.$geo);
     if (!chessPos) {
         return;
@@ -157,6 +160,9 @@ function getAroundChess(chessBoardSize, currChessObj, currChessType, chessBoard)
 
 
 function isChessHasQi(chessBoardSize, currChessObj, chessBoard) {
+    if(currChessObj==null) {
+        debugger;
+    }
     let chessPos = getPosIdxFromGeo(chessBoardSize, currChessObj.$geo);
     if (chessPos.x > 0) {
         //check left
@@ -191,6 +197,10 @@ function isChessHasQi(chessBoardSize, currChessObj, chessBoard) {
 
 
 function getAllOppositeChessList(chessBoardSize, currChessObj, existedChessMap, chessBoard) {
+    if(currChessObj==null) {
+        debugger;
+    }
+
     if (existedChessMap[currChessObj.$geo] != null) {
         //already checked.
         return;
