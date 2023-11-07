@@ -1,18 +1,19 @@
 import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
-import './ProblemTestPage.css';
+import './ProblemTestPagePortrait.css';
 
 import {useNavigate} from "react-router-dom";
 import {Button, NavBar} from "antd-mobile";
 import {useLocation} from "react-router";
 import {DialogUtils, NavigateUtils, XmsSpinView} from "sirius-react-mobile";
-import ProblemInfoView from "../../components/problem-info/ProblemInfoView";
-import ProblemUtils from "../util/ProblemUtils";
-import GameView from "../../components/game/GameView";
+import ProblemInfoView from "../../../components/problem-info/ProblemInfoView";
+import ProblemUtils from "../../util/ProblemUtils";
+import GameView from "../../../components/game/GameView";
+import ProblemInfoFloatingPanel from "../../../components/problem-info/ProblemInfoFloatingPanel";
 
 
-function ProblemTestPage(props) {
+function ProblemTestPagePortrait(props) {
     const navigate = useNavigate();
     const location = useLocation();
     const [currPageKey] = useState(() => NavigateUtils.buildPageKey(location));
@@ -97,12 +98,14 @@ function ProblemTestPage(props) {
                     <div style={{height:'100px'}}></div>
                 </div>
 
+                <ProblemInfoFloatingPanel problem={formData} onChange={handleProblemChange}/>
+
                 <ProblemInfoView problem={formData} onChange={handleProblemChange}/>
             </div>
     )
 }
 
-export default ProblemTestPage;
+export default ProblemTestPagePortrait;
 
 
 

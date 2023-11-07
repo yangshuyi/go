@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 import './css/variable.css';
 import '../node_modules/sirius-react-mobile/dist/style.css';
+import './css/index.css';
+
 
 import {ConfigProvider, SafeArea} from "antd-mobile";
 import enUS from 'antd-mobile/es/locales/en-US';

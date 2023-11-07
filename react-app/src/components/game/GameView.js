@@ -45,8 +45,7 @@ function GameView(props) {
 
 
     const reset = (showMark) => {
-        SpinUtils.start();
-
+        console.log("GameView: reset")
         let game = JSON.parse(JSON.stringify(props.game));
         game.$currChessBoard = {}; //当前棋盘上的棋子信息
         game.$currChessBoard = game.chessBoard;
@@ -59,8 +58,6 @@ function GameView(props) {
         _.each(game.$currChessBoard, (chess) => {
             domChessBoardRef.current.drawChess(chess);
         });
-
-        SpinUtils.complete();
     }
 
     function stepForward(action, chess) {
@@ -145,14 +142,7 @@ function GameView(props) {
         }
     }
 
-    const handleFieldChanged = (field, value) => {
-        setGame((oldObj) => {
-            let newObj = {...oldObj};
-            newObj[field] = value;
-            return newObj;
-        })
-    }
-
+    console.log("GameView render");
 
     return <div className="game-view">
         {props.singleRow === true ?

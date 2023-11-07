@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import _ from 'lodash';
 
+import './ProblemListViewPortraint.css';
 
 import {useNavigate} from "react-router-dom";
 import {useActivate, useAliveController} from "react-activation";
@@ -128,7 +129,7 @@ function ProblemListViewPortrait(props) {
             >棋局列表</NavBar>
 
             <ProblemFilterView onChange={handleFilterChange}/>
-            <div className="xms-page-content with-padding-top">
+            <div className="xms-page-content with-padding-top problem-list-view-portraits">
                 <List>
                     {listData.map((problem) => {
                         return (

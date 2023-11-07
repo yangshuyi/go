@@ -3,7 +3,7 @@ import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 
 import KeepAlive, {AliveScope} from "react-activation";
 import ProblemListPage from "./module/problem-list/ProblemListPage";
-import ProblemTestPage from "./module/problem-test/ProblemTestPage";
+import ProblemTestPage from "./module/problem-test/portrait/ProblemTestPagePortrait";
 import Constants from "./Constants";
 import MainPage from "./module/main/MainPage";
 import HomePage from "./module/home/HomePage";

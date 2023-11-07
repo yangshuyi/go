@@ -3,15 +3,9 @@ import _ from 'lodash';
 
 import './ProblemListViewLandscape.css';
 
-import {useNavigate} from "react-router-dom";
-import {useActivate, useAliveController} from "react-activation";
-import {useLocation} from "react-router";
-import {DialogUtils, NavigateUtils, XmsSpinView} from "sirius-react-mobile";
-import ProblemUtils from "../../util/ProblemUtils";
+import {DialogUtils} from "sirius-react-mobile";
 import ListView from "./ListView";
-import GameView from "../../../components/game/GameView";
 import {Button, NavBar} from "antd-mobile";
-import ProblemInfoActionBarVertical from "../../../components/problem-info/ProblemInfoActionBarVertical";
 import ProblemTestViewLandscape from "../../problem-test/landscape/ProblemTestViewLandscape";
 
 

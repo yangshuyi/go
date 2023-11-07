@@ -67,6 +67,36 @@ function getGeoLabelByIdx(chessBoardSize, rowOrCol, idx) {
     }
 }
 
+function checkJingRuDian(chessBoardSize, currChessObj, chessBoard) {
+    let chessType = currChessObj.type;
+    let oppositeChessType = Constants.CHESS_TYPE[chessType].nextStep;
+
+    let oppositeChessList = getAroundChess(chessBoardSize, currChessObj, oppositeChessType, chessBoard);
+    let tiziList = [];
+    _.each(oppositeChessList, (oppositeChess) => {
+        let allOppositeChessMap = getAllOppositeChessList(chessBoardSize, oppositeChess, {}, chessBoard);
+        let checkTizi = true;
+        _.each(allOppositeChessMap, (oppositeChessObj) => {
+            let hasQi = isChessHasQi(chessBoardSize, oppositeChessObj, chessBoard);
+            if (hasQi) {
+                checkTizi = false;
+                return false;
+            }
+        });
+
+        if (checkTizi) {
+            tiziList = _.union(tiziList, _.values(allOppositeChessMap));
+        }
+    });
+
+    if (_.isEmpty(tiziList)) {
+        return null;
+    } else {
+        console.log("checkTizi: " + tiziList);
+        return tiziList;
+    }
+}
+
 
 function checkTizi(chessBoardSize, currChessObj, chessBoard) {
     let chessType = currChessObj.type;

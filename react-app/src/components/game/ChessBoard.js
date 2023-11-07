@@ -6,6 +6,8 @@ import ChessUtils from "../../module/util/ChessUtils";
 import Constants from "../../Constants";
 import {DomUtils} from "sirius-common-utils";
 
+import * as PropTypes from "prop-types";
+
 const ChessBoard = (props, ref) => {
     useImperativeHandle(ref, () => {
         return {
@@ -52,10 +54,16 @@ const ChessBoard = (props, ref) => {
         setCanvasWidth(data.current.canvas.boardBorder);
         setCanvasHeight(data.current.canvas.boardBorder);
 
-        setTimeout(() => {
-            props.onBoardReady();
-        }, 1000)
     }, [domChessBoardCanvasRef.current]);
+
+    //when canvasWidth be set, means canvas has been constructed.
+    useEffect(() => {
+       if(canvasWidth){
+           if(props.onBoardReady) {
+               props.onBoardReady();
+           }
+       }
+    }, [canvasWidth]);
 
     const init = async (chessBoardSize, showMark = false) => {
         data.current.chessBoardSize = chessBoardSize;
@@ -250,12 +258,13 @@ const ChessBoard = (props, ref) => {
         }
     }
 
+    console.log("ChessBoard render");
 
     return (
         <div className={props.showBoard === true ? "chess-board with-board" : "chess-board"}>
             <div className="wrap">
                 <canvas ref={domChessBoardCanvasRef}
-                        // style={{visibility:"hidden"}}
+                        style={{visibility:"hidden"}}
                         width={canvasWidth} height={canvasHeight}
                         onClick={onCanvasClick}/>
             </div>
@@ -264,9 +273,15 @@ const ChessBoard = (props, ref) => {
 }
 
 const WrapChessBoard = forwardRef(ChessBoard);
+const MemoWrapChessBoard = React.memo(WrapChessBoard);
+export default MemoWrapChessBoard;
 
-export default WrapChessBoard;
 
+MemoWrapChessBoard.propTypes = {
+    onBoardReady: PropTypes.func,
+    onChessStep: PropTypes.func,
+    showBoard: PropTypes.bool,
+};
 
 
 

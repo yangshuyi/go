@@ -97,7 +97,7 @@ async function filterProblemList(filterParam) {
 }
 
 async function queryFilteredProblemByPage(pageNo, pageSize) {
-    console.log(`queryFilteredProblemByPage: ${pageNo}, ${pageSize}`);
+    //console.log(`queryFilteredProblemByPage: ${pageNo}, ${pageSize}`);
 
     let offset = (pageNo - 1) * pageSize;
     let endIdx = offset + pageSize;
