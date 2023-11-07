@@ -4,20 +4,10 @@ import _ from 'lodash';
 import './ProblemListPage.css';
 
 import {useNavigate} from "react-router-dom";
-import {useActivate, useAliveController} from "react-activation";
-import {Button, InfiniteScroll, List, NavBar, PullToRefresh, SwipeAction, Tabs} from "antd-mobile";
-import {useLocation} from "react-router";
-import Constants from "../../Constants";
 import {NavigateUtils, XmsSpinView} from "sirius-react-mobile";
-import ProblemUtils from "../util/ProblemUtils";
-import {EyeFilled, HeartFilled, StarFilled} from "@ant-design/icons";
-import ProblemFilterView from "./ProblemFilterView";
 import ConfigUtils from "../../components/config/ConfigUtils";
 import ProblemListViewPortrait from "./portrait/ProblemListViewPortrait";
 import ProblemListViewLandscape from "./landscape/ProblemListViewLandscape";
-import BookUtils from "../../components/book/BookUtils";
-import TagUtils from "../../components/tag/TagUtils";
-
 
 function ProblemListPage(props) {
     const pageInitialized = useRef(false);

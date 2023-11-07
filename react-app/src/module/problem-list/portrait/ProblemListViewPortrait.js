@@ -32,7 +32,7 @@ function ProblemListViewPortrait(props) {
 
     useActivate(async () => {
         let {fromPageKey, param} = NavigateUtils.getPageResult();
-        if (props.currPageKey === fromPageKey) {
+        if (currPageKey === fromPageKey) {
             if (param?.action === "DEL") {
                 let newListData = _.reject(listData, {id: param.problemId});
                 setListData(newListData);

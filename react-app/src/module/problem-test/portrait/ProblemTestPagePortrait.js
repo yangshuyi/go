@@ -11,6 +11,7 @@ import ProblemInfoView from "../../../components/problem-info/ProblemInfoView";
 import ProblemUtils from "../../util/ProblemUtils";
 import GameView from "../../../components/game/GameView";
 import ProblemInfoFloatingPanel from "../../../components/problem-info/ProblemInfoFloatingPanel";
+import {useActivate} from "react-activation";
 
 
 function ProblemTestPagePortrait(props) {
@@ -60,7 +61,7 @@ function ProblemTestPagePortrait(props) {
             await ProblemUtils.saveProblem(problem, true);
         }
         NavigateUtils.navigateBack(navigate, location, {
-            action: 'VIEW',
+            action: 'SAVE',
             problemId: formData.id,
         });
     }
