@@ -131,7 +131,48 @@ const ChessBoard = (props, ref) => {
             ctx.stroke();
         }
 
+        //星位
+        if(data.current.chessBoardSize === 19) {
+            drawXingWei(ctx, 4, 4);
+            drawXingWei(ctx, 4, 9);
+            drawXingWei(ctx, 4, 15);
+
+            drawXingWei(ctx, 9, 4);
+            drawXingWei(ctx, 9, 9);
+            drawXingWei(ctx, 9, 15);
+
+            drawXingWei(ctx, 15, 4);
+            drawXingWei(ctx, 15, 9);
+            drawXingWei(ctx, 15, 15);
+        }
+
         ctx.restore();
+    }
+
+    function drawXingWei(ctx, x, y){
+        // ctx.save();
+        //
+        // let posIdx = ChessUtils.getPosIdxFromGeo(data.current.chessBoardSize, chessObj.$geo);
+        // let x = posIdx.x * data.current.canvas.unitBorder + data.current.canvas.padding;
+        // let y = posIdx.y * data.current.canvas.unitBorder + data.current.canvas.padding;
+        //
+        // ctx.translate(x, y);
+        //
+        // ctx.fillStyle = 'black';
+        // ctx.strokeStyle = 'black';
+        // ctx.beginPath();
+        // ctx.arc(0, 0, chessRadius, 0, 2 * Math.PI);
+        // ctx.fill();
+        // ctx.closePath();
+        // ctx.stroke();
+        //
+        // ctx.save();
+        //
+        // let posIdx = ChessUtils.getPosIdxFromGeo(data.current.chessBoardSize, chessObj.$geo);
+        // let x = posIdx.x * data.current.canvas.unitBorder + data.current.canvas.padding;
+        // let y = posIdx.y * data.current.canvas.unitBorder + data.current.canvas.padding;
+        //
+        // ctx.translate(x, y);
     }
 
     /**
