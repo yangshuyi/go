@@ -23,9 +23,7 @@
     "cordova-plugin-fetch": "github:aporat/cordova-plugin-fetch",
     "cordova-plugin-file": "^8.0.0",
     "cordova-plugin-screen-orientation": "^3.0.3",
-    "es6-promise-plugin": "^4.2.2",
-    "cordova-ios": "~4.5.1",
-    "cordova-browser": "latest"
+    "es6-promise-plugin": "^4.2.2"
   },
   "cordova": {
     "platforms": [
@@ -40,6 +38,5 @@
       "cordova-plugin-screen-orientation": {},
       "cordova-plugin-fetch": {}
     }
-  },
-  "dependencies": {}
+  }
 }
