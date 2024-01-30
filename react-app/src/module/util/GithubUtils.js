@@ -7,7 +7,7 @@ import {Base64} from "js-base64";
 import ConfigUtils from "../../components/config/ConfigUtils";
 import FetchPlugin from "../../cordova/fetch/FetchPlugin";
 
-let destToken = "RyMjI1ojIyNGIyMjZCMjI00jIyNOIyMjayMjI2UjIyNMIyMjaCMjI1YjIyNVIyMjMiMjI0EjIyNsIyMjTiMjIzIjIyNZIyMjRSMjI1MjIyNKIyMjTiMjI1UjIyNUIyMjWiMjI1IjIyMxIyMjVCMjI1UjIyNsIyMjeiMjI2EjIyN3IyMjaCMjI0YjIyNNIyMjMSMjI3MjIyMyIyMjViMjIzEjIyNSIyMjSCMjI2MjIyN3IyMjSiMjI1UjIyNkIyMjYSMjI0YjIyMxIyMjTiMjI2gjIyM1IyMjMCMjI1EjIyMzIyMjWSMjIzAjIyNNIyMjeCMjIzQjIyNVIyMjUyMjIzIjIyNWIyMjRyMjI04jIyM1IyMjTiMjI0cjIyNhIyMjUCMjI0IjIyNsIyMjWSMjI1ojIyNwIyMjMyMjI1gjIyNQIyMjZCMjI1cjIyNZIyMjdSMjI3AjIyNtIyMjYiMjI3ojIyNZIyMjMCMjI2MjIyM2IyMjRiMjI2wjIyNZIyMjdyMjI2sjIyNVIyMjVCMjI1ojIyNOIyMjRiMjI04jIyNDIyMjRiMjI1UjIyNNIyMjeCMjIzgjIyNGIyMjZCMjI2gjIyNCIyMjMyMjI1gjIyNpIyMjViMjI0gjIyNhIyMjMCMjI2wjIyMyIyMjWg==";
+let destToken = "eCMjI2sjIyNGIyMjYyMjI1cjIyNkIyMjMyMjI1EjIyNIIyMjbCMjI3ojIyNSIyMjQiMjI1ojIyNUIyMjUyMjI0QjIyNWIyMjbCMjI1IjIyNMIyMjNSMjI20jIyNOIyMjTyMjI1YjIyNrIyMjUiMjIzEjIyNaIyMjRCMjI2UjIyN3IyMjTiMjI0UjIyNXIyMjNCMjI2cjIyNGIyMjYiMjIzUjIyNKIyMjaiMjI1cjIyNUIyMjMSMjIzIjIyNZIyMjdyMjI0IjIyNIIyMjUiMjI0kjIyNkIyMjWCMjI2QjIyM1IyMjSiMjI1UjIyNVIyMjMCMjI1IjIyNtIyMjZCMjI1EjIyM5IyMjbSMjI1YjIyN3IyMjWiMjIzEjIyNUIyMjUSMjI2gjIyNUIyMjWSMjI1ojIyNSIyMjeiMjI1gjIyNLIyMjSiMjI2sjIyNjIyMjayMjI0ojIyMxIyMjVSMjI2wjIyM1IyMjVyMjI1UjIyNTIyMjZCMjI1UjIyNOIyMjdyMjI2sjIyNVIyMjVCMjI1ojIyNOIyMjRiMjI04jIyNDIyMjRiMjI1UjIyNNIyMjeCMjIzgjIyNGIyMjZCMjI2gjIyNCIyMjMyMjI1gjIyNpIyMjViMjI0gjIyNhIyMjMCMjI2wjIyMyIyMjWg==";
 let globalOctokit = null;
 
 let onlineFlag = false;
@@ -17,7 +17,7 @@ let onlineFlag = false;
  */
 
 async function init() {
-    //genToken();
+    // genToken();
     globalOctokit = new Octokit({
         auth: getToken(destToken)
     });
@@ -31,7 +31,7 @@ async function getOctokit() {
 }
 
 function genToken() {
-    let originalToken = "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";
+    let originalToken = "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";
     let token4 = Base64.encode(originalToken);
     let token3 = _.split(token4, "");
     let token2 = _.reverse(token3);
